@@ -1,4 +1,5 @@
 import Navigation from '@/components/Navigation';
+import Dummy from '@/components/Dummy';
 import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
@@ -6,7 +7,8 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      {/* <Navigation /> */}
+      <Dummy />
       <HeroSection />
       
       {/* Quick Links Section */}

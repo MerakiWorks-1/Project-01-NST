@@ -129,7 +129,7 @@ const Navigation = () => {
                   <NavigationMenuItem key={menu.title}>
                     <NavigationMenuTrigger
                       className={cn(
-                        'text-foreground hover:text-primary bg-transparent data-[state=open]:text-primary',
+                        'text-foreground hover:text-primary bg-transparent data-[state=open]:text-primary relative',
                         isActiveDropdown(menu.items) && 'text-primary'
                       )}
                       onClick={() =>
@@ -181,9 +181,6 @@ const Navigation = () => {
               </NavigationMenuList>
 
               {/* ✅ REQUIRED FOR PROPER POSITIONING */}
-              <div className="absolute top-full left-0 flex justify-center w-full">
-                <NavigationMenuViewport className="mt-2 origin-top-center bg-popover rounded-md shadow-lg border border-border transition-all duration-200 ease-in-out" />
-              </div>
             </NavigationMenu>
           </div>
 

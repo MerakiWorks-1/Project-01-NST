@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import NotFound from "./pages/NotFound";
+import Dummy from "./components/Dummy"
 
 // Lazy load pages for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -44,6 +45,8 @@ const App = () => (
             <Route path="/support" element={<Support />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
+            {/* Testing ROUTE */}
+            <Route path="/test" element={<Dummy />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
