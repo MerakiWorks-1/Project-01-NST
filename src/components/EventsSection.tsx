@@ -1,0 +1,175 @@
+import { Calendar, Trophy, Lightbulb, Users, ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+
+const EventsSection = () => {
+  const upcomingEvents = [
+    {
+      id: 1,
+      title: "TechFest: Neutron 2024",
+      date: "Dec 15-17, 2024",
+      type: "Technical Festival",
+      description: "Annual tech festival featuring hackathons, coding competitions, and tech talks.",
+      highlights: ["48-hour Hackathon", "Industry Speakers", "Prize Pool ₹5L+"],
+      status: "upcoming",
+      icon: Lightbulb
+    },
+    {
+      id: 2,
+      title: "Cultural Fest: Damru",
+      date: "Jan 20-22, 2025",
+      type: "Cultural Festival",
+      description: "Showcase your artistic talents in music, dance, drama, and creative arts.",
+      highlights: ["Inter-college Competition", "Celebrity Performances", "Art Exhibitions"],
+      status: "upcoming",
+      icon: Users
+    },
+    {
+      id: 3,
+      title: "Innovation Expo",
+      date: "Feb 10, 2025",
+      type: "Academic Event",
+      description: "Present your innovative projects and research to industry experts.",
+      highlights: ["Student Projects", "Research Showcase", "Industry Networking"],
+      status: "upcoming",
+      icon: Trophy
+    }
+  ];
+
+  const pastHighlights = [
+    {
+      title: "Hackathon Champions",
+      description: "Our students won 1st place in Inter-University Hackathon 2024",
+      achievement: "₹2L Prize Money"
+    },
+    {
+      title: "Cultural Excellence",
+      description: "Damru 2024 attracted 50+ colleges and 10,000+ participants",
+      achievement: "Regional Recognition"
+    },
+    {
+      title: "Industry Connect",
+      description: "100+ companies participated in our placement drive",
+      achievement: "95% Placement Rate"
+    }
+  ];
+
+  return (
+    <section id="events" className="py-20 bg-secondary/30">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Events & 
+            <span className="bg-gradient-accent bg-clip-text text-transparent"> Festivals</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Experience vibrant campus life through our exciting events, festivals, and competitions that bring together the entire Newton community.
+          </p>
+        </div>
+
+        {/* Upcoming Events */}
+        <div className="mb-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+            Upcoming Events
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {upcomingEvents.map((event) => {
+              const IconComponent = event.icon;
+              return (
+                <Card key={event.id} className="bg-card border-border hover:shadow-card transition-all duration-300 group relative overflow-hidden">
+                  {/* Status Badge */}
+                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-medium">
+                    Upcoming
+                  </div>
+                  
+                  <CardHeader>
+                    <div className="flex items-center mb-4">
+                      <div className="p-3 rounded-lg bg-accent/10 mr-4">
+                        <IconComponent className="h-6 w-6 text-accent" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-medium text-primary mb-1">{event.date}</div>
+                        <div className="text-xs text-muted-foreground bg-secondary px-2 py-1 rounded">
+                          {event.type}
+                        </div>
+                      </div>
+                    </div>
+                    <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
+                      {event.title}
+                    </CardTitle>
+                    <CardDescription className="text-muted-foreground">
+                      {event.description}
+                    </CardDescription>
+                  </CardHeader>
+                  
+                  <CardContent>
+                    <div className="space-y-3 mb-6">
+                      <h4 className="font-semibold text-foreground">Event Highlights:</h4>
+                      <ul className="space-y-2">
+                        {event.highlights.map((highlight, index) => (
+                          <li key={index} className="flex items-center text-sm text-muted-foreground">
+                            <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                            {highlight}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-all">
+                      Register Now
+                      <Calendar className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Past Highlights */}
+        <div className="mb-12">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+            Competition Outcomes & Achievements
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {pastHighlights.map((highlight, index) => (
+              <div key={index} className="text-center group">
+                <div className="bg-card rounded-2xl p-6 hover:shadow-card transition-all duration-300 group-hover:-translate-y-1">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Trophy className="h-8 w-8 text-primary-foreground" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground mb-2">{highlight.title}</h4>
+                  <p className="text-muted-foreground mb-4">{highlight.description}</p>
+                  <div className="inline-block bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">
+                    {highlight.achievement}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Event Calendar CTA */}
+        <div className="bg-card rounded-2xl p-8 md:p-12 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            Never Miss an Event
+          </h3>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Stay updated with our complete event calendar and get notified about registration deadlines and important announcements.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button size="lg" className="bg-gradient-accent hover:shadow-glow">
+              View Full Calendar
+              <Calendar className="ml-2 h-5 w-5" />
+            </Button>
+            <Button variant="outline" size="lg">
+              Subscribe to Updates
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default EventsSection;
