@@ -1,20 +1,21 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const quickLinks = [
-    { label: 'Admissions', href: '#admissions' },
-    { label: 'Academic Programs', href: '#academics' },
-    { label: 'Campus Life', href: '#campus' },
-    { label: 'Student Support', href: '#support' },
+    { label: 'Admissions', href: '/admissions' },
+    { label: 'Academic Programs', href: '/academics' },
+    { label: 'Campus Life', href: '/campus' },
+    { label: 'Student Support', href: '/support' },
   ];
 
   const resources = [
-    { label: 'Academic Calendar', href: '#calendar' },
-    { label: 'Course Catalog', href: '#courses' },
-    { label: 'Faculty Directory', href: '#faculty' },
-    { label: 'Student Portal', href: '#portal' },
+    { label: 'Academic Calendar', href: '/#' },
+    { label: 'Course Catalog', href: '/#' },
+    { label: 'Faculty Directory', href: '/#' },
+    { label: 'Student Portal', href: '/#' },
   ];
 
   const socialLinks = [
@@ -91,12 +92,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href} 
+                  <Link
+                    to={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors duration-200"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
