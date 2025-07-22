@@ -95,7 +95,7 @@ const EventsSection = () => {
                         </div>
                       </div>
                     </div>
-                    <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
+                    <CardTitle className="text-xl text-foreground group-hover:text-primary transition-all duration-300">
                       {event.title}
                     </CardTitle>
                     <CardDescription className="text-muted-foreground">
@@ -115,7 +115,7 @@ const EventsSection = () => {
                         ))}
                       </ul>
                     </div>
-                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-all">
+                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
                       Register Now
                       <Calendar className="ml-2 h-4 w-4" />
                     </Button>
@@ -158,11 +158,11 @@ const EventsSection = () => {
             Stay updated with our complete event calendar and get notified about registration deadlines and important announcements.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-gradient-accent hover:shadow-glow">
+            <Button size="lg" className="bg-gradient-accent hover:shadow-glow transition-all duration-300">
               View Full Calendar
               <Calendar className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" className='transition-all duration-300'>
               Subscribe to Updates
             </Button>
           </div>

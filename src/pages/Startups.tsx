@@ -40,7 +40,7 @@ const Startups = () => {
       <Dummy />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-20 bg-gradient-to-br from-background to-card">
+      <section className="pt-40 pb-20 bg-gradient-to-br from-background to-card">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
@@ -50,11 +50,11 @@ const Startups = () => {
               Transform your innovative ideas into successful startups with Start-X funding program
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
+              <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
                 <Rocket className="w-5 h-5 mr-2" />
                 Apply for Funding
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className='transition-all duration-300'>
                 <FileText className="w-5 h-5 mr-2" />
                 Download Pitch Template
               </Button>
@@ -149,7 +149,7 @@ const Startups = () => {
                   </CardContent>
                 </Card>
                 {index < 3 && (
-                  <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-6 border-t-2 border-r-2 border-primary/30 rotate-45 transform -translate-y-1/2" />
+                  <div className="hidden md:block absolute top-1/2 -right-4 w-6 h-6 border-t-2 border-r-2 border-primary/30 rotate-45 transform -translate-y-1/2" />
                 )}
               </div>
             ))}
@@ -193,7 +193,7 @@ const Startups = () => {
                       <DollarSign className="w-4 h-4 text-primary" />
                       <span className="font-semibold text-primary">{story.funding}</span>
                     </div>
-                    <Button variant="ghost" size="sm">
+                    <Button variant="ghost" size="sm" className='transition-all duration-300'>
                       Learn More
                     </Button>
                   </div>
@@ -257,7 +257,7 @@ const Startups = () => {
                   </ul>
                   
                   <Button 
-                    className={`w-full ${tier.popular ? 'bg-gradient-primary hover:shadow-glow' : ''}`}
+                    className={`w-full ${tier.popular ? 'bg-gradient-primary hover:shadow-glow transition-all duration-300' : ''}`}
                     variant={tier.popular ? 'default' : 'outline'}
                   >
                     Apply Now

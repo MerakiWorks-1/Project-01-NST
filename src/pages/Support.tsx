@@ -9,7 +9,7 @@ const Support = () => {
     <div className="min-h-screen bg-background">
       {/* <Navigation /> */}
       <Dummy />
-      <div className="pt-24">
+      <div className="pt-20">
         <SupportSection />
       </div>
       <Footer />

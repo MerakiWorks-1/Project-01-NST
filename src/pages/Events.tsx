@@ -8,7 +8,7 @@ const Events = () => {
     <div className="min-h-screen bg-background">
       {/* <Navigation /> */}
       <Dummy />
-      <div className="pt-24">
+      <div className="pt-20">
         <EventsSection />
       </div>
       <Footer />

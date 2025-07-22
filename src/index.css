@@ -46,7 +46,7 @@ All colors MUST be HSL.
 
     /* Shadows */
     --shadow-elegant: 0 10px 30px -10px hsl(217 15% 7% / 0.8);
-    --shadow-glow: 0 0 40px hsl(195 100% 50% / 0.3);
+    --shadow-glow: 0 0 20px hsl(195 100% 50% / 0.3);
     --shadow-card: 0 4px 20px hsl(217 15% 7% / 0.5);
 
     /* Animations */

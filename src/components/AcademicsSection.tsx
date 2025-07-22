@@ -77,7 +77,7 @@ const AcademicsSection = () => {
                     {program.duration}
                   </span>
                 </div>
-                <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
+                <CardTitle className="text-xl text-foreground group-hover:text-primary transition-all duration-300">
                   {program.title}
                 </CardTitle>
                 <CardDescription className="text-muted-foreground">
@@ -113,7 +113,7 @@ const AcademicsSection = () => {
                   </div>
                 </div>
                 
-                <Button variant="outline" className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                <Button variant="outline" className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   Learn More
                 </Button>
               </CardContent>
@@ -146,10 +146,10 @@ const AcademicsSection = () => {
             Our faculty members offer extended office hours, personalized mentoring, and are always available to help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-gradient-accent hover:shadow-glow">
+            <Button size="lg" className="bg-gradient-accent hover:shadow-glow transition-all duration-300">
               Meet Our Faculty
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" className='transition-all duration-300'>
               Academic Calendar
             </Button>
           </div>

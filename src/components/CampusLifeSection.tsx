@@ -107,7 +107,7 @@ const CampusLifeSection = () => {
                         ))}
                       </div>
                     </div>
-                    <Button variant="outline" className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                    <Button variant="outline" className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                       View Floor Plans
                     </Button>
                   </CardContent>
@@ -150,11 +150,11 @@ const CampusLifeSection = () => {
             Take a virtual tour of our modern facilities or schedule an in-person visit to see what makes our campus special.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
+            <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
               <MapPin className="mr-2 h-5 w-5" />
               Virtual Campus Tour
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" className='transition-all duration-300'>
               Schedule Visit
             </Button>
           </div>

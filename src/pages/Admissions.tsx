@@ -69,7 +69,7 @@ const Admissions = () => {
                   <p className="text-muted-foreground text-center">{step.description}</p>
                 </CardContent>
                 {index < 3 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-6 border-t-2 border-r-2 border-primary/30 rotate-45 transform -translate-y-1/2" />
+                  <div className="hidden lg:block absolute top-1/2 -right-4 w-6 h-6 border-t-2 border-r-2 border-primary/30 rotate-45 transform -translate-y-1/2" />
                 )}
               </Card>
             ))}

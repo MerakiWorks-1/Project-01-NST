@@ -5,10 +5,10 @@ import Footer from '@/components/Footer';
 
 const Academics = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* <Navigation /> */}
       <Dummy />
-      <div className="pt-24">
+      <div className="pt-20">
         <AcademicsSection />
       </div>
       <Footer />
