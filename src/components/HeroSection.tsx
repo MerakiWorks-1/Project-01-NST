@@ -8,7 +8,8 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src={campusHero} 
+          // src={campusHero} 
+          src='https://lh3.googleusercontent.com/p/AF1QipNWC_MbFAfLlUcchLXGGmEYlawRXIimq6hvFJKx=s1360-w1360-h1020-rw'
           alt="Newton School Campus" 
           className="w-full h-full object-cover"
         />
@@ -42,7 +43,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Button 
               size="lg" 
-              className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-4 h-auto"
+              className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-4 h-auto transition-all duration-300"
             >
               Start Your Journey
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -51,7 +52,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-primary/30 hover:bg-primary/10 text-lg px-8 py-4 h-auto"
+              className="border-primary/30 hover:bg-primary/100 text-lg px-8 py-4 h-auto transition-all duration-300"
             >
               <Play className="mr-2 h-5 w-5" />
               Watch Campus Tour
