@@ -112,10 +112,10 @@ const ClubsSection = () => {
                   </div>
                   <Button 
                     variant="outline" 
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all"
+                    className="w-full hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     Join Club
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 h-4 w-4 hover:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
               </Card>
