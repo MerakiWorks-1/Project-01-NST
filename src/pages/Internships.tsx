@@ -1,4 +1,5 @@
 import Navigation from '@/components/Navigation';
+import Dummy from '@/components/Dummy'
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -86,7 +87,8 @@ const Internships = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      {/* <Navigation /> */}
+      <Dummy />
       
       {/* Hero Section */}
       <section className="pt-24 pb-20 bg-gradient-to-br from-background to-card">
