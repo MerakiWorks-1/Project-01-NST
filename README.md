@@ -1,5 +1,5 @@
 # Newton School of Technology Repository
-
+git
 A modern, scalable, and maintainable web application for the Newton School of Technology at Rishihood University. This repository is built with a focus on performance, accessibility, and developer experience, leveraging the latest in the React ecosystem.
 
 ---
