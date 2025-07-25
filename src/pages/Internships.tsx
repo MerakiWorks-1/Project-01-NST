@@ -106,7 +106,7 @@ const Internships = () => {
       {/* Hero Section */}
       <section className="pt-40 pb-20 bg-gradient-to-br from-background to-card">
         <div className="container mx-auto px-6 pb-10">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto animate-fade-in-up delay-100">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
               Internships & Projects
             </h1>
@@ -114,10 +114,10 @@ const Internships = () => {
               Gain real-world experience and build your professional portfolio
               with industry internships
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-200">
               <Button
                 size="lg"
-                className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
+                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 hover:scale-105"
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Browse Opportunities
@@ -125,7 +125,7 @@ const Internships = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="transition-all duration-300"
+                className="transition-all duration-300 hover:scale-105"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Career Resources
@@ -137,14 +137,14 @@ const Internships = () => {
         {/* Stats Section */}
         <section className="py-12">
           <div className="container mx-auto px-6">
-            <div className="grid md:grid-cols-4 gap-6 text-center">
+            <div className="grid md:grid-cols-4 gap-6 text-center animate-fade-in-up delay-300">
               {[
                 { label: "Active Internships", value: "250+" },
                 { label: "Partner Companies", value: "80+" },
                 { label: "Average Stipend", value: "₹25K/month" },
                 { label: "Placement Rate", value: "92%" },
-              ].map((stat) => (
-                <div key={stat.label}>
+              ].map((stat, idx) => (
+                <div key={stat.label} style={{ animationDelay: `${0.35 + idx * 0.07}s` }} className="animate-fade-in-up">
                   <div className="text-3xl font-bold text-primary mb-2">
                     {stat.value}
                   </div>
@@ -159,7 +159,7 @@ const Internships = () => {
       {/* Current Opportunities */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in-up delay-100">
             <h2 className="text-4xl font-bold mb-6 text-foreground">
               Current Opportunities
             </h2>
@@ -170,10 +170,11 @@ const Internships = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {internships.map((internship) => (
+            {internships.map((internship, idx) => (
               <Card
                 key={internship.id}
-                className="hover:shadow-glow transition-all duration-300"
+                className="hover:shadow-glow transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.18 + idx * 0.09}s` }}
               >
                 <CardHeader>
                   <div className="flex items-start justify-between">
@@ -240,7 +241,7 @@ const Internships = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full bg-gradient-primary">
+                  <Button className="w-full bg-gradient-primary hover:scale-105 transition-all duration-300">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Apply Now
                   </Button>
@@ -249,8 +250,8 @@ const Internships = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button variant="outline" size="lg">
+          <div className="text-center mt-12 animate-fade-in-up delay-400">
+            <Button variant="outline" size="lg" className="hover:scale-105 transition-all duration-300">
               View All Opportunities
             </Button>
           </div>
@@ -260,7 +261,7 @@ const Internships = () => {
       {/* Portfolio Building */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in-up delay-100">
             <h3 className="text-3xl font-bold mb-6 text-foreground">
               Portfolio Building Toolkit
             </h3>
@@ -271,10 +272,11 @@ const Internships = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {portfolioTools.map((tool) => (
+            {portfolioTools.map((tool, idx) => (
               <Card
                 key={tool.title}
-                className="text-center group hover:shadow-glow transition-all duration-300"
+                className="text-center group hover:shadow-glow transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.22 + idx * 0.09}s` }}
               >
                 <CardHeader>
                   <div className="text-4xl mb-4">{tool.icon}</div>
@@ -286,7 +288,7 @@ const Internships = () => {
                   </p>
                   <Button
                     variant="outline"
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground"
+                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground hover:scale-105 transition-all duration-300"
                   >
                     {tool.action}
                   </Button>
@@ -300,7 +302,7 @@ const Internships = () => {
       {/* Application Process */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
+          <h3 className="text-3xl font-bold text-center mb-12 text-foreground animate-fade-in-up delay-100">
             How to Apply
           </h3>
 
@@ -330,8 +332,8 @@ const Internships = () => {
                 description:
                   "Prepare for interviews and begin your internship journey",
               },
-            ].map((item, index) => (
-              <div key={item.step} className="text-center">
+            ].map((item, idx) => (
+              <div key={item.step} className="text-center animate-fade-in-up" style={{ animationDelay: `${0.18 + idx * 0.09}s` }}>
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-xl font-bold text-primary-foreground">
                     {item.step}

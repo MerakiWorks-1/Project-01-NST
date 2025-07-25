@@ -14,14 +14,14 @@ const Admissions = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-20 bg-gradient-to-br from-background to-card">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto animate-fade-in-up delay-100">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
               Join Newton School
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Start your journey into technology with our comprehensive admission process
             </p>
-            <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
+            <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 hover:scale-105">
               Apply Now
             </Button>
           </div>
@@ -31,7 +31,7 @@ const Admissions = () => {
       {/* Admission Process */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">
+          <h2 className="text-4xl font-bold text-center mb-16 text-foreground animate-fade-in-up delay-100">
             Admission Process
           </h2>
           
@@ -58,7 +58,7 @@ const Admissions = () => {
                 description: "Complete enrollment and join orientation"
               }
             ].map((step, index) => (
-              <Card key={step.title} className="relative">
+              <Card key={step.title} className="relative animate-fade-in-up" style={{ animationDelay: `${0.18 + index * 0.09}s` }}>
                 <CardHeader className="text-center">
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                     <step.icon className="w-6 h-6 text-primary-foreground" />
@@ -81,7 +81,7 @@ const Admissions = () => {
       <section className="py-20 bg-card">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12">
-            <div>
+            <div className="animate-fade-in-up delay-100">
               <h3 className="text-3xl font-bold mb-6 text-foreground">Eligibility Criteria</h3>
               <ul className="space-y-4">
                 {[
@@ -90,8 +90,8 @@ const Admissions = () => {
                   "Basic computer literacy",
                   "Age between 17-25 years",
                   "Passion for technology and innovation"
-                ].map((criteria) => (
-                  <li key={criteria} className="flex items-start gap-3">
+                ].map((criteria, idx) => (
+                  <li key={criteria} className="flex items-start gap-3 animate-fade-in-up" style={{ animationDelay: `${0.22 + idx * 0.07}s` }}>
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <span className="text-muted-foreground">{criteria}</span>
                   </li>
@@ -99,7 +99,7 @@ const Admissions = () => {
               </ul>
             </div>
             
-            <div>
+            <div className="animate-fade-in-up delay-200">
               <h3 className="text-3xl font-bold mb-6 text-foreground">Required Documents</h3>
               <ul className="space-y-4">
                 {[
@@ -109,8 +109,8 @@ const Admissions = () => {
                   "Passport size photographs",
                   "Identity proof (Aadhar/PAN)",
                   "Category certificate (if applicable)"
-                ].map((document) => (
-                  <li key={document} className="flex items-start gap-3">
+                ].map((document, idx) => (
+                  <li key={document} className="flex items-start gap-3 animate-fade-in-up" style={{ animationDelay: `${0.22 + idx * 0.07}s` }}>
                     <FileText className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <span className="text-muted-foreground">{document}</span>
                   </li>
@@ -124,14 +124,14 @@ const Admissions = () => {
       {/* Important Dates */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">Important Dates</h3>
+          <h3 className="text-3xl font-bold text-center mb-12 text-foreground animate-fade-in-up delay-100">Important Dates</h3>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               { title: "Application Opens", date: "March 1, 2024", status: "open" },
               { title: "Application Deadline", date: "June 30, 2024", status: "upcoming" },
               { title: "Classes Begin", date: "August 15, 2024", status: "upcoming" }
-            ].map((item) => (
-              <Card key={item.title} className="text-center">
+            ].map((item, idx) => (
+              <Card key={item.title} className="text-center animate-fade-in-up" style={{ animationDelay: `${0.22 + idx * 0.09}s` }}>
                 <CardHeader>
                   <CardTitle className="text-lg">{item.title}</CardTitle>
                 </CardHeader>

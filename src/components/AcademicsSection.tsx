@@ -57,7 +57,7 @@ const AcademicsSection = () => {
     <section id="academics" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in-up delay-100">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Academic 
             <span className="bg-gradient-accent bg-clip-text text-transparent"> Excellence</span>
@@ -69,8 +69,12 @@ const AcademicsSection = () => {
 
         {/* Programs Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {programs.map((program) => (
-            <Card key={program.id} className="bg-card border-border hover:shadow-card transition-all duration-300 group">
+          {programs.map((program, idx) => (
+            <Card
+              key={program.id}
+              className="bg-card border-border hover:shadow-card transition-all duration-300 group animate-fade-in-up"
+              style={{ animationDelay: `${0.18 + idx * 0.09}s` }}
+            >
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
@@ -113,7 +117,7 @@ const AcademicsSection = () => {
                   </div>
                 </div>
                 
-                <Button variant="outline" className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                <Button variant="outline" className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 hover:scale-105">
                   Learn More
                 </Button>
               </CardContent>
@@ -123,10 +127,14 @@ const AcademicsSection = () => {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {features.map((feature, index) => {
+          {features.map((feature, idx) => {
             const IconComponent = feature.icon;
             return (
-              <div key={index} className="text-center group">
+              <div
+                key={idx}
+                className="text-center group animate-fade-in-up"
+                style={{ animationDelay: `${0.35 + idx * 0.09}s` }}
+              >
                 <div className="mx-auto w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4 group-hover:shadow-glow transition-all duration-300">
                   <IconComponent className="h-8 w-8 text-primary-foreground" />
                 </div>
@@ -138,7 +146,7 @@ const AcademicsSection = () => {
         </div>
 
         {/* Faculty Support CTA */}
-        <div className="bg-card rounded-2xl p-8 md:p-12 text-center">
+        <div className="bg-card rounded-2xl p-8 md:p-12 text-center animate-fade-in-up delay-400">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             Need Academic Support?
           </h3>
@@ -146,10 +154,10 @@ const AcademicsSection = () => {
             Our faculty members offer extended office hours, personalized mentoring, and are always available to help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-gradient-accent hover:shadow-glow transition-all duration-300">
+            <Button size="lg" className="bg-gradient-accent hover:shadow-glow transition-all duration-300 hover:scale-105">
               Meet Our Faculty
             </Button>
-            <Button variant="outline" size="lg" className='transition-all duration-300'>
+            <Button variant="outline" size="lg" className='transition-all duration-300 hover:scale-105'>
               Academic Calendar
             </Button>
           </div>

@@ -61,7 +61,7 @@ const CampusLifeSection = () => {
     <section id="campus" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in-up delay-100">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Campus
             <span className="bg-gradient-primary bg-clip-text text-transparent"> Life</span>
@@ -73,14 +73,18 @@ const CampusLifeSection = () => {
 
         {/* Accommodation Section */}
         <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center animate-fade-in-up delay-200">
             Accommodation & Housing
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {accommodations.map((hostel) => {
+            {accommodations.map((hostel, idx) => {
               const IconComponent = hostel.icon;
               return (
-                <Card key={hostel.id} className="bg-card border-border hover:shadow-card transition-all duration-300 group">
+                <Card
+                  key={hostel.id}
+                  className="bg-card border-border hover:shadow-card transition-all duration-300 group animate-fade-in-up"
+                  style={{ animationDelay: `${0.25 + idx * 0.09}s` }}
+                >
                   <CardHeader>
                     <div className="flex items-center justify-between mb-4">
                       <div className="p-3 rounded-lg bg-primary/10">
@@ -107,7 +111,10 @@ const CampusLifeSection = () => {
                         ))}
                       </div>
                     </div>
-                    <Button variant="outline" className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                    <Button
+                      variant="outline"
+                      className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 hover:scale-105"
+                    >
                       View Floor Plans
                     </Button>
                   </CardContent>
@@ -119,18 +126,22 @@ const CampusLifeSection = () => {
 
         {/* Facilities Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {facilities.map((facility, index) => {
+          {facilities.map((facility, idx) => {
             const IconComponent = facility.icon;
             return (
-              <div key={index} className="text-center group">
+              <div
+                key={idx}
+                className="text-center group animate-fade-in-up"
+                style={{ animationDelay: `${0.35 + idx * 0.09}s` }}
+              >
                 <div className="mx-auto w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-glow transition-all duration-300">
                   <IconComponent className="h-8 w-8 text-accent-foreground" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-3">{facility.title}</h3>
                 <p className="text-muted-foreground mb-4">{facility.description}</p>
                 <div className="space-y-1">
-                  {facility.details.map((detail, idx) => (
-                    <div key={idx} className="text-sm text-muted-foreground flex items-center justify-center">
+                  {facility.details.map((detail, i) => (
+                    <div key={i} className="text-sm text-muted-foreground flex items-center justify-center">
                       <div className="w-1 h-1 bg-accent rounded-full mr-2"></div>
                       {detail}
                     </div>
@@ -142,7 +153,7 @@ const CampusLifeSection = () => {
         </div>
 
         {/* Virtual Tour CTA */}
-        <div className="bg-secondary rounded-2xl p-8 md:p-12 text-center">
+        <div className="bg-secondary rounded-2xl p-8 md:p-12 text-center animate-fade-in-up delay-400">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             Experience Our Campus
           </h3>
@@ -150,11 +161,11 @@ const CampusLifeSection = () => {
             Take a virtual tour of our modern facilities or schedule an in-person visit to see what makes our campus special.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300">
+            <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 hover:scale-105">
               <MapPin className="mr-2 h-5 w-5" />
               Virtual Campus Tour
             </Button>
-            <Button variant="outline" size="lg" className='transition-all duration-300'>
+            <Button variant="outline" size="lg" className='transition-all duration-300 hover:scale-105'>
               Schedule Visit
             </Button>
           </div>

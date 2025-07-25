@@ -58,7 +58,7 @@ const EventsSection = () => {
     <section id="events" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in-up delay-100">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Events & 
             <span className="bg-gradient-accent bg-clip-text text-transparent"> Festivals</span>
@@ -70,14 +70,18 @@ const EventsSection = () => {
 
         {/* Upcoming Events */}
         <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center animate-fade-in-up delay-200">
             Upcoming Events
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {upcomingEvents.map((event) => {
+            {upcomingEvents.map((event, idx) => {
               const IconComponent = event.icon;
               return (
-                <Card key={event.id} className="bg-card border-border hover:shadow-card transition-all duration-300 group relative overflow-hidden">
+                <Card
+                  key={event.id}
+                  className="bg-card border-border hover:shadow-card transition-all duration-300 group relative overflow-hidden animate-fade-in-up"
+                  style={{ animationDelay: `${0.22 + idx * 0.09}s` }}
+                >
                   {/* Status Badge */}
                   <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-medium">
                     Upcoming
@@ -115,7 +119,7 @@ const EventsSection = () => {
                         ))}
                       </ul>
                     </div>
-                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
+                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300 hover:scale-105">
                       Register Now
                       <Calendar className="ml-2 h-4 w-4" />
                     </Button>
@@ -128,12 +132,12 @@ const EventsSection = () => {
 
         {/* Past Highlights */}
         <div className="mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center animate-fade-in-up delay-300">
             Competition Outcomes & Achievements
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {pastHighlights.map((highlight, index) => (
-              <div key={index} className="text-center group">
+            {pastHighlights.map((highlight, idx) => (
+              <div key={idx} className="text-center group animate-fade-in-up" style={{ animationDelay: `${0.32 + idx * 0.09}s` }}>
                 <div className="bg-card rounded-2xl p-6 hover:shadow-card transition-all duration-300 group-hover:-translate-y-1">
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <Trophy className="h-8 w-8 text-primary-foreground" />
@@ -150,7 +154,7 @@ const EventsSection = () => {
         </div>
 
         {/* Event Calendar CTA */}
-        <div className="bg-card rounded-2xl p-8 md:p-12 text-center">
+        <div className="bg-card rounded-2xl p-8 md:p-12 text-center animate-fade-in-up delay-400">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             Never Miss an Event
           </h3>
@@ -158,11 +162,11 @@ const EventsSection = () => {
             Stay updated with our complete event calendar and get notified about registration deadlines and important announcements.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-gradient-accent hover:shadow-glow transition-all duration-300">
+            <Button size="lg" className="bg-gradient-accent hover:shadow-glow transition-all duration-300 hover:scale-105">
               View Full Calendar
               <Calendar className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className='transition-all duration-300'>
+            <Button variant="outline" size="lg" className='transition-all duration-300 hover:scale-105'>
               Subscribe to Updates
             </Button>
           </div>

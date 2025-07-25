@@ -65,7 +65,7 @@ const SupportSection = () => {
     <section id="support" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in-up delay-100">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Student
             <span className="bg-gradient-primary bg-clip-text text-transparent"> Support</span>
@@ -77,12 +77,16 @@ const SupportSection = () => {
 
         {/* Student Mentors */}
         <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center animate-fade-in-up delay-200">
             Student Mentors
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mentors.map((mentor) => (
-              <Card key={mentor.id} className="bg-card border-border hover:shadow-card transition-all duration-300 group">
+            {mentors.map((mentor, idx) => (
+              <Card
+                key={mentor.id}
+                className="bg-card border-border hover:shadow-card transition-all duration-300 group animate-fade-in-up"
+                style={{ animationDelay: `${0.22 + idx * 0.09}s` }}
+              >
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <User className="h-8 w-8 text-primary-foreground" />
@@ -113,7 +117,7 @@ const SupportSection = () => {
                   </div>
                   <Button 
                     variant="outline" 
-                    className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all"
+                    className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 hover:scale-105"
                   >
                     Book a Session
                     <Clock className="ml-2 h-4 w-4" />
@@ -126,10 +130,14 @@ const SupportSection = () => {
 
         {/* Support Channels */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {supportChannels.map((channel, index) => {
+          {supportChannels.map((channel, idx) => {
             const IconComponent = channel.icon;
             return (
-              <Card key={index} className="bg-card border-border hover:shadow-card transition-all duration-300 group text-center">
+              <Card
+                key={idx}
+                className="bg-card border-border hover:shadow-card transition-all duration-300 group text-center animate-fade-in-up"
+                style={{ animationDelay: `${0.35 + idx * 0.09}s` }}
+              >
                 <CardHeader>
                   <div className="mx-auto w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mb-4 group-hover:shadow-glow transition-all duration-300">
                     <IconComponent className="h-8 w-8 text-accent-foreground" />
@@ -143,7 +151,7 @@ const SupportSection = () => {
                   <div className="text-sm text-primary font-medium mb-4">
                     {channel.availability}
                   </div>
-                  <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-all">
+                  <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300 hover:scale-105">
                     {channel.action}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -154,7 +162,7 @@ const SupportSection = () => {
         </div>
 
         {/* Faculty Support CTA */}
-        <div className="bg-secondary rounded-2xl p-8 md:p-12 text-center">
+        <div className="bg-secondary rounded-2xl p-8 md:p-12 text-center animate-fade-in-up delay-400">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             Need to Connect with Faculty?
           </h3>
@@ -162,11 +170,11 @@ const SupportSection = () => {
             Our "Ask Faculty" forum allows you to directly connect with professors for academic guidance, project discussions, and career advice.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
+            <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 hover:scale-105">
               <MessageCircle className="mr-2 h-5 w-5" />
               Ask Faculty Forum
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" className="transition-all duration-300 hover:scale-105">
               Faculty Directory
             </Button>
           </div>

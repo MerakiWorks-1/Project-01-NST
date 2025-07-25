@@ -64,7 +64,7 @@ const ClubsSection = () => {
     <section id="clubs" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in-up delay-100">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Clubs & 
             <span className="bg-gradient-primary bg-clip-text text-transparent"> Societies</span>
@@ -76,12 +76,13 @@ const ClubsSection = () => {
 
         {/* Clubs Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {clubs.map((club) => {
+          {clubs.map((club, idx) => {
             const IconComponent = club.icon;
             return (
               <Card 
                 key={club.id} 
-                className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-card border-border"
+                className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-card border-border animate-fade-in-up"
+                style={{ animationDelay: `${0.18 + idx * 0.09}s` }}
               >
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-4">
@@ -112,7 +113,7 @@ const ClubsSection = () => {
                   </div>
                   <Button 
                     variant="outline" 
-                    className="w-full hover:bg-primary hover:text-primary-foreground transition-all"
+                    className="w-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
                   >
                     Join Club
                     <ArrowRight className="ml-2 h-4 w-4 hover:translate-x-1 transition-transform" />
@@ -124,7 +125,7 @@ const ClubsSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center">
+        <div className="text-center animate-fade-in-up delay-400">
           <div className="bg-secondary rounded-2xl p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Ready to Get Involved?
@@ -133,11 +134,11 @@ const ClubsSection = () => {
               Explore all our clubs and societies. Find your passion, develop leadership skills, and create amazing memories.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
+              <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 hover:scale-105">
                 Browse All Clubs
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="transition-all duration-300 hover:scale-105">
                 Start a New Club
               </Button>
             </div>

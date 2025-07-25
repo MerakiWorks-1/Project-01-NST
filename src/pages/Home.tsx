@@ -14,7 +14,7 @@ const Home = () => {
       {/* Quick Links Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in-up delay-100">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
               Explore NST Repository
             </h2>
@@ -23,7 +23,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 animate-fade-in-up delay-200">
             {[
               { title: 'Clubs & Societies', href: '/clubs', description: 'Join amazing communities' },
               { title: 'Admissions', href: '/admissions', description: 'Application process' },
@@ -33,11 +33,12 @@ const Home = () => {
               { title: 'Mentors', href: '/mentors', description: 'Student guidance' },
               { title: 'Startups', href: '/startups', description: 'Newton Startup Fund' },
               { title: 'Support', href: '/support', description: 'Help & resources' }
-            ].map((item) => (
+            ].map((item, idx) => (
               <Link
                 key={item.title}
                 to={item.href}
-                className="group p-6 bg-card rounded-xl border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow"
+                className={`group p-6 bg-card rounded-xl border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow transform hover:-translate-y-2 hover:scale-[1.03] animate-fade-in-up`}
+                style={{ animationDelay: `${0.15 + idx * 0.07}s` }}
               >
                 <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {item.title}

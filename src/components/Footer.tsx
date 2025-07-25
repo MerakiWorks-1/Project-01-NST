@@ -29,7 +29,7 @@ const Footer = () => {
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-6 py-16">
         {/* Newsletter Section */}
-        <div className="bg-secondary rounded-2xl p-8 md:p-12 mb-16">
+        <div className="bg-secondary rounded-2xl p-8 md:p-12 mb-16 animate-fade-in-up delay-100">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Stay Connected with Newton School
@@ -43,7 +43,7 @@ const Footer = () => {
                 placeholder="Enter your email address"
                 className="flex-1 bg-background border-border"
               />
-              <Button className="bg-gradient-primary hover:shadow-glow">
+              <Button className="bg-gradient-primary hover:shadow-glow transition-transform duration-200 hover:scale-105">
                 Subscribe
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
 
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 animate-fade-in-up delay-200">
           {/* About Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
@@ -91,7 +91,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-foreground mb-6">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
-                <li key={index}>
+                <li key={index} className="animate-fade-in-up" style={{ animationDelay: `${0.25 + index * 0.07}s` }}>
                   <Link
                     to={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -108,7 +108,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-foreground mb-6">Resources</h4>
             <ul className="space-y-3">
               {resources.map((resource, index) => (
-                <li key={index}>
+                <li key={index} className="animate-fade-in-up" style={{ animationDelay: `${0.35 + index * 0.07}s` }}>
                   <a 
                     href={resource.href} 
                     className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -122,7 +122,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-8 border-t border-border">
+        <div className="pt-8 border-t border-border animate-fade-in-up delay-300">
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Copyright */}
             <p className="text-muted-foreground text-sm mb-4 md:mb-0">
@@ -138,7 +138,8 @@ const Footer = () => {
                     key={index}
                     href={social.href}
                     aria-label={social.label}
-                    className="w-10 h-10 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-lg flex items-center justify-center transition-all duration-200 group"
+                    className="w-10 h-10 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-lg flex items-center justify-center transition-all duration-200 group animate-fade-in-up"
+                    style={{ animationDelay: `${0.45 + index * 0.07}s` }}
                   >
                     <IconComponent className="h-5 w-5" />
                   </a>

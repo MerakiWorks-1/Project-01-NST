@@ -90,7 +90,7 @@ const Mentors = () => {
       {/* Hero Section */}
       <section className="pt-40 pb-10 bg-gradient-to-br from-background to-card">
         <div className="container mx-auto px-6 pb-10">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto animate-fade-in-up delay-100">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
               Student Mentors
             </h1>
@@ -98,10 +98,10 @@ const Mentors = () => {
               Connect with experienced students who can guide you through your
               academic journey
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-200">
               <Button
                 size="lg"
-                className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
+                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 hover:scale-105"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book a Session
@@ -109,7 +109,7 @@ const Mentors = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="transition-all duration-300"
+                className="transition-all duration-300 hover:scale-105"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Join Community
@@ -119,7 +119,7 @@ const Mentors = () => {
         </div>
 
         {/* Stats Section */}
-        <section className="py-12 ">
+        <section className="py-12">
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-4 gap-6 text-center">
               {[
@@ -127,8 +127,8 @@ const Mentors = () => {
                 { label: "Sessions Completed", value: "1,200+" },
                 { label: "Average Rating", value: "4.8/5" },
                 { label: "Success Rate", value: "95%" },
-              ].map((stat) => (
-                <div key={stat.label}>
+              ].map((stat, idx) => (
+                <div key={stat.label} className="animate-fade-in-up" style={{ animationDelay: `${0.25 + idx * 0.07}s` }}>
                   <div className="text-3xl font-bold text-primary mb-2">
                     {stat.value}
                   </div>
@@ -143,7 +143,7 @@ const Mentors = () => {
       {/* Mentors Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in-up delay-100">
             <h2 className="text-4xl font-bold mb-6 text-foreground">
               Meet Your Mentors
             </h2>
@@ -154,10 +154,11 @@ const Mentors = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mentors.map((mentor) => (
+            {mentors.map((mentor, idx) => (
               <Card
                 key={mentor.id}
-                className="transition-all duration-300"
+                className="transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.18 + idx * 0.09}s` }}
               >
                 <CardHeader className="text-center">
                   <div className="relative mx-auto mb-4">
@@ -199,7 +200,7 @@ const Mentors = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full bg-gradient-primary hover:shadow-glow cursor-pointer transition-all duration-300">
+                  <Button className="w-full bg-gradient-primary hover:shadow-glow cursor-pointer transition-all duration-300 hover:scale-105">
                     <Calendar className="w-4 h-4 mr-2" />
                     Book Session
                   </Button>
@@ -213,7 +214,7 @@ const Mentors = () => {
       {/* How It Works */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-6">
-          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">
+          <h3 className="text-3xl font-bold text-center mb-12 text-foreground animate-fade-in-up delay-100">
             How Mentoring Works
           </h3>
 
@@ -237,8 +238,8 @@ const Mentors = () => {
                 description:
                   "Join the session, ask questions, get guidance, and accelerate your learning journey.",
               },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
+            ].map((item, idx) => (
+              <div key={item.step} className="text-center animate-fade-in-up" style={{ animationDelay: `${0.22 + idx * 0.09}s` }}>
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-primary-foreground">
                     {item.step}
