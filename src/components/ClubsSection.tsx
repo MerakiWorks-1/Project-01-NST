@@ -61,7 +61,7 @@ const ClubsSection = () => {
   ];
 
   return (
-    <section id="clubs" className="py-20 bg-background">
+    <section id="clubs" className="py-20 bg-transparent">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up delay-100">

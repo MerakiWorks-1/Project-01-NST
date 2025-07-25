@@ -6,7 +6,7 @@ import { DEFAULT_CIPHERS } from 'tls';
 
 const Support = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* <Navigation /> */}
       <Dummy />
       <div className="pt-20">

@@ -1,16 +1,31 @@
-import Navigation from '@/components/Navigation';
-import Dummy from '@/components/Dummy'
-import ClubsSection from '@/components/ClubsSection';
-import Footer from '@/components/Footer';
+import Navigation from "@/components/Navigation";
+import Dummy from "@/components/Dummy";
+import ClubsSection from "@/components/ClubsSection";
+import Footer from "@/components/Footer";
+import DotGrid from "../components/DotGrid/DotGrid";
 
 const Clubs = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* <Navigation /> */}
       <Dummy />
-      
+
       {/* Clubs Section */}
       <div className="pt-24">
+        <div style={{ width: "100vw", height: "100vh", position: "absolute" }}>
+          <DotGrid
+            dotSize={10}
+            gap={15}
+            baseColor="#008bdb"
+            activeColor="#ffffff"
+            proximity={150}
+            shockRadius={250}
+            shockStrength={5}
+            resistance={750}
+            returnDuration={1.5}
+          >
+          </DotGrid>
+        </div>
         <ClubsSection />
       </div>
       <Footer />

@@ -7,7 +7,7 @@ import { CheckCircle, Calendar, FileText, Users } from 'lucide-react';
 
 const Admissions = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* <Navigation /> */}
       <Dummy />
       

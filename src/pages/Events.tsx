@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 
 const Events = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* <Navigation /> */}
       <Dummy />
       <div className="pt-20">
