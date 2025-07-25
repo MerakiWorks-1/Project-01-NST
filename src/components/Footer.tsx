@@ -26,24 +26,24 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-white/95 border-t border-blue-100">
       <div className="container mx-auto px-6 py-16">
         {/* Newsletter Section */}
-        <div className="bg-secondary rounded-2xl p-8 md:p-12 mb-16 animate-fade-in-up delay-100">
+        <div className="bg-blue-50 rounded-2xl p-8 md:p-12 mb-16 animate-fade-in-up delay-100">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
               Stay Connected with Newton School
             </h3>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-blue-700 mb-8 max-w-2xl mx-auto">
               Get the latest updates on events, admissions, academic programs, and campus news delivered directly to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-4">
               <Input 
                 type="email" 
                 placeholder="Enter your email address"
-                className="flex-1 bg-background border-border"
+                className="flex-1 bg-white border-blue-200 text-blue-900"
               />
-              <Button className="bg-gradient-primary hover:shadow-glow transition-transform duration-200 hover:scale-105">
+              <Button className="bg-gradient-to-r from-blue-600 to-blue-400 text-white hover:shadow-lg transition-transform duration-200 hover:scale-105">
                 Subscribe
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -56,31 +56,31 @@ const Footer = () => {
           {/* About Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">N</span>
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">N</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground">Newton School of Technology</h3>
-                <p className="text-sm text-muted-foreground">Rishihood University</p>
+                <h3 className="text-xl font-bold text-blue-900">Newton School of Technology</h3>
+                <p className="text-sm text-blue-700">Rishihood University</p>
               </div>
             </div>
-            <p className="text-muted-foreground mb-6 max-w-md">
+            <p className="text-blue-700 mb-6 max-w-md">
               Empowering the next generation of tech leaders through innovative education, 
               hands-on learning, and industry-relevant curriculum at Rishihood University.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center text-muted-foreground">
-                <MapPin className="h-4 w-4 mr-3 text-primary" />
+              <div className="flex items-center text-blue-700">
+                <MapPin className="h-4 w-4 mr-3 text-blue-500" />
                 <span className="text-sm">Rishihood University, Haryana, India</span>
               </div>
-              <div className="flex items-center text-muted-foreground">
-                <Phone className="h-4 w-4 mr-3 text-primary" />
+              <div className="flex items-center text-blue-700">
+                <Phone className="h-4 w-4 mr-3 text-blue-500" />
                 <span className="text-sm">+91 98765 43210</span>
               </div>
-              <div className="flex items-center text-muted-foreground">
-                <Mail className="h-4 w-4 mr-3 text-primary" />
+              <div className="flex items-center text-blue-700">
+                <Mail className="h-4 w-4 mr-3 text-blue-500" />
                 <span className="text-sm">admissions@newtonschool.edu</span>
               </div>
             </div>
@@ -88,13 +88,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-foreground mb-6">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-blue-900 mb-6">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index} className="animate-fade-in-up" style={{ animationDelay: `${0.25 + index * 0.07}s` }}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="text-blue-700 hover:text-blue-500 transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -105,13 +105,13 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h4 className="text-lg font-semibold text-foreground mb-6">Resources</h4>
+            <h4 className="text-lg font-semibold text-blue-900 mb-6">Resources</h4>
             <ul className="space-y-3">
               {resources.map((resource, index) => (
                 <li key={index} className="animate-fade-in-up" style={{ animationDelay: `${0.35 + index * 0.07}s` }}>
                   <a 
                     href={resource.href} 
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="text-blue-700 hover:text-blue-500 transition-colors duration-200"
                   >
                     {resource.label}
                   </a>
@@ -122,10 +122,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-8 border-t border-border animate-fade-in-up delay-300">
+        <div className="pt-8 border-t border-blue-100 animate-fade-in-up delay-300">
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Copyright */}
-            <p className="text-muted-foreground text-sm mb-4 md:mb-0">
+            <p className="text-blue-700 text-sm mb-4 md:mb-0">
               © 2024 Newton School of Technology, Rishihood University. All rights reserved.
             </p>
 
@@ -138,7 +138,7 @@ const Footer = () => {
                     key={index}
                     href={social.href}
                     aria-label={social.label}
-                    className="w-10 h-10 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-lg flex items-center justify-center transition-all duration-200 group animate-fade-in-up"
+                    className="w-10 h-10 bg-blue-100 hover:bg-blue-500 hover:text-white text-blue-700 rounded-lg flex items-center justify-center transition-all duration-200 group animate-fade-in-up"
                     style={{ animationDelay: `${0.45 + index * 0.07}s` }}
                   >
                     <IconComponent className="h-5 w-5" />

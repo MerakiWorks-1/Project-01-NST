@@ -6,19 +6,19 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* <Navigation /> */}
       <Dummy />
       <HeroSection />
       
       {/* Quick Links Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white/95">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in-up delay-100">
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-500 bg-clip-text text-transparent">
               Explore NST Repository
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-black text-lg max-w-2xl mx-auto">
               Access all the resources and documentation you need to excel in your tech journey
             </p>
           </div>
@@ -37,13 +37,13 @@ const Home = () => {
               <Link
                 key={item.title}
                 to={item.href}
-                className={`group p-6 bg-card rounded-xl border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow transform hover:-translate-y-2 hover:scale-[1.03] animate-fade-in-up`}
+                className={`group p-6 bg-blue-100 rounded-xl border border-blue-100 hover:border-blue-400 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-2 hover:scale-[1.03] animate-fade-in-up`}
                 style={{ animationDelay: `${0.15 + idx * 0.07}s` }}
               >
-                <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <h3 className="font-semibold text-blue-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">{item.description}</p>
+                <p className="text-black text-sm">{item.description}</p>
               </Link>
             ))}
           </div>

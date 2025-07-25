@@ -4,55 +4,58 @@ import campusHero from '@/assets/campus-hero.jpg';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      {/* Background Image with Blue Overlay */}
       <div className="absolute inset-0">
-        <img 
-          // src={campusHero} 
-          src='https://lh3.googleusercontent.com/p/AF1QipNWC_MbFAfLlUcchLXGGmEYlawRXIimq6hvFJKx=s1360-w1360-h1020-rw'
-          alt="Newton School Campus" 
-          className="w-full h-full object-cover"
+        <img
+          // src={campusHero}
+          src="https://lh3.googleusercontent.com/p/AF1QipNWC_MbFAfLlUcchLXGGmEYlawRXIimq6hvFJKx=s1360-w1360-h1020-rw"
+          alt="Newton School Campus"
+          className="w-full h-full object-cover opacity-50"
         />
-        <div className="absolute inset-0 bg-gradient-hero"></div>
+
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-secondary/20 backdrop-blur-sm border border-primary/20 mb-8 animate-fade-in delay-100">
-            <span className="text-primary font-medium">🎓 Welcome to NST Repository</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 border border-blue-200 mb-8 animate-fade-in delay-100">
+            <span className="text-blue-700 font-medium">🎓 Welcome to NST Repository</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight animate-fade-in-up delay-200">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up delay-200">
             Your Gateway to
-            <span className="bg-gradient-primary bg-clip-text text-transparent block">
+            <span className="bg-gradient-to-r from-blue-500 via-blue-400 to-blue-200 bg-clip-text text-transparent block">
               Tech Knowledge
             </span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-300">
-            Welcome to NST Repository. 
-            Discover comprehensive tech resources, documentation, and learning materials 
+          <p className="text-xl md:text-2xl bg-black/70 p-4 rounded text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-300">
+            Welcome to NST Repository.
+            Discover comprehensive tech resources, documentation, and learning materials
             to enhance your technical knowledge.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in-up delay-400">
-            <Button 
-              size="lg" 
-              className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-4 h-auto transition-all duration-300 transform hover:scale-105"
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-blue-400 text-white text-lg px-8 py-4 h-auto border-none shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
               Start Your Journey
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-primary/30 hover:bg-primary/100 text-lg px-8 py-4 h-auto transition-all duration-300 transform hover:scale-105"
+
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-blue-700 bg-blue-50 hover:bg-black/90 hover:text-white text-lg px-8 py-4 h-auto transition-all duration-300 transform hover:scale-105"
             >
               <Play className="mr-2 h-5 w-5" />
               Watch Campus Tour
@@ -62,28 +65,28 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-2xl mx-auto animate-fade-in-up delay-500">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
-              <div className="text-muted-foreground">Students</div>
+              <div className="text-3xl font-bold text-white mb-2">500+</div>
+              <div className="text-white">Students</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">Faculty</div>
+              <div className="text-3xl font-bold text-white mb-2">50+</div>
+              <div className="text-white">Faculty</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">20+</div>
-              <div className="text-muted-foreground">Clubs</div>
+              <div className="text-3xl font-bold text-white mb-2">20+</div>
+              <div className="text-white">Clubs</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">95%</div>
-              <div className="text-muted-foreground">Placement</div>
+              <div className="text-3xl font-bold text-white mb-2">95%</div>
+              <div className="text-white">Placement</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Floating Animation Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-float-slow"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-accent/10 rounded-full blur-xl animate-float-slow2"></div>
+      <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200/60 rounded-full blur-2xl animate-float-slow"></div>
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-300/60 rounded-full blur-2xl animate-float-slow2"></div>
     </section>
   );
 };
