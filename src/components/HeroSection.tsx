@@ -18,14 +18,14 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto animate-fade-in-up">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-secondary/20 backdrop-blur-sm border border-primary/20 mb-8">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-secondary/20 backdrop-blur-sm border border-primary/20 mb-8 animate-fade-in delay-100">
             <span className="text-primary font-medium">🎓 Welcome to NST Repository</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight animate-fade-in-up delay-200">
             Your Gateway to
             <span className="bg-gradient-primary bg-clip-text text-transparent block">
               Tech Knowledge
@@ -33,17 +33,17 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-300">
             Welcome to NST Repository. 
             Discover comprehensive tech resources, documentation, and learning materials 
             to enhance your technical knowledge.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in-up delay-400">
             <Button 
               size="lg" 
-              className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-4 h-auto transition-all duration-300"
+              className="bg-gradient-primary hover:shadow-glow text-lg px-8 py-4 h-auto transition-all duration-300 transform hover:scale-105"
             >
               Start Your Journey
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -52,7 +52,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-primary/30 hover:bg-primary/100 text-lg px-8 py-4 h-auto transition-all duration-300"
+              className="border-primary/30 hover:bg-primary/100 text-lg px-8 py-4 h-auto transition-all duration-300 transform hover:scale-105"
             >
               <Play className="mr-2 h-5 w-5" />
               Watch Campus Tour
@@ -60,7 +60,7 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-2xl mx-auto animate-fade-in-up delay-500">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">500+</div>
               <div className="text-muted-foreground">Students</div>
@@ -82,8 +82,8 @@ const HeroSection = () => {
       </div>
 
       {/* Floating Animation Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-accent/10 rounded-full blur-xl animate-pulse delay-1000"></div>
+      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-float-slow"></div>
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-accent/10 rounded-full blur-xl animate-float-slow2"></div>
     </section>
   );
 };
