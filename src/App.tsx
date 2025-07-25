@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import NotFound from "./pages/NotFound";
-import Dummy from "./components/Dummy"
+import Dummy from "./components/Dummy";
 
 // Lazy load pages for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -19,6 +19,8 @@ const Startups = lazy(() => import("./pages/Startups"));
 const Internships = lazy(() => import("./pages/Internships"));
 const Support = lazy(() => import("./pages/Support"));
 
+import DotGrid from "./components/DotGrid/DotGrid";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -27,11 +29,13 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Suspense fallback={
-          <div className="min-h-screen flex items-center justify-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-          </div>
-        }>
+        <Suspense
+          fallback={
+            <div className="min-h-screen flex items-center justify-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+            </div>
+          }
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/clubs" element={<Clubs />} />

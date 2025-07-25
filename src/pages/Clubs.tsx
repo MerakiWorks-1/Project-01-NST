@@ -7,12 +7,7 @@ import DotGrid from "../components/DotGrid/DotGrid";
 const Clubs = () => {
   return (
     <div className="min-h-screen">
-      {/* <Navigation /> */}
-      <Dummy />
-
-      {/* Clubs Section */}
-      <div className="pt-24">
-        <div style={{ width: "100vw", height: "100vh", position: "absolute" }}>
+        <div style={{ width: "100vw", height: "98vh", position: "absolute" }}>
           <DotGrid
             dotSize={10}
             gap={15}
@@ -26,6 +21,11 @@ const Clubs = () => {
           >
           </DotGrid>
         </div>
+      {/* <Navigation /> */}
+      <Dummy />
+
+      {/* Clubs Section */}
+      <div className="pt-24">
         <ClubsSection />
       </div>
       <Footer />
