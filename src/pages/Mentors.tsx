@@ -88,7 +88,7 @@ const Mentors = () => {
       <Dummy />
 
       {/* Hero Section */}
-      <section className="pt-40 pb-10 bg-gradient-to-br from-background to-card">
+      <section className="pt-40 pb-10 bg-gradient-to-br from-[hsl(217_15%_7%)]  to-card">
         <div className="container mx-auto px-6 pb-10">
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up delay-100">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">

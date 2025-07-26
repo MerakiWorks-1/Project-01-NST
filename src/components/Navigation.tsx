@@ -87,27 +87,34 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-card' : 'bg-transparent'
+      className={`fixed left-1/2 top-6 z-50 -translate-x-1/2 w-[90vw] max-w-3xl rounded-2xl border border-border shadow-2xl bg-[hsl(217_15%_7%)]/70 backdrop-blur-2xl transition-all duration-300 ${
+        isScrolled ? 'scale-105 py-2 shadow-2xl bg-[hsl(217_15%_7%)]/90' : 'py-4 '
       }`}
+      style={{
+        boxShadow: isScrolled
+          ? '0 12px 32px 0 rgba(59,130,246,0.22)'
+          : '0 6px 24px 0 rgba(59,130,246,0.14)',
+        background: 'rgba(24, 28, 36, 0.7)',
+        border: '1px solid rgba(59,130,246,0.12)',
+        backdropFilter: 'blur(16px)',
+      }}
     >
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">N</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-foreground">NST Repository</h1>
-              <p className="text-xs text-muted-foreground">Your Tech Knowledge Hub</p>
-            </div>
-          </Link>
+      <div className="flex items-center justify-between px-6">
+        {/* Logo */}
+        <Link to="/" className="flex items-center space-x-3">
+          <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+            <span className="text-primary-foreground font-bold text-lg">N</span>
+          </div>
+          <div className="hidden sm:block">
+            <h1 className="text-xl font-bold text-foreground">NST Repository</h1>
+            <p className="text-xs text-muted-foreground">Your Tech Knowledge Hub</p>
+          </div>
+        </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center">
-            <NavigationMenu value={openDropdown} onValueChange={setOpenDropdown} className="relative">
-              <NavigationMenuList className="space-x-2">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center">
+          <NavigationMenu value={openDropdown} onValueChange={setOpenDropdown} className="relative">
+            <NavigationMenuList className="space-x-2">
                 {/* Home Link */}
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
@@ -184,48 +191,47 @@ const Navigation = () => {
             </NavigationMenu>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="default" className="bg-gradient-primary hover:shadow-glow">
-              Apply Now
-            </Button>
-          </div>
-
-          {/* Mobile Toggle Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
+        {/* CTA Button */}
+        <div className="hidden md:block">
+          <Button variant="default" className="bg-gradient-primary hover:shadow-glow">
+            Apply Now
           </Button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
-            <div className="flex flex-col space-y-4 pt-4">
-              {mobileNavItems.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  className={cn(
-                    'text-foreground hover:text-primary font-medium transition-colors duration-200',
-                    location.pathname === item.href && 'text-primary'
-                  )}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-              <Button variant="default" className="bg-gradient-primary w-full mt-4">
-                Apply Now
-              </Button>
-            </div>
-          </div>
-        )}
+        {/* Mobile Toggle Button */}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X /> : <Menu />}
+        </Button>
       </div>
+
+      {/* Mobile Menu - overlays below the Dynamic Island */}
+      {isMobileMenuOpen && (
+        <div className="fixed left-1/2 top-[5.5rem] z-40 w-[90vw] max-w-3xl -translate-x-1/2 rounded-2xl border border-border bg-background/95 backdrop-blur-lg shadow-2xl md:hidden animate-fade-in">
+          <div className="flex flex-col space-y-4 p-6">
+            {mobileNavItems.map((item) => (
+              <Link
+                key={item.label}
+                to={item.href}
+                className={cn(
+                  'text-foreground hover:text-primary font-medium transition-colors duration-200',
+                  location.pathname === item.href && 'text-primary'
+                )}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Button variant="default" className="bg-gradient-primary w-full mt-4">
+              Apply Now
+            </Button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

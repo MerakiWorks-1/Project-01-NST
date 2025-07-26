@@ -14,13 +14,13 @@ const HeroSection = () => {
           // src={campusHero}
           src="https://lh3.googleusercontent.com/p/AF1QipNWC_MbFAfLlUcchLXGGmEYlawRXIimq6hvFJKx=s1360-w1360-h1020-rw"
           alt="Newton School Campus"
-          className="w-full h-full object-cover opacity-50"
+          className="w-full h-full object-cover opacity-100"
         />
 
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-6 text-center bg-black/40 min-h-screen min-w-full flex items-center justify-center">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 border border-blue-200 mb-8 animate-fade-in delay-100">

@@ -9,7 +9,6 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Newton School Dark Theme - Based on #12141A, #1E222A, #00C2FF, #FF6B6B */
-    --background: 217 15% 7%;      /* #12141A - Primary charcoal */
     --foreground: 0 0% 96%;        /* #F5F5F5 - Off-white text */
 
     --card: 217 11% 12%;           /* #1E222A - Secondary dark slate */
