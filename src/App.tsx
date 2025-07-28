@@ -48,13 +48,11 @@ const App = () => (
             <Route path="/startups" element={<Startups />} />
             <Route path="/internships" element={<Internships />} />
             <Route path="/support" element={<Support />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-            {/* Testing ROUTE */}
-            <Route path="/test" element={<Dummy />} />
             <Route path="/cp" element={<CpClub />} />
             <Route path="/dev" element={<DevClub />} />
             <Route path="/robotics" element={<RoboticsClub />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
