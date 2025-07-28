@@ -26,7 +26,7 @@ import {
 
 export default function RoboticsClub() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -81,7 +81,7 @@ export default function RoboticsClub() {
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-            <Card className="hover:shadow-lg transition-shadow border-blue-200">
+            <Card className="hover:shadow-lg transition-shadow border-blue-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
                   <Settings className="w-6 h-6 text-blue-600" />
@@ -95,7 +95,7 @@ export default function RoboticsClub() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-green-200">
+            <Card className="hover:shadow-lg transition-shadow border-green-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3">
                   <BookOpen className="w-6 h-6 text-green-600" />
@@ -110,7 +110,7 @@ export default function RoboticsClub() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-purple-200">
+            <Card className="hover:shadow-lg transition-shadow border-purple-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
                   <Trophy className="w-6 h-6 text-purple-600" />
@@ -143,7 +143,7 @@ export default function RoboticsClub() {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
-            <Card className="border-l-4 border-l-blue-500 hover:shadow-lg transition-shadow">
+            <Card className="border-l-4 border-l-blue-500 hover:shadow-lg transition-shadow bg-transparent">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-blue-100 p-3 rounded-full">
@@ -162,7 +162,7 @@ export default function RoboticsClub() {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-green-500 hover:shadow-lg transition-shadow">
+            <Card className="border-l-4 border-l-green-500 hover:shadow-lg transition-shadow bg-transparent">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-green-100 p-3 rounded-full">
@@ -247,7 +247,7 @@ export default function RoboticsClub() {
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-            <Card className="hover:shadow-lg transition-shadow border-blue-200">
+            <Card className="hover:shadow-lg transition-shadow border-blue-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
                   <Car className="w-6 h-6 text-blue-600" />
@@ -262,7 +262,7 @@ export default function RoboticsClub() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-green-200">
+            <Card className="hover:shadow-lg transition-shadow border-green-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3">
                   <Plane className="w-6 h-6 text-green-600" />
@@ -277,7 +277,7 @@ export default function RoboticsClub() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-purple-200">
+            <Card className="hover:shadow-lg transition-shadow border-purple-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
                   <Ship className="w-6 h-6 text-purple-600" />
@@ -304,7 +304,7 @@ export default function RoboticsClub() {
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center hover:shadow-lg transition-shadow border-red-200">
+            <Card className="text-center hover:shadow-lg transition-shadow border-red-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Heart className="w-6 h-6 text-red-600" />
@@ -316,7 +316,7 @@ export default function RoboticsClub() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow border-blue-200">
+            <Card className="text-center hover:shadow-lg transition-shadow border-blue-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Zap className="w-6 h-6 text-blue-600" />
@@ -330,7 +330,7 @@ export default function RoboticsClub() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow border-green-200">
+            <Card className="text-center hover:shadow-lg transition-shadow border-green-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Lightbulb className="w-6 h-6 text-green-600" />
@@ -342,7 +342,7 @@ export default function RoboticsClub() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow border-purple-200">
+            <Card className="text-center hover:shadow-lg transition-shadow border-purple-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Rocket className="w-6 h-6 text-purple-600" />
@@ -366,7 +366,7 @@ export default function RoboticsClub() {
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-            <Card className="hover:shadow-lg transition-shadow border-blue-200">
+            <Card className="hover:shadow-lg transition-shadow border-blue-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
                   <Calendar className="w-6 h-6 text-blue-600" />
@@ -384,7 +384,7 @@ export default function RoboticsClub() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-green-200">
+            <Card className="hover:shadow-lg transition-shadow border-green-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3">
                   <Users className="w-6 h-6 text-green-600" />
@@ -399,7 +399,7 @@ export default function RoboticsClub() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow border-purple-200">
+            <Card className="hover:shadow-lg transition-shadow border-purple-200 bg-transparent">
               <CardHeader>
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
                   <Wrench className="w-6 h-6 text-purple-600" />
@@ -428,12 +428,12 @@ export default function RoboticsClub() {
 
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-6 mb-8">
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-transparent">
                 <CardHeader>
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
                     <FileText className="w-6 h-6 text-blue-600" />
                   </div>
-                  <CardTitle className="text-sm">Submit Membership Form</CardTitle>
+                  <CardTitle className="text-sm text-black">Submit Membership Form</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-xs text-gray-600">
@@ -442,36 +442,36 @@ export default function RoboticsClub() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-transparent">
                 <CardHeader>
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
                     <Video className="w-6 h-6 text-green-600" />
                   </div>
-                  <CardTitle className="text-sm">Interview</CardTitle>
+                  <CardTitle className="text-sm text-black">Interview</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-xs text-gray-600">Professional aptitude and reasoning interview assessment</p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-transparent">
                 <CardHeader>
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
                     <Bot className="w-6 h-6 text-purple-600" />
                   </div>
-                  <CardTitle className="text-sm">Pick a Project Team</CardTitle>
+                  <CardTitle className="text-sm text-black">Pick a Project Team</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-xs text-gray-600">Align with one of our flagship or upcoming initiatives</p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              <Card className="text-center hover:shadow-lg transition-shadow bg-transparent">
                 <CardHeader>
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2">
                     <UserCheck className="w-6 h-6 text-orange-600" />
                   </div>
-                  <CardTitle className="text-sm">Engage & Contribute</CardTitle>
+                  <CardTitle className="text-sm text-black">Engage & Contribute</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-xs text-gray-600">Attend meetings, workshops, and active build sessions</p>
@@ -479,7 +479,7 @@ export default function RoboticsClub() {
               </Card>
             </div>
 
-            <Card className="border-green-200 bg-green-50">
+            <Card className="border-green-200 bg-green-50 bg-transparent">
               <CardContent className="p-6 text-center">
                 <h3 className="text-lg font-semibold text-green-800 mb-2">Ready to Start Building?</h3>
                 <p className="text-green-700">
