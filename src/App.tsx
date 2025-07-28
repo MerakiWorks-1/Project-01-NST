@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import NotFound from "./pages/NotFound";
 import Dummy from "./components/Dummy";
+import CpClub from "./pages/Clubs/CpClub";
+import DevClub from "./pages/Clubs/DevClub";
 
 // Lazy load pages for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -49,6 +51,8 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
             {/* Testing ROUTE */}
             <Route path="/test" element={<Dummy />} />
+            <Route path="/cp" element={<CpClub />} />
+            <Route path="/dev" element={<DevClub />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
