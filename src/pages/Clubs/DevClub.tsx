@@ -302,7 +302,7 @@ export default function DevClubNST() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-4 gap-6">
               <Card className="text-center hover:shadow-lg transition-shadow bg-transparent">
                 <CardHeader>
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
@@ -312,6 +312,18 @@ export default function DevClubNST() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-xs text-gray-600">Submit your application form with basic details</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-shadow bg-transparent">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <Brain className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <CardTitle className="text-sm text-black">Aptitude Test</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-xs text-gray-600">Assess your problem-solving and logical thinking</p>
                 </CardContent>
               </Card>
 
