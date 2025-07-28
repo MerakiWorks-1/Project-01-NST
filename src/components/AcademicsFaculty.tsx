@@ -4,7 +4,7 @@ import { Linkedin, X } from "lucide-react";
 import { facultyMembers, mentorList } from "../data/data";
 import Dummy from "@/components/Dummy"; // Import Navbar
 import Footer from "@/components/Footer"; // Import Footer
-import ExpertSessionsSection from "./ExpertSessionsSection";
+import ExpertSessionsSection from "@/components/ExpertSessionsSection";
 
 // --- TYPE DEFINITIONS (for TSX) ---
 interface Person {

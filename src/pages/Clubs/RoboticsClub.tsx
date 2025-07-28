@@ -156,8 +156,70 @@ export default function RoboticsClub() {
           </div>
         </section>
 
-        {/* Flagship Projects */}
+        {/* See Our Robots in Action */}
         <section className="py-16 px-4 bg-white">
+            <div className="container mx-auto">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                        See Our Robots in Action
+                    </h2>
+                    <p className="text-blue-700 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.18s" }}>
+                        From concept to reality, watch our creations come to life.
+                    </p>
+                </div>
+                <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    {/* Video 1 */}
+                    <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+                        <Card className="group relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 border border-blue-200 shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                            <CardHeader className="p-6">
+                                <CardTitle className="text-2xl text-blue-950">Project Showcase</CardTitle>
+                                <CardDescription className="text-blue-700 mt-2">
+                                    A glimpse into the mechanics and electronics behind our award-winning bots.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="px-6 pb-6">
+                                <div className="aspect-video rounded-lg overflow-hidden shadow-2xl border-4 border-white">
+                                    <iframe
+                                        className="w-full h-full"
+                                        src="https://www.youtube.com/embed/fp2LNDcZYZM"
+                                        title="Robotics Project Showcase"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                    {/* Video 2 - UPDATED LINK */}
+                    <div className="animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
+                        <Card className="group relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 border border-blue-200 shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                            <CardHeader className="p-6">
+                                <CardTitle className="text-2xl text-blue-950">Competition Highlights</CardTitle>
+                                <CardDescription className="text-blue-700 mt-2">
+                                    Experience the thrill of competition and see our robots tackle tough challenges.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="px-6 pb-6">
+                                <div className="aspect-video rounded-lg overflow-hidden shadow-2xl border-4 border-white">
+                                    <iframe
+                                        className="w-full h-full"
+                                        src="https://www.youtube.com/embed/7MOFBE7xcdw"
+                                        title="Robotics Competition Highlights"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Flagship Projects */}
+        <section className="py-16 px-4 bg-blue-50/70">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>Flagship Projects 2025-26</h2>
@@ -195,7 +257,7 @@ export default function RoboticsClub() {
         </section>
 
         {/* How to Join */}
-        <section className="py-16 px-4 bg-blue-50/70">
+        <section className="py-16 px-4 bg-white">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>How to Join & Participate</h2>

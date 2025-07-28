@@ -135,8 +135,70 @@ export default function DevClub() {
           </div>
         </section>
 
-        {/* GSoC Section */}
+        {/* Hear From Our Community - NEW SECTION */}
         <section className="py-16 px-4 bg-white">
+            <div className="container mx-auto">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                        Hear From Our Community
+                    </h2>
+                    <p className="text-blue-700 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.18s" }}>
+                        Discover the projects we build and the experiences our members cherish.
+                    </p>
+                </div>
+                <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    {/* Video 1 */}
+                    <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+                        <Card className="group relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 border border-blue-200 shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                            <CardHeader className="p-6">
+                                <CardTitle className="text-2xl text-blue-950">Project Showcase: DCODE</CardTitle>
+                                <CardDescription className="text-blue-700 mt-2">
+                                    See what our students built during our flagship open-source program.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="px-6 pb-6">
+                                <div className="aspect-video rounded-lg overflow-hidden shadow-2xl border-4 border-white">
+                                    <iframe
+                                        className="w-full h-full"
+                                        src="https://www.youtube.com/embed/DBQRqkmKfHw"
+                                        title="DCODE Project Showcase"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                    {/* Video 2 */}
+                    <div className="animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
+                        <Card className="group relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 border border-blue-200 shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                            <CardHeader className="p-6">
+                                <CardTitle className="text-2xl text-blue-950">Member Testimonial</CardTitle>
+                                <CardDescription className="text-blue-700 mt-2">
+                                    Hear directly from a DevClub member about their experience and growth.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="px-6 pb-6">
+                                <div className="aspect-video rounded-lg overflow-hidden shadow-2xl border-4 border-white">
+                                    <iframe
+                                        className="w-full h-full"
+                                        src="https://www.youtube.com/embed/S6NpSqL44s8"
+                                        title="DevClub Member Testimonial"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* GSoC Section */}
+        <section className="py-16 px-4 bg-blue-50/70">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
@@ -146,58 +208,17 @@ export default function DevClub() {
                 Empowering students to contribute to open source and earn up to $3000 through GSoC.
               </p>
             </div>
-
             <div className="max-w-6xl mx-auto">
-              <Card className="border-blue-200 bg-blue-50/60 mb-8 animate-fade-in-up" style={{ animationDelay: "0.22s" }}>
+              <Card className="border-blue-200 bg-white mb-8 animate-fade-in-up" style={{ animationDelay: "0.22s" }}>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4 mb-4">
                     <Globe className="w-8 h-8 text-blue-600" />
                     <h3 className="text-xl font-semibold text-blue-800">Open Source Simplified</h3>
                   </div>
-                  <p className="text-blue-700">
+                  <p className="text-gray-700">
                     Code that's publicly accessible for anyone to read, improve, and contribute to. When you contribute
                     and maintainers approve, your changes become part of projects used globally.
                   </p>
-                </CardContent>
-              </Card>
-
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                {[
-                  { num: "1", title: "Explore & Contribute", desc: "Browse organizations, interact with maintainers, make initial contributions" },
-                  { num: "2", title: "Propose & Work", desc: "Submit proposal, get selected, work remotely for 3 months" },
-                  { num: "3", title: "Get Rewarded", desc: "Receive up to $3000 stipend, certificate, and global recognition" }
-                ].map((step, idx) => (
-                  <Card key={step.title} className="text-center bg-white border-blue-200 animate-fade-in-up transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ animationDelay: `${0.25 + idx * 0.07}s` }}>
-                    <CardHeader>
-                      <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                        <span className="text-xl font-bold text-blue-600">{step.num}</span>
-                      </div>
-                      <CardTitle className="text-blue-800">{step.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600">{step.desc}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
-              <Card className="border-blue-200 bg-blue-50/60 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Trophy className="w-8 h-8 text-blue-600" />
-                    <h3 className="text-xl font-semibold text-blue-800">Success Story: Agnik Mishra</h3>
-                  </div>
-                  <p className="text-blue-700 mb-4">
-                    Started with Hacktoberfest (Oct 2024) → Serious contributions (Feb 2025) → Pivoted to Apache Kvrocks →
-                    Merged 2200 lines of code → Selected for GSoC! 🎉
-                  </p>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {["Stay Consistent", "Balance is Key", "Never Give Up", "Communicate Well"].map((tip, index) => (
-                      <Badge key={index} className="bg-blue-100 text-blue-800 justify-center animate-fade-in-up" style={{ animationDelay: `${0.6 + index * 0.07}s` }}>
-                        {tip}
-                      </Badge>
-                    ))}
-                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -205,7 +226,7 @@ export default function DevClub() {
         </section>
 
         {/* Recruitment Process */}
-        <section className="py-16 px-4 bg-blue-50/70">
+        <section className="py-16 px-4 bg-white">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
@@ -215,7 +236,6 @@ export default function DevClub() {
                 Structured recruitment process to become part of our vibrant, project-driven tech community.
               </p>
             </div>
-
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-4 gap-6">
                 {[

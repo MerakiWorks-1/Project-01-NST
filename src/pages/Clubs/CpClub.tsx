@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, Clock, Code, Trophy, Users, Target, Star, Award, Zap, ArrowRight } from "lucide-react"
+import { Calendar, Clock, Code, Trophy, Users, Target, Star, Award, Zap, ArrowRight, PlayCircle, Youtube } from "lucide-react"
 import Dummy from "@/components/Dummy";
 import Footer from "@/components/Footer";
 
@@ -64,6 +64,27 @@ export default function CpClub() {
         hoverBorder: "hover:border-green-400"
       }
     },
+  ];
+
+  const spotlightVideos = [
+    {
+      id: 1,
+      title: "From Pupil to Specialist",
+      description: "An inspiring journey to the Specialist rank on Codeforces.",
+      embedId: "fylywqd_gGQ"
+    },
+    {
+      id: 2,
+      title: "Live Contest Walkthrough",
+      description: "See how our members tackle problems under pressure in real-time.",
+      embedId: "68o5Qe6E92k"
+    },
+    {
+      id: 3,
+      title: "Advanced Problem Solving",
+      description: "A deep dive into the strategies used to solve complex challenges.",
+      embedId: "b4wztf5q8Os"
+    }
   ];
 
   return (
@@ -146,15 +167,6 @@ export default function CpClub() {
                 </CardContent>
               </Card>
             </div>
-            <div className="mt-8 p-6 bg-blue-100/70 rounded-lg border border-blue-200 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              <div className="flex items-center gap-3 mb-2">
-                <Calendar className="w-5 h-5 text-blue-600" />
-                <span className="font-semibold text-blue-800">CodeChef Starters Schedule</span>
-              </div>
-              <p className="text-blue-700">
-                Every Wednesday from <strong>8:00 PM to 10:00 PM</strong>
-              </p>
-            </div>
           </div>
         </section>
 
@@ -191,16 +203,51 @@ export default function CpClub() {
                 );
               })}
             </div>
-            <div className="mt-8 text-center animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-              <p className="text-blue-700">
-                <strong>Codeforces Rankings</strong> out of 250+ students engaged in competitive coding.
-              </p>
-            </div>
           </div>
         </section>
 
-        {/* Competitions */}
+        {/* Member Spotlight - REDESIGNED SECTION */}
         <section className="py-16 px-4 bg-white">
+            <div className="container mx-auto">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                        Member Spotlights
+                    </h2>
+                    <p className="text-blue-700 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.18s" }}>
+                        Celebrating the achievements and dedication of our community members.
+                    </p>
+                </div>
+                <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    {spotlightVideos.map((video, idx) => (
+                        <div key={video.id} className="animate-fade-in-up" style={{ animationDelay: `${0.25 + idx * 0.1}s` }}>
+                            <Card className="group relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 border border-blue-200 shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+                                <CardHeader className="p-6">
+                                    <CardTitle className="text-xl text-blue-950">{video.title}</CardTitle>
+                                    <CardDescription className="text-blue-700 mt-2 h-10">
+                                        {video.description}
+                                    </CardDescription>
+                                </CardHeader>
+                                <CardContent className="px-6 pb-6">
+                                    <div className="aspect-video rounded-lg overflow-hidden shadow-2xl border-4 border-white">
+                                        <iframe
+                                            className="w-full h-full"
+                                            src={`https://www.youtube.com/embed/${video.embedId}`}
+                                            title={video.title}
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        {/* Competitions */}
+        <section className="py-16 px-4 bg-blue-50/70">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
@@ -222,7 +269,7 @@ export default function CpClub() {
                 return (
                   <Card
                     key={item.title}
-                    className="group border-l-4 border-l-blue-500 bg-blue-50/60 animate-fade-in-up transition-all duration-300 hover:shadow-md hover:border-l-indigo-600"
+                    className="group border-l-4 border-l-blue-500 bg-white animate-fade-in-up transition-all duration-300 hover:shadow-md hover:border-l-indigo-600"
                     style={{ animationDelay: `${0.22 + idx * 0.09}s` }}
                   >
                     <CardHeader>
@@ -250,7 +297,6 @@ export default function CpClub() {
               })}
             </div>
             
-            {/* Special Event Section */}
             <div className="mt-16 text-center animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
               <h3 className="text-2xl font-bold text-blue-900 mb-6">Special Events & Announcements</h3>
               <div className="max-w-2xl mx-auto">
