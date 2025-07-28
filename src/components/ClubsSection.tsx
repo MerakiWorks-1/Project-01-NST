@@ -1,51 +1,53 @@
-import { Users, Code, Mic, Brush, Gamepad, Film } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { Users, Code, Mic, Brush, Gamepad, Film, Binary, Microchip} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 const ClubsSection = () => {
   const clubs = [
     {
-      name: "Coding Club",
-      description: "For aspiring developers and competitive programmers.",
+      name: "CP Club",
+      description: "For aspiring problem solvers and competitive programmers.",
       members: "250+ Members",
       icon: Code,
-      tags: ["Development", "CP", "Web", "App"],
+      tags: [
+        "Competitive Programming",
+        "Algorithms",
+        "Data Structures",
+        "Problem Solving",
+      ],
+      link: "/cp",
     },
     {
-      name: "Orators Club",
+      name: "Dev Club",
       description: "Hone your public speaking and communication skills.",
       members: "120+ Members",
-      icon: Mic,
-      tags: ["Public Speaking", "Debate", "MUN"],
+      icon: Binary,
+      tags: [
+        "UI/UX",
+        "Web",
+        "App",
+        "AI",
+        "Blockchain",
+        "Cybersecurity",
+        "Cloud Computing",
+        "DevOps",
+      ],
+      link: "/dev",
     },
     {
-      name: "Design & Arts Society",
-      description: "A community for creative minds and visual artists.",
+      name: "Robotics Club",
+      description: "Explore the world of robotics and automation.",
       members: "180+ Members",
-      icon: Brush,
-      tags: ["UI/UX", "Graphics", "Fine Arts"],
-    },
-    {
-      name: "E-Sports Guild",
-      description: "Compete in popular gaming titles and tournaments.",
-      members: "300+ Members",
-      icon: Gamepad,
-      tags: ["Gaming", "Tournaments", "Strategy"],
-    },
-    {
-      name: "Film & Photography Club",
-      description: "Capture moments and tell stories through visuals.",
-      members: "150+ Members",
-      icon: Film,
-      tags: ["Filmmaking", "Photography", "Editing"],
-    },
-    {
-      name: "Entrepreneurship Cell",
-      description: "Nurturing the next generation of startup founders.",
-      members: "200+ Members",
-      icon: Users,
-      tags: ["Startups", "Business", "Innovation"],
+      icon: Microchip,
+      tags: ["Robotics", "AI", "Engineering"],
+      link: "/robotics",
     },
   ];
 
@@ -58,7 +60,8 @@ const ClubsSection = () => {
             Clubs & Societies
           </h2>
           <p className="text-xl text-gray-700 font-medium max-w-3xl mx-auto">
-            Join vibrant communities, develop new skills, and make lifelong connections through our diverse range of student organizations.
+            Join vibrant communities, develop new skills, and make lifelong
+            connections through our diverse range of student organizations.
           </p>
         </div>
 
@@ -69,7 +72,7 @@ const ClubsSection = () => {
             return (
               <Card
                 key={club.name}
-                className="group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+                className="flex flex-col justify-between group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${0.18 + idx * 0.07}s` }}
               >
                 <div className="relative z-10">
@@ -82,7 +85,9 @@ const ClubsSection = () => {
                         {club.members}
                       </Badge>
                     </div>
-                    <CardTitle className="text-xl text-blue-950">{club.name}</CardTitle>
+                    <CardTitle className="text-xl text-blue-950">
+                      {club.name}
+                    </CardTitle>
                     <CardDescription className="text-gray-700 pt-1">
                       {club.description}
                     </CardDescription>
@@ -90,16 +95,21 @@ const ClubsSection = () => {
                   <CardContent>
                     <div className="flex flex-wrap gap-2 mb-6">
                       {club.tags.map((tag) => (
-                        <Badge key={tag} variant="outline" className="border-blue-300 text-blue-700">
+                        <Badge
+                          key={tag}
+                          variant="outline"
+                          className="border-blue-300 text-blue-700"
+                        >
                           {tag}
                         </Badge>
                       ))}
                     </div>
                     <Button
+                      onClick={() => (window.location.href = club.link)}
                       variant="outline"
                       className="w-full border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
                     >
-                      Join Community
+                      Explore Community
                     </Button>
                   </CardContent>
                 </div>

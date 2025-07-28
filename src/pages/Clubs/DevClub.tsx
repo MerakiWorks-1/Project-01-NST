@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Dummy from "@/components/Dummy";
 import {
   Code2,
   Globe,
@@ -24,6 +25,8 @@ import {
 
 export default function DevClubNST() {
   return (
+    <div className="min-h-screen bg-white/95">
+       <Dummy />
     <div className="min-h-screen">
 
       {/* Hero Section */}
@@ -354,6 +357,7 @@ export default function DevClubNST() {
           </div>
         </div>
       </section>
+    </div>
     </div>
   )
 }

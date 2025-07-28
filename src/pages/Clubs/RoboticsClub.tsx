@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Dummy from "@/components/Dummy";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Bot,
@@ -26,6 +27,8 @@ import {
 
 export default function RoboticsClub() {
   return (
+    <div className="min-h-screen bg-white/95">
+      <Dummy />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 px-4">
@@ -492,6 +495,7 @@ export default function RoboticsClub() {
         </div>
       </section>
 
+    </div>
     </div>
   )
 }

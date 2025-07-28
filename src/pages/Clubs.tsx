@@ -8,7 +8,7 @@ const Clubs = () => {
   return (
     // Set a light background from our theme
     <div className="min-h-screen bg-white/95">
-        <div style={{ width: "100vw", height: "98vh", position: "absolute", zIndex: 0 }}>
+        <div style={{ width: "100vw", height: "80vh", position: "absolute", zIndex: 0 }}>
           <DotGrid
             dotSize={10}
             gap={15}
@@ -38,3 +38,4 @@ const Clubs = () => {
 };
 
 export default Clubs;
+l

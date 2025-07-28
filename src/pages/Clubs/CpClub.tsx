@@ -2,9 +2,12 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, Clock, Code, Trophy, Users, Target, Star, Award, Zap } from "lucide-react"
+import Dummy from "@/components/Dummy";
 
 export default function CpClub() {
   return (
+    <div className="min-h-screen bg-white/95">
+      <Dummy />
     <div className="min-h-screen bg-gradient-to-br ">
 
       {/* Hero Section */}
@@ -273,6 +276,7 @@ export default function CpClub() {
         </div>
       </section>
 
+    </div>
     </div>
   )
 }
