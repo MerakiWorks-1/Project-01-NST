@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 
+
 const Home = () => {
   return (
     <div className="min-h-screen">
