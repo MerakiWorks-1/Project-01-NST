@@ -7,7 +7,8 @@ import {
   Linkedin,
   ArrowRight,
   ExternalLink,
-  X,
+  Twitter, // Assuming 'X' icon is Twitter
+  Code, // Icon for 'Made by'
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -37,7 +38,7 @@ const Footer = () => {
       href: 'https://www.facebook.com/newtonschooloftechnology/',
       label: 'Facebook',
     },
-    { icon: X, href: 'https://x.com/nst_edu', label: 'X' },
+    { icon: Twitter, href: 'https://x.com/nst_edu', label: 'X/Twitter' },
     {
       icon: Instagram,
       href: 'https://www.instagram.com/newtonschooloftechnology/?hl=en',
@@ -79,7 +80,7 @@ const Footer = () => {
           {/* About */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3">
-              <img src="https://d3dyfaf3iutrxo.cloudfront.net/general/upload/6e7102036b2742429ee4aec7125666d7-newton_school_logo.svg"></img>
+              <img src="https://d3dyfaf3iutrxo.cloudfront.net/general/upload/6e7102036b2742429ee4aec7125666d7-newton_school_logo.svg" alt="Newton School Logo" className="h-12 w-12" />
               <div>
                 <h3 className="text-xl font-bold text-blue-900">Newton School of Technology</h3>
                 <p className="text-sm text-gray-600">Rishihood University</p>
@@ -148,8 +149,15 @@ const Footer = () => {
         </section>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-blue-200 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600 font-medium">
-          <p>© 2024 Newton School of Technology, Rishihood University. All rights reserved.</p>
+        <div className="pt-8 border-t border-blue-200 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-600 font-medium">
+          <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <p>© 2024 Newton School of Technology. All rights reserved.</p>
+            {/* NEW: Added credit link */}
+            <a href="https://www.linkedin.com/company/official-merakiworks/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/60 text-blue-800 px-3 py-1.5 rounded-full border border-blue-200 hover:shadow-md hover:bg-white transition-all duration-300">
+              <Code className="w-4 h-4 text-blue-600" />
+              <span>Made with 💙 by <strong>Meraki Works</strong></span>
+            </a>
+          </div>
           <div className="flex space-x-4">
             {socialLinks.map((social, index) => {
               const Icon = social.icon;
