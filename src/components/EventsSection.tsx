@@ -119,13 +119,11 @@ const EventsSection = () => {
                         ))}
                       </ul>
                     </div>
-                    <Button variant="outline" className="w-full border-blue-300 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105">
+                    <Button variant="outline" className="w-full border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105">
                       Register Now
                       <Calendar className="ml-2 h-4 w-4" />
                     </Button>
                   </CardContent>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
                 </Card>
               );
             })}
@@ -168,7 +166,7 @@ const EventsSection = () => {
               View Full Calendar
               <Calendar className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className='border-blue-300 text-blue-700 hover:bg-blue-100 transition-all duration-300 hover:scale-105'>
+            <Button variant="outline" size="lg" className='border-blue-300 text-white hover:bg-blue-100 transition-all duration-300 hover:scale-105'>
               Subscribe to Updates
             </Button>
           </div>

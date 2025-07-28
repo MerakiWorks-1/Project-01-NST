@@ -97,7 +97,7 @@ const ClubsSection = () => {
                     </div>
                     <Button
                       variant="outline"
-                      className="w-full border-blue-300 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
+                      className="w-full border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
                     >
                       Join Community
                     </Button>

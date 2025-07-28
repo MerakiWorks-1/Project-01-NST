@@ -40,7 +40,7 @@ const HeroSection = () => {
           {/* Subheading */}
           <p
             className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-300
-              bg-white/20 backdrop-blur-md rounded-lg px-6 py-4 text-white/90 border border-white/20 shadow-lg"
+              bg-white/20 backdrop-blur-xl rounded-lg px-6 py-4 text-white/90 border border-white/20 shadow-lg"
           >
             Welcome to NST Repository. Discover comprehensive tech resources,
             documentation, and learning materials to enhance your technical
