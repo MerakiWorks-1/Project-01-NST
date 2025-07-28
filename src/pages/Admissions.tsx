@@ -119,26 +119,26 @@ const Admissions = () => {
           </h2>
           <div className="relative">
             <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-blue-200 hidden md:block"></div>
-            <div className="space-y-12">
+            <div className="space-y-16 md:space-y-0">
               {processSteps.map((step, idx) => (
-                <div key={idx} className={`flex items-center w-full ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                  <div className="hidden md:flex justify-center w-[calc(50%-1.5rem)]">
-                    {idx % 2 !== 0 && (
-                      <Card className="p-6 bg-white border border-blue-200 shadow-lg w-full">
-                        <CardTitle className="text-xl text-blue-900 mb-2">{step.title}</CardTitle>
-                        <p className="text-gray-700">{step.description}</p>
-                      </Card>
-                    )}
-                  </div>
-                  <div className="z-10 bg-white w-12 h-12 rounded-full border-4 border-blue-500 flex items-center justify-center font-bold text-blue-600 text-xl shadow-md mx-6 shrink-0">
-                    {step.step}
-                  </div>
-                  <div className="w-full md:w-[calc(50%-1.5rem)]">
-                     <Card className="p-6 bg-white border border-blue-200 shadow-lg">
+                <div key={idx} className={`md:flex items-center w-full ${idx % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                  {/* Content Card */}
+                  <div className="w-full md:w-[calc(50%-2.5rem)]">
+                     <Card className="p-6 bg-white border border-blue-200 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                         <CardTitle className="text-xl text-blue-900 mb-2">{step.title}</CardTitle>
                         <p className="text-gray-700">{step.description}</p>
                       </Card>
                   </div>
+                  
+                  {/* Center Dot */}
+                  <div className="relative my-4 md:my-0">
+                    <div className="z-10 bg-white w-12 h-12 rounded-full border-4 border-blue-500 flex items-center justify-center font-bold text-blue-600 text-xl shadow-md mx-4 shrink-0">
+                      {step.step}
+                    </div>
+                  </div>
+
+                  {/* Spacer Div */}
+                  <div className="hidden md:block w-[calc(50%-2.5rem)]"></div>
                 </div>
               ))}
             </div>
