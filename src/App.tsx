@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Dummy from "./components/Dummy";
 import CpClub from "./pages/Clubs/CpClub";
 import DevClub from "./pages/Clubs/DevClub";
+import RoboticsClub from "./pages/Clubs/RoboticsClub";
 
 // Lazy load pages for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -53,6 +54,7 @@ const App = () => (
             <Route path="/test" element={<Dummy />} />
             <Route path="/cp" element={<CpClub />} />
             <Route path="/dev" element={<DevClub />} />
+            <Route path="/robotics" element={<RoboticsClub />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

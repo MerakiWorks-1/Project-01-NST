@@ -6,21 +6,6 @@ import { Calendar, Clock, Code, Trophy, Users, Target, Star, Award, Zap } from "
 export default function CpClub() {
   return (
     <div className="min-h-screen bg-gradient-to-br ">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Code className="h-8 w-8 text-blue-600" />
-              <div>
-                <h1 className="text-xl font-bold text-blue-900">CP Club</h1>
-                <p className="text-sm text-blue-700">Newton School of Technology</p>
-              </div>
-            </div>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">Join Now</Button>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="py-20 px-4">
@@ -29,8 +14,9 @@ export default function CpClub() {
             <Trophy className="w-4 h-4 mr-1" />
             Aiming for ICPC World Finals Gold
           </Badge>
+          <h3 className="text-5xl font-bold text-blue-900 mb-6">OOPS - Organization of Problem Solvers</h3>
           <h1 className="text-5xl font-bold text-blue-900 mb-6">Competitive Programming Club</h1>
-          <p className="text-xl text-blue-700 mb-8 max-w-3xl mx-auto">Newton School of Technology, Sonipat</p>
+          <p className="text-xl text-blue-700 mb-8 max-w-3xl mx-auto">Newton School of Technology</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100">
               <div className="text-3xl font-bold text-blue-600">50+</div>
@@ -134,7 +120,7 @@ export default function CpClub() {
                 <CardTitle className="text-purple-800">Expert</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-3xl font-bold text-purple-600">1</div>
+                <div className="text-3xl font-bold text-purple-600">2</div>
               </CardContent>
             </Card>
             <Card className="text-center border-blue-200 bg-blue-50">
@@ -145,7 +131,7 @@ export default function CpClub() {
                 <CardTitle className="text-blue-800">Specialists</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-3xl font-bold text-blue-600">3</div>
+                <div className="text-3xl font-bold text-blue-600">2</div>
               </CardContent>
             </Card>
             <Card className="text-center border-green-200 bg-green-50">
@@ -287,31 +273,6 @@ export default function CpClub() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-white text-blue-900 py-12 px-4 border-t border-blue-100">
-        <div className="container mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Code className="h-6 w-6 text-blue-600" />
-            <span className="text-xl font-bold">CP Club</span>
-          </div>
-          <p className="text-blue-700 mb-6">Newton School of Technology, Sonipat</p>
-          <div className="flex justify-center gap-6 mb-6">
-            <Badge variant="outline" className="text-blue-700 border-blue-300">
-              CodeChef
-            </Badge>
-            <Badge variant="outline" className="text-blue-700 border-blue-300">
-              Codeforces
-            </Badge>
-            <Badge variant="outline" className="text-blue-700 border-blue-300">
-              LeetCode
-            </Badge>
-            <Badge variant="outline" className="text-blue-700 border-blue-300">
-              ICPC
-            </Badge>
-          </div>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white">Ready to Join? Get Started</Button>
-        </div>
-      </footer>
     </div>
   )
 }
