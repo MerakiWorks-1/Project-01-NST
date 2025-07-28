@@ -38,4 +38,3 @@ const Clubs = () => {
 };
 
 export default Clubs;
-l
