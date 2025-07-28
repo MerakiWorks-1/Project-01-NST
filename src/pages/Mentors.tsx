@@ -8,99 +8,28 @@ import { Calendar, Star, Users, MessageCircle } from "lucide-react";
 import DotGrid from "../components/DotGrid/DotGrid";
 
 const Mentors = () => {
-  const mentors = [
-    {
-      id: 1,
-      name: "Priya Sharma",
-      expertise: ["React", "Node.js", "System Design"],
-      year: "4th Year",
-      department: "Computer Science",
-      rating: 4.9,
-      sessions: 127,
-      bio: "Full-stack developer with experience in building scalable web applications. Passionate about helping students master modern web technologies.",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    },
-    {
-      id: 2,
-      name: "Arjun Patel",
-      expertise: ["Python", "Machine Learning", "Data Science"],
-      year: "3rd Year",
-      department: "Data Science",
-      rating: 4.8,
-      sessions: 89,
-      bio: "Data science enthusiast with hands-on experience in ML projects. Love sharing knowledge about Python and statistical analysis.",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    },
-    {
-      id: 3,
-      name: "Sneha Reddy",
-      expertise: ["UI/UX", "Figma", "Design Systems"],
-      year: "4th Year",
-      department: "Design",
-      rating: 4.9,
-      sessions: 156,
-      bio: "Creative designer focused on user experience and interface design. Helping students build design thinking and practical skills.",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    },
-    {
-      id: 4,
-      name: "Rohit Kumar",
-      expertise: ["DevOps", "AWS", "Docker"],
-      year: "4th Year",
-      department: "Computer Science",
-      rating: 4.7,
-      sessions: 94,
-      bio: "Cloud infrastructure specialist with expertise in containerization and deployment. Passionate about automation and best practices.",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    },
-    {
-      id: 5,
-      name: "Kavya Nair",
-      expertise: ["Mobile Dev", "Flutter", "React Native"],
-      year: "3rd Year",
-      department: "Computer Science",
-      rating: 4.8,
-      sessions: 73,
-      bio: "Mobile application developer with experience in cross-platform development. Love helping students build their first mobile apps.",
-      image:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face",
-    },
-    {
-      id: 6,
-      name: "Vikram Singh",
-      expertise: ["Blockchain", "Web3", "Smart Contracts"],
-      year: "4th Year",
-      department: "Computer Science",
-      rating: 4.6,
-      sessions: 52,
-      bio: "Blockchain developer exploring decentralized technologies. Eager to share knowledge about Web3 and cryptocurrency development.",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-white/95">
-      <div style={{ width: "100vw", height: "98vh", position: "absolute", zIndex: 0 }}>
-          <DotGrid
-            dotSize={10}
-            gap={15}
-            // Updated baseColor to a light, subtle blue for the light theme
-            baseColor="#dbeafe" // This corresponds to Tailwind's `blue-100`
-            // Active color is a stronger blue for contrast on the light background
-            activeColor="#3b82f6" // This corresponds to Tailwind's `blue-500`
-            proximity={150}
-            shockRadius={250}
-            shockStrength={5}
-            resistance={750}
-            returnDuration={1.5}
-          >
-          </DotGrid>
-        </div>
+      <div
+        style={{
+          width: "100vw",
+          height: "98vh",
+          position: "absolute",
+          zIndex: 0,
+        }}
+      >
+        <DotGrid
+          dotSize={10}
+          gap={15}
+          baseColor="#dbeafe"
+          activeColor="#3b82f6"
+          proximity={150}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        />
+      </div>
       {/* <Navigation /> */}
       <Dummy />
 
@@ -109,11 +38,15 @@ const Mentors = () => {
         <div className="container mx-auto px-6 pb-10">
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up delay-100">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
-              Student Mentors
+              🌱 Junior Mentorship Culture at NST
             </h1>
             <p className="text-xl text-gray-800 font-medium mb-8">
-              Connect with experienced students who can guide you through your
-              academic journey
+              “Culture does not make people, people make the culture.”
+              <br />
+              At NST, we believe that the transition into college life should
+              feel less like a leap and more like a warm welcome. That’s why
+              we’ve launched the Junior Mentorship Culture — a student-led
+              initiative designed to make our newest members feel right at home.
             </p>
             <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-200">
               <Button
@@ -140,12 +73,16 @@ const Mentors = () => {
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-4 gap-6 text-center">
               {[
-                { label: "Active Mentors", value: "50+" },
-                { label: "Sessions Completed", value: "1,200+" },
-                { label: "Average Rating", value: "4.8/5" },
-                { label: "Success Rate", value: "95%" },
+                { label: "Passionate Mentors", value: "29" },
+                { label: "Batches Connected", value: "3+" },
+                { label: "Avg. Session/Month", value: "100+" },
+                { label: "Success Stories", value: "Countless" },
               ].map((stat, idx) => (
-                <div key={stat.label} className="animate-fade-in-up" style={{ animationDelay: `${0.25 + idx * 0.07}s` }}>
+                <div
+                  key={stat.label}
+                  className="animate-fade-in-up"
+                  style={{ animationDelay: `${0.25 + idx * 0.07}s` }}
+                >
                   <div className="text-3xl font-bold text-blue-900 mb-2">
                     {stat.value}
                   </div>
@@ -157,70 +94,107 @@ const Mentors = () => {
         </section>
       </section>
 
-      {/* Mentors Grid */}
+      {/* What Is the Junior Mentorship Culture */}
       <section className="py-2">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in-up delay-100">
             <h2 className="text-4xl font-bold mb-6 text-blue-900">
-              Meet Your Mentors
+              🤝 What Is the Junior Mentorship Culture?
             </h2>
             <p className="text-gray-700 font-medium max-w-2xl mx-auto">
-              Our student mentors are carefully selected based on their academic
-              excellence and willingness to help fellow students succeed.
+              The Junior Mentorship Culture is a carefully curated support
+              system where second and third-year students volunteer as mentors
+              to guide the incoming batch of freshers. These mentors act as the
+              first point of contact — friends, guides, and motivators — helping
+              juniors adjust, grow, and thrive in their new academic journey.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mentors.map((mentor, idx) => (
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                name: "Aarav Sharma",
+                role: "Web Dev & Academics",
+                desc: "Loves React, hackathons, and helping juniors ace their first semester.",
+                img: "https://randomuser.me/api/portraits/men/32.jpg",
+              },
+              {
+                name: "Priya Mehta",
+                role: "AI/ML & Campus Life",
+                desc: "Passionate about AI, always up for a coffee chat and career advice.",
+                img: "https://randomuser.me/api/portraits/women/44.jpg",
+              },
+              {
+                name: "Rohan Gupta",
+                role: "Robotics & Motivation",
+                desc: "Robotics enthusiast, motivator, and your go-to for project ideas.",
+                img: "https://randomuser.me/api/portraits/men/65.jpg",
+              },
+            ].map((mentor, idx) => (
               <Card
-                key={mentor.id}
+                key={mentor.name}
+                className="overflow-hidden border border-blue-200 bg-white hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.13 + idx * 0.09}s` }}
+              >
+                <CardHeader className="flex flex-col items-center pt-8">
+                  <img
+                    src={mentor.img}
+                    alt={mentor.name}
+                    className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-blue-100 shadow"
+                  />
+                  <h4 className="text-lg font-bold text-blue-900">
+                    {mentor.name}
+                  </h4>
+                  <span className="text-blue-700 text-sm mb-2">
+                    {mentor.role}
+                  </span>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 text-center text-sm">
+                    {mentor.desc}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Academic & Personal Guidance",
+                desc: "Mentors provide both academic and personal guidance, helping juniors navigate campus life, resources, and opportunities.",
+                icon: <Star className="w-8 h-8 text-yellow-500 mx-auto mb-3" />,
+              },
+              {
+                title: "Emotional Support",
+                desc: "Mentors offer a listening ear and foster a safe, encouraging space for growth and well-being.",
+                icon: <Users className="w-8 h-8 text-blue-600 mx-auto mb-3" />,
+              },
+              {
+                title: "Culture of Hype & Care",
+                desc: "Mentors are not just here to help — they’re here to hype you up and make you feel at home!",
+                icon: (
+                  <Badge className="bg-blue-100 text-blue-800 mx-auto mb-3">
+                    Vibe
+                  </Badge>
+                ),
+              },
+            ].map((item, idx) => (
+              <Card
+                key={item.title}
                 className="group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${0.18 + idx * 0.09}s` }}
               >
                 <CardHeader className="text-center pt-8">
-                  <div className="relative mx-auto mb-4">
-                    <img
-                      src={mentor.image}
-                      alt={mentor.name}
-                      className="w-24 h-24 rounded-full object-cover mx-auto border-4 border-white shadow-md"
-                    />
-                  </div>
+                  <div className="relative mx-auto mb-4">{item.icon}</div>
                   <h3 className="text-xl font-semibold text-blue-950">
-                    {mentor.name}
+                    {item.title}
                   </h3>
-                  <p className="text-blue-700 font-medium">
-                    {mentor.year} • {mentor.department}
-                  </p>
                 </CardHeader>
-
-                <CardContent className="space-y-4 px-6 pb-6">
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {mentor.expertise.map((skill) => (
-                      <Badge key={skill} className="bg-blue-100 text-blue-800 border-blue-200">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-
+                <CardContent>
                   <p className="text-gray-700 text-sm text-center pt-2">
-                    {mentor.bio}
+                    {item.desc}
                   </p>
-
-                  <div className="flex justify-between items-center text-sm text-gray-600 pt-2 border-t border-blue-100">
-                    <div className=" flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-500 fill-yellow-400" />
-                      <span className="font-semibold">{mentor.rating}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Users className="w-4 h-4" />
-                      <span>{mentor.sessions} sessions</span>
-                    </div>
-                  </div>
-
-                  <Button className="w-full bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg cursor-pointer transition-all duration-300 hover:scale-105">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Book Session
-                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -228,35 +202,38 @@ const Mentors = () => {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Why This Culture Matters */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="container mx-auto px-6">
           <h3 className="text-3xl font-bold text-center mb-12 text-blue-900 animate-fade-in-up delay-100">
-            How Mentoring Works
+            💬 Why This Culture Matters
           </h3>
-
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 step: "01",
-                title: "Choose Your Mentor",
+                title: "Smooth Transition",
                 description:
-                  "Browse mentor profiles and select based on your learning goals and their expertise.",
+                  "Starting college can be overwhelming — but with someone walking beside you, the path feels a lot less lonely. Our mentorship culture eases the transition into college life.",
               },
               {
                 step: "02",
-                title: "Schedule Session",
+                title: "Bonding & Empathy",
                 description:
-                  "Book a convenient time slot and specify what you'd like to learn or discuss.",
+                  "We build long-lasting bonds across batches and promote a culture of empathy, collaboration, and open communication.",
               },
               {
                 step: "03",
-                title: "Learn & Grow",
+                title: "Empowerment & Community",
                 description:
-                  "Join the session, ask questions, get guidance, and accelerate your learning journey.",
+                  "Juniors gain confidence, clarity, and a strong support network that genuinely cares.",
               },
             ].map((item, idx) => (
-              <div key={item.step} className="text-center animate-fade-in-up" style={{ animationDelay: `${0.22 + idx * 0.09}s` }}>
+              <div
+                key={item.step}
+                className="text-center animate-fade-in-up"
+                style={{ animationDelay: `${0.22 + idx * 0.09}s` }}
+              >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-2xl font-bold text-white">
                     {item.step}
@@ -268,6 +245,94 @@ const Mentors = () => {
                 <p className="text-gray-700">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What Juniors Can Expect */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12 animate-fade-in-up delay-100">
+            <h2 className="text-3xl font-bold mb-6 text-blue-900">
+              🪄 What Juniors Can Expect
+            </h2>
+            <p className="text-gray-700 font-medium max-w-2xl mx-auto">
+              Regular one-on-one catch-ups, group bonding sessions, academic and
+              career insight sharing, personal growth challenges, and an
+              approachable support network that genuinely cares.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                label: "1:1 Catch-ups",
+                desc: "Personalized guidance and regular check-ins.",
+                icon: (
+                  <Calendar className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                ),
+              },
+              {
+                label: "Group Mixers",
+                desc: "Fun bonding sessions and group activities.",
+                icon: <Users className="w-8 h-8 text-green-600 mx-auto mb-3" />,
+              },
+              {
+                label: "Growth Challenges",
+                desc: "Academic, career, and personal growth support.",
+                icon: <Star className="w-8 h-8 text-yellow-500 mx-auto mb-3" />,
+              },
+              {
+                label: "Support Network",
+                desc: "A safe, approachable, and caring community.",
+                icon: (
+                  <Badge className="bg-blue-100 text-blue-800 mx-auto mb-3">
+                    Care
+                  </Badge>
+                ),
+              },
+            ].map((item, idx) => (
+              <Card
+                key={item.label}
+                className="group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.18 + idx * 0.09}s` }}
+              >
+                <CardHeader className="text-center pt-8">
+                  <div className="relative mx-auto mb-4">{item.icon}</div>
+                  <h3 className="text-xl font-semibold text-blue-950">
+                    {item.label}
+                  </h3>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 text-sm text-center pt-2">
+                    {item.desc}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The NST Promise */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto animate-fade-in-up delay-100">
+            <h2 className="text-3xl font-bold mb-6 text-blue-900">
+              🚀 The NST Promise
+            </h2>
+            <p className="text-xl text-gray-800 font-medium mb-8">
+              This isn’t just a program — it’s a culture. A tradition we hope to
+              build stronger with each new batch. A culture of connection,
+              support, and shared success.
+              <br />
+              <br />
+              We’re excited to see the Junior Mentorship Culture grow and evolve
+              as more students step up to give back, support others, and lead
+              with heart.
+            </p>
+            <div className="text-2xl font-semibold text-blue-700 mb-4">
+              Let’s build something beautiful — together.
+            </div>
           </div>
         </div>
       </section>
