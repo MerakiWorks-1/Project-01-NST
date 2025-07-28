@@ -4,6 +4,7 @@ import { Linkedin, X } from "lucide-react";
 import { facultyMembers, mentorList } from "../data/data";
 import Dummy from "@/components/Dummy"; // Import Navbar
 import Footer from "@/components/Footer"; // Import Footer
+import ExpertSessionsSection from "./ExpertSessionsSection";
 
 // --- TYPE DEFINITIONS (for TSX) ---
 interface Person {
@@ -27,14 +28,19 @@ const CardItem = ({ person }: { person: Person }) => (
           // UPDATED: Reverted to object-cover and added object-top to prioritize the face
           className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110"
           onError={(e) => {
-            e.currentTarget.src = `https://ui-avatars.com/api/?name=${person.name.replace(" ", "+")}&background=3b82f6&color=fff&size=200`;
+            e.currentTarget.src = `https://ui-avatars.com/api/?name=${person.name.replace(
+              " ",
+              "+"
+            )}&background=3b82f6&color=fff&size=200`;
           }}
         />
       </div>
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div>
           <h3 className="text-lg font-bold text-blue-950">{person.name}</h3>
-          <p className="text-sm text-blue-700 mt-1 line-clamp-3 min-h-[60px]">{person.bio}</p>
+          <p className="text-sm text-blue-700 mt-1 line-clamp-3 min-h-[60px]">
+            {person.bio}
+          </p>
         </div>
         <div className="mt-3 flex flex-wrap gap-2 items-center justify-center min-h-[24px]">
           {person.badges?.map((logo, idx) => (
@@ -74,7 +80,7 @@ const FlowingCardsSection = ({
   sectionId: string;
 }) => {
   const [showAll, setShowAll] = useState(false);
-  const animationDuration = data.length * 5; 
+  const animationDuration = data.length * 5;
 
   return (
     <div className="mb-16">
@@ -92,12 +98,15 @@ const FlowingCardsSection = ({
             transition={{ duration: 0.5 }}
           >
             <div className="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-              <div 
+              <div
                 className="flex w-max animate-scroll hover:[animation-play-state:paused]"
                 style={{ animationDuration: `${animationDuration}s` }}
               >
                 {[...data, ...data].map((person, index) => (
-                  <div key={`${sectionId}-${person.id}-${index}`} className="flex-shrink-0 mx-3">
+                  <div
+                    key={`${sectionId}-${person.id}-${index}`}
+                    className="flex-shrink-0 mx-3"
+                  >
                     <CardItem person={person} />
                   </div>
                 ))}
@@ -127,7 +136,7 @@ const FlowingCardsSection = ({
             >
               <X className="h-5 w-5" />
             </button>
-            <motion.div 
+            <motion.div
               className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6"
               variants={{
                 hidden: { opacity: 0 },
@@ -142,7 +151,10 @@ const FlowingCardsSection = ({
               {data.map((person) => (
                 <motion.div
                   key={`${sectionId}-grid-${person.id}`}
-                  variants={{ hidden: { y: 20, opacity: 0 }, show: { y: 0, opacity: 1 } }}
+                  variants={{
+                    hidden: { y: 20, opacity: 0 },
+                    show: { y: 0, opacity: 1 },
+                  }}
                   className="flex justify-center"
                 >
                   <CardItem person={person} />
@@ -166,33 +178,34 @@ const FlowingCardsSection = ({
 
 const AcademicsFaculty = () => {
   return (
-    <div className="min-h-screen bg-white/95">
-      <Dummy />
-      <section className="pt-20 bg-gradient-to-br from-white via-blue-50/40 to-indigo-50/40 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-blue-700 to-indigo-600 bg-clip-text text-transparent">
-              Academics & Faculty
-            </h2>
-            <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed">
-              Learn from world-class educators and industry experts who are
-              passionate about shaping the next generation of innovators.
-            </p>
+    <>
+      <div className="min-h-screen bg-white/95">
+        <Dummy />
+        <section className="pt-20 bg-gradient-to-br from-white via-blue-50/40 to-indigo-50/40 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]" />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-blue-700 to-indigo-600 bg-clip-text text-transparent">
+                Academics & Faculty
+              </h2>
+              <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed">
+                Learn from world-class educators and industry experts who are
+                passionate about shaping the next generation of innovators.
+              </p>
+            </div>
+            <FlowingCardsSection
+              title="Our Distinguished Faculty"
+              data={facultyMembers}
+              sectionId="faculty"
+            />
+            <FlowingCardsSection
+              title="Industry Mentors"
+              data={mentorList}
+              sectionId="mentors"
+            />
           </div>
-          <FlowingCardsSection
-            title="Our Distinguished Faculty"
-            data={facultyMembers}
-            sectionId="faculty"
-          />
-          <FlowingCardsSection
-            title="Industry Mentors"
-            data={mentorList}
-            sectionId="mentors"
-          />
-        </div>
-        <style>{`
+          <style>{`
           @keyframes scroll {
             from { transform: translateX(0); }
             to { transform: translateX(-50%); }
@@ -207,9 +220,11 @@ const AcademicsFaculty = () => {
             overflow: hidden;
           }
         `}</style>
-      </section>
-      <Footer />
-    </div>
+        </section>
+        <ExpertSessionsSection />
+        <Footer />
+      </div>
+    </>
   );
 };
 

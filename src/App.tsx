@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import NotFound from "./pages/NotFound";
-import Dummy from "./components/Dummy";
 import CpClub from "./pages/Clubs/CpClub";
 import DevClub from "./pages/Clubs/DevClub";
 import RoboticsClub from "./pages/Clubs/RoboticsClub";
