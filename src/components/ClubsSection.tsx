@@ -1,148 +1,114 @@
-import { ArrowRight, Users, Code, Palette, Music, Trophy, Cpu } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Users, Code, Mic, Brush, Gamepad, Film } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 const ClubsSection = () => {
   const clubs = [
     {
-      id: 1,
       name: "Coding Club",
-      description: "Master programming languages and participate in hackathons",
+      description: "For aspiring developers and competitive programmers.",
+      members: "250+ Members",
       icon: Code,
-      members: 120,
-      category: "Technical",
-      color: "primary"
+      tags: ["Development", "CP", "Web", "App"],
     },
     {
-      id: 2,
-      name: "Design Studio",
-      description: "UI/UX design, graphics, and creative digital solutions",
-      icon: Palette,
-      members: 85,
-      category: "Creative",
-      color: "accent"
+      name: "Orators Club",
+      description: "Hone your public speaking and communication skills.",
+      members: "120+ Members",
+      icon: Mic,
+      tags: ["Public Speaking", "Debate", "MUN"],
     },
     {
-      id: 3,
-      name: "Music Society",
-      description: "Campus events, cultural performances, and music production",
-      icon: Music,
-      members: 95,
-      category: "Cultural",
-      color: "primary"
+      name: "Design & Arts Society",
+      description: "A community for creative minds and visual artists.",
+      members: "180+ Members",
+      icon: Brush,
+      tags: ["UI/UX", "Graphics", "Fine Arts"],
     },
     {
-      id: 4,
-      name: "Sports Arena",
-      description: "Inter-college competitions and fitness activities",
-      icon: Trophy,
-      members: 150,
-      category: "Sports",
-      color: "accent"
+      name: "E-Sports Guild",
+      description: "Compete in popular gaming titles and tournaments.",
+      members: "300+ Members",
+      icon: Gamepad,
+      tags: ["Gaming", "Tournaments", "Strategy"],
     },
     {
-      id: 5,
-      name: "AI/ML Club",
-      description: "Machine learning projects and research initiatives",
-      icon: Cpu,
-      members: 110,
-      category: "Technical",
-      color: "primary"
+      name: "Film & Photography Club",
+      description: "Capture moments and tell stories through visuals.",
+      members: "150+ Members",
+      icon: Film,
+      tags: ["Filmmaking", "Photography", "Editing"],
     },
     {
-      id: 6,
-      name: "Student Council",
-      description: "Student representation and campus governance",
+      name: "Entrepreneurship Cell",
+      description: "Nurturing the next generation of startup founders.",
+      members: "200+ Members",
       icon: Users,
-      members: 25,
-      category: "Leadership",
-      color: "accent"
-    }
+      tags: ["Startups", "Business", "Innovation"],
+    },
   ];
 
   return (
-    <section id="clubs" className="py-20 bg-transparent">
+    <section id="clubs" className="py-20">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up delay-100">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Clubs & 
-            <span className="bg-gradient-primary bg-clip-text text-transparent"> Societies</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+            Clubs & Societies
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 font-medium max-w-3xl mx-auto">
             Join vibrant communities, develop new skills, and make lifelong connections through our diverse range of student organizations.
           </p>
         </div>
 
         {/* Clubs Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {clubs.map((club, idx) => {
             const IconComponent = club.icon;
             return (
-              <Card 
-                key={club.id} 
-                className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-card border-border animate-fade-in-up"
-                style={{ animationDelay: `${0.18 + idx * 0.09}s` }}
+              <Card
+                key={club.name}
+                className="group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.18 + idx * 0.07}s` }}
               >
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-lg ${
-                      club.color === 'primary' ? 'bg-primary/10' : 'bg-accent/10'
-                    }`}>
-                      <IconComponent className={`h-6 w-6 ${
-                        club.color === 'primary' ? 'text-primary' : 'text-accent'
-                      }`} />
+                <div className="relative z-10">
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                      <div className="p-4 rounded-xl bg-blue-100/80 mb-4">
+                        <IconComponent className="h-8 w-8 text-blue-700" />
+                      </div>
+                      <Badge className="bg-blue-100 text-blue-800 border-blue-200">
+                        {club.members}
+                      </Badge>
                     </div>
-                    <span className="text-sm text-muted-foreground bg-secondary px-3 py-1 rounded-full">
-                      {club.category}
-                    </span>
-                  </div>
-                  <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
-                    {club.name}
-                  </CardTitle>
-                  <CardDescription className="text-muted-foreground">
-                    {club.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                      <Users className="h-4 w-4" />
-                      <span>{club.members} members</span>
+                    <CardTitle className="text-xl text-blue-950">{club.name}</CardTitle>
+                    <CardDescription className="text-gray-700 pt-1">
+                      {club.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {club.tags.map((tag) => (
+                        <Badge key={tag} variant="outline" className="border-blue-300 text-blue-700">
+                          {tag}
+                        </Badge>
+                      ))}
                     </div>
-                  </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
-                  >
-                    Join Club
-                    <ArrowRight className="ml-2 h-4 w-4 hover:translate-x-1 transition-transform" />
-                  </Button>
-                </CardContent>
+                    <Button
+                      variant="outline"
+                      className="w-full border-blue-300 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
+                    >
+                      Join Community
+                    </Button>
+                  </CardContent>
+                </div>
+                {/* Hover Effects */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
               </Card>
             );
           })}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center animate-fade-in-up delay-400">
-          <div className="bg-secondary rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Ready to Get Involved?
-            </h3>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Explore all our clubs and societies. Find your passion, develop leadership skills, and create amazing memories.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 hover:scale-105">
-                Browse All Clubs
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="transition-all duration-300 hover:scale-105">
-                Start a New Club
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

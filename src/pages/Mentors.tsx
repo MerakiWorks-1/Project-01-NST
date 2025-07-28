@@ -83,25 +83,25 @@ const Mentors = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white/95">
       {/* <Navigation /> */}
       <Dummy />
 
       {/* Hero Section */}
-      <section className="pt-40 pb-10 bg-gradient-to-br from-[hsl(217_15%_7%)]  to-card">
+      <section className="pt-40 pb-10 bg-gradient-to-br from-blue-50 to-indigo-50 border-b border-blue-200">
         <div className="container mx-auto px-6 pb-10">
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up delay-100">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
               Student Mentors
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-gray-800 font-medium mb-8">
               Connect with experienced students who can guide you through your
               academic journey
             </p>
             <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-200">
               <Button
                 size="lg"
-                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book a Session
@@ -109,7 +109,7 @@ const Mentors = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="transition-all duration-300 hover:scale-105"
+                className="border-blue-300 text-blue-700 hover:bg-blue-50 transition-all duration-300 hover:scale-105"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Join Community
@@ -129,10 +129,10 @@ const Mentors = () => {
                 { label: "Success Rate", value: "95%" },
               ].map((stat, idx) => (
                 <div key={stat.label} className="animate-fade-in-up" style={{ animationDelay: `${0.25 + idx * 0.07}s` }}>
-                  <div className="text-3xl font-bold text-primary mb-2">
+                  <div className="text-3xl font-bold text-blue-900 mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-muted-foreground">{stat.label}</div>
+                  <div className="text-gray-700">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -144,10 +144,10 @@ const Mentors = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in-up delay-100">
-            <h2 className="text-4xl font-bold mb-6 text-foreground">
+            <h2 className="text-4xl font-bold mb-6 text-blue-900">
               Meet Your Mentors
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-gray-700 font-medium max-w-2xl mx-auto">
               Our student mentors are carefully selected based on their academic
               excellence and willingness to help fellow students succeed.
             </p>
@@ -157,42 +157,42 @@ const Mentors = () => {
             {mentors.map((mentor, idx) => (
               <Card
                 key={mentor.id}
-                className="transition-all duration-300 animate-fade-in-up"
+                className="group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${0.18 + idx * 0.09}s` }}
               >
-                <CardHeader className="text-center">
+                <CardHeader className="text-center pt-8">
                   <div className="relative mx-auto mb-4">
                     <img
                       src={mentor.image}
                       alt={mentor.name}
-                      className="w-24 h-24 rounded-full object-cover mx-auto"
+                      className="w-24 h-24 rounded-full object-cover mx-auto border-4 border-white shadow-md"
                     />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">
+                  <h3 className="text-xl font-semibold text-blue-950">
                     {mentor.name}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-blue-700 font-medium">
                     {mentor.year} • {mentor.department}
                   </p>
                 </CardHeader>
 
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 px-6 pb-6">
                   <div className="flex flex-wrap gap-2 justify-center">
                     {mentor.expertise.map((skill) => (
-                      <Badge key={skill} variant="secondary">
+                      <Badge key={skill} className="bg-blue-100 text-blue-800 border-blue-200">
                         {skill}
                       </Badge>
                     ))}
                   </div>
 
-                  <p className="text-muted-foreground text-sm text-center">
+                  <p className="text-gray-700 text-sm text-center pt-2">
                     {mentor.bio}
                   </p>
 
-                  <div className="flex justify-between items-center text-sm text-muted-foreground">
+                  <div className="flex justify-between items-center text-sm text-gray-600 pt-2 border-t border-blue-100">
                     <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                      <span>{mentor.rating}</span>
+                      <Star className="w-4 h-4 text-yellow-500 fill-yellow-400" />
+                      <span className="font-semibold">{mentor.rating}</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <Users className="w-4 h-4" />
@@ -200,11 +200,13 @@ const Mentors = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full bg-gradient-primary hover:shadow-glow cursor-pointer transition-all duration-300 hover:scale-105">
+                  <Button className="w-full bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg cursor-pointer transition-all duration-300 hover:scale-105">
                     <Calendar className="w-4 h-4 mr-2" />
                     Book Session
                   </Button>
                 </CardContent>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
               </Card>
             ))}
           </div>
@@ -212,9 +214,9 @@ const Mentors = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-card">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="container mx-auto px-6">
-          <h3 className="text-3xl font-bold text-center mb-12 text-foreground animate-fade-in-up delay-100">
+          <h3 className="text-3xl font-bold text-center mb-12 text-blue-900 animate-fade-in-up delay-100">
             How Mentoring Works
           </h3>
 
@@ -240,15 +242,15 @@ const Mentors = () => {
               },
             ].map((item, idx) => (
               <div key={item.step} className="text-center animate-fade-in-up" style={{ animationDelay: `${0.22 + idx * 0.09}s` }}>
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-primary-foreground">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">
                     {item.step}
                   </span>
                 </div>
-                <h4 className="text-xl font-semibold mb-4 text-foreground">
+                <h4 className="text-xl font-semibold mb-4 text-blue-900">
                   {item.title}
                 </h4>
-                <p className="text-muted-foreground">{item.description}</p>
+                <p className="text-gray-700">{item.description}</p>
               </div>
             ))}
           </div>

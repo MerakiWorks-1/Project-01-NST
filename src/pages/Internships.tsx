@@ -99,25 +99,25 @@ const Internships = () => {
   ];
 
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen bg-white/95">
       {/* <Navigation /> */}
       <Dummy />
 
       {/* Hero Section */}
-      <section className="pt-40 pb-20 bg-gradient-to-br from-[hsl(217_15%_7%)]  to-card">
+      <section className="pt-40 pb-20 bg-gradient-to-br from-blue-50 to-indigo-50 border-b border-blue-200">
         <div className="container mx-auto px-6 pb-10">
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up delay-100">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
               Internships & Projects
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-gray-800 font-medium mb-8">
               Gain real-world experience and build your professional portfolio
               with industry internships
             </p>
             <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-200">
               <Button
                 size="lg"
-                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Browse Opportunities
@@ -125,7 +125,7 @@ const Internships = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="transition-all duration-300 hover:scale-105"
+                className="border-blue-300 text-blue-700 hover:bg-blue-50 transition-all duration-300 hover:scale-105"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Career Resources
@@ -145,10 +145,10 @@ const Internships = () => {
                 { label: "Placement Rate", value: "92%" },
               ].map((stat, idx) => (
                 <div key={stat.label} style={{ animationDelay: `${0.35 + idx * 0.07}s` }} className="animate-fade-in-up">
-                  <div className="text-3xl font-bold text-primary mb-2">
+                  <div className="text-3xl font-bold text-blue-900 mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-muted-foreground">{stat.label}</div>
+                  <div className="text-gray-700">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -160,10 +160,10 @@ const Internships = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in-up delay-100">
-            <h2 className="text-4xl font-bold mb-6 text-foreground">
+            <h2 className="text-4xl font-bold mb-6 text-blue-900">
               Current Opportunities
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-gray-700 font-medium max-w-2xl mx-auto">
               Explore internship opportunities from top companies and startups
               across various technology domains.
             </p>
@@ -173,7 +173,7 @@ const Internships = () => {
             {internships.map((internship, idx) => (
               <Card
                 key={internship.id}
-                className="hover:shadow-glow transition-all duration-300 animate-fade-in-up"
+                className="group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${0.18 + idx * 0.09}s` }}
               >
                 <CardHeader>
@@ -182,20 +182,22 @@ const Internships = () => {
                       <img
                         src={internship.logo}
                         alt={internship.company}
-                        className="w-12 h-12 rounded-lg object-cover"
+                        className="w-12 h-12 rounded-lg object-cover border border-blue-100"
                       />
                       <div>
-                        <CardTitle className="text-lg">
+                        <CardTitle className="text-xl text-blue-950">
                           {internship.role}
                         </CardTitle>
-                        <p className="text-muted-foreground">
+                        <p className="font-medium text-blue-700">
                           {internship.company}
                         </p>
                       </div>
                     </div>
                     <Badge
-                      variant={
-                        internship.type === "Remote" ? "default" : "secondary"
+                      className={
+                        internship.type === "Remote"
+                          ? "bg-blue-600 text-white"
+                          : "bg-blue-100 text-blue-800"
                       }
                     >
                       {internship.type}
@@ -204,54 +206,56 @@ const Internships = () => {
                 </CardHeader>
 
                 <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-700">
                     {internship.description}
                   </p>
 
                   <div className="flex flex-wrap gap-2">
                     {internship.skills.map((skill) => (
-                      <Badge key={skill} variant="outline" className="text-xs">
+                      <Badge key={skill} variant="outline" className="text-xs border-blue-300 text-blue-700">
                         {skill}
                       </Badge>
                     ))}
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="grid grid-cols-2 gap-4 text-sm pt-2 border-t border-blue-100">
                     <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-muted-foreground">
+                      <MapPin className="w-4 h-4 text-gray-600" />
+                      <span className="text-gray-700">
                         {internship.location}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-muted-foreground">
+                      <Clock className="w-4 h-4 text-gray-600" />
+                      <span className="text-gray-700">
                         {internship.duration}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <DollarSign className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-muted-foreground">
+                      <DollarSign className="w-4 h-4 text-gray-600" />
+                      <span className="text-gray-700">
                         {internship.stipend}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Building className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-muted-foreground">Tech</span>
+                      <Building className="w-4 h-4 text-gray-600" />
+                      <span className="text-gray-700">Tech</span>
                     </div>
                   </div>
 
-                  <Button className="w-full bg-gradient-primary hover:scale-105 transition-all duration-300">
+                  <Button className="w-full bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Apply Now
                   </Button>
                 </CardContent>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
               </Card>
             ))}
           </div>
 
           <div className="text-center mt-12 animate-fade-in-up delay-400">
-            <Button variant="outline" size="lg" className="hover:scale-105 transition-all duration-300">
+            <Button variant="outline" size="lg" className="border-blue-300 text-blue-700 hover:bg-blue-50 hover:scale-105 transition-all duration-300">
               View All Opportunities
             </Button>
           </div>
@@ -259,13 +263,13 @@ const Internships = () => {
       </section>
 
       {/* Portfolio Building */}
-      <section className="py-20 bg-card">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in-up delay-100">
-            <h3 className="text-3xl font-bold mb-6 text-foreground">
+            <h3 className="text-3xl font-bold mb-6 text-blue-900">
               Portfolio Building Toolkit
             </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-gray-700 font-medium max-w-2xl mx-auto">
               Access professional tools and templates to create an impressive
               portfolio and resume that stands out to employers.
             </p>
@@ -275,24 +279,26 @@ const Internships = () => {
             {portfolioTools.map((tool, idx) => (
               <Card
                 key={tool.title}
-                className="text-center group hover:shadow-glow transition-all duration-300 animate-fade-in-up"
+                className="text-center group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${0.22 + idx * 0.09}s` }}
               >
                 <CardHeader>
                   <div className="text-4xl mb-4">{tool.icon}</div>
-                  <CardTitle className="text-lg">{tool.title}</CardTitle>
+                  <CardTitle className="text-xl text-blue-950">{tool.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-gray-700 text-sm">
                     {tool.description}
                   </p>
                   <Button
                     variant="outline"
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground hover:scale-105 transition-all duration-300"
+                    className="w-full border-blue-300 text-blue-700 group-hover:bg-blue-600 group-hover:text-white hover:scale-105 transition-all duration-300"
                   >
                     {tool.action}
                   </Button>
                 </CardContent>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
               </Card>
             ))}
           </div>
@@ -302,47 +308,27 @@ const Internships = () => {
       {/* Application Process */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <h3 className="text-3xl font-bold text-center mb-12 text-foreground animate-fade-in-up delay-100">
+          <h3 className="text-3xl font-bold text-center mb-12 text-blue-900 animate-fade-in-up delay-100">
             How to Apply
           </h3>
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              {
-                step: "01",
-                title: "Browse & Select",
-                description:
-                  "Explore opportunities that match your skills and interests",
-              },
-              {
-                step: "02",
-                title: "Prepare Application",
-                description:
-                  "Use our toolkit to create a compelling resume and portfolio",
-              },
-              {
-                step: "03",
-                title: "Submit & Track",
-                description:
-                  "Apply through our platform and track your application status",
-              },
-              {
-                step: "04",
-                title: "Interview & Start",
-                description:
-                  "Prepare for interviews and begin your internship journey",
-              },
+              { step: "01", title: "Browse & Select", description: "Explore opportunities that match your skills and interests" },
+              { step: "02", title: "Prepare Application", description: "Use our toolkit to create a compelling resume and portfolio" },
+              { step: "03", title: "Submit & Track", description: "Apply through our platform and track your application status" },
+              { step: "04", title: "Interview & Start", description: "Prepare for interviews and begin your internship journey" },
             ].map((item, idx) => (
               <div key={item.step} className="text-center animate-fade-in-up" style={{ animationDelay: `${0.18 + idx * 0.09}s` }}>
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-xl font-bold text-primary-foreground">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-xl font-bold text-white">
                     {item.step}
                   </span>
                 </div>
-                <h4 className="text-lg font-semibold mb-4 text-foreground">
+                <h4 className="text-lg font-semibold mb-4 text-blue-900">
                   {item.title}
                 </h4>
-                <p className="text-muted-foreground">{item.description}</p>
+                <p className="text-gray-700">{item.description}</p>
               </div>
             ))}
           </div>

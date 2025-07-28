@@ -72,7 +72,7 @@ const CampusLifeSection = () => {
         </div>
 
         {/* Accommodation Section */}
-        <div className="mb-16 relative z-10">
+        <div id="accommodation" className="mb-16 relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-8 text-center animate-fade-in-up delay-200">
             Accommodation & Housing
           </h3>
@@ -85,41 +85,43 @@ const CampusLifeSection = () => {
                   className="bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 group animate-fade-in-up relative overflow-hidden"
                   style={{ animationDelay: `${0.25 + idx * 0.09}s` }}
                 >
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="p-3 rounded-lg bg-blue-100/80">
-                        <IconComponent className="h-6 w-6 text-blue-700" />
+                  <div className="relative z-10">
+                    <CardHeader>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="p-3 rounded-lg bg-blue-100/80">
+                          <IconComponent className="h-6 w-6 text-blue-700" />
+                        </div>
+                        <span className="text-sm text-blue-700 bg-blue-50 px-3 py-1 rounded-full font-medium">
+                          {hostel.capacity}
+                        </span>
                       </div>
-                      <span className="text-sm text-blue-700 bg-blue-50 px-3 py-1 rounded-full font-medium">
-                        {hostel.capacity}
-                      </span>
-                    </div>
-                    <CardTitle className="text-xl text-blue-950">{hostel.name}</CardTitle>
-                    <CardDescription className="text-blue-700 font-medium">
-                      {hostel.type}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-blue-900">Features:</h4>
-                      <div className="grid grid-cols-2 gap-2">
-                        {hostel.features.map((feature, index) => (
-                          <div key={index} className="flex items-center text-sm text-gray-700">
-                            <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                            {feature}
-                          </div>
-                        ))}
+                      <CardTitle className="text-xl text-blue-950">{hostel.name}</CardTitle>
+                      <CardDescription className="text-blue-700 font-medium">
+                        {hostel.type}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <h4 className="font-semibold text-blue-900">Features:</h4>
+                        <div className="grid grid-cols-2 gap-2">
+                          {hostel.features.map((feature, index) => (
+                            <div key={index} className="flex items-center text-sm text-gray-700">
+                              <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                              {feature}
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                    <Button
-                      variant="outline"
-                      className="w-full mt-6 border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105 relative z-10"
-                    >
-                      View Floor Plans
-                    </Button>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
-                  </CardContent>
+                      <Button
+                        variant="outline"
+                        className="w-full mt-6 border-blue-300 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
+                      >
+                        View Floor Plans
+                      </Button>
+                    </CardContent>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
                 </Card>
               );
             })}
@@ -127,7 +129,7 @@ const CampusLifeSection = () => {
         </div>
 
         {/* Facilities Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 relative z-10">
+        <div id="facilities" className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 relative z-10">
           {facilities.map((facility, idx) => {
             const IconComponent = facility.icon;
             return (
@@ -136,18 +138,20 @@ const CampusLifeSection = () => {
                 className="text-center group animate-fade-in-up bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden"
                 style={{ animationDelay: `${0.35 + idx * 0.09}s` }}
               >
-                <div className="mx-auto w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-lg transition-all duration-300">
-                  <IconComponent className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-blue-950 mb-3">{facility.title}</h3>
-                <p className="text-gray-700 mb-4">{facility.description}</p>
-                <div className="space-y-1">
-                  {facility.details.map((detail, i) => (
-                    <div key={i} className="text-sm text-gray-700 flex items-center justify-center">
-                      <div className="w-1 h-1 bg-blue-600 rounded-full mr-2"></div>
-                      {detail}
-                    </div>
-                  ))}
+                <div className="relative z-10">
+                  <div className="mx-auto w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-lg transition-all duration-300">
+                    <IconComponent className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-blue-950 mb-3">{facility.title}</h3>
+                  <p className="text-gray-700 mb-4">{facility.description}</p>
+                  <div className="space-y-1">
+                    {facility.details.map((detail, i) => (
+                      <div key={i} className="text-sm text-gray-700 flex items-center justify-center">
+                        <div className="w-1 h-1 bg-blue-600 rounded-full mr-2"></div>
+                        {detail}
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
@@ -158,7 +162,7 @@ const CampusLifeSection = () => {
 
         {/* Virtual Tour CTA */}
         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-8 md:p-12 text-center animate-fade-in-up delay-400 shadow-md relative overflow-hidden">
-          <div className="absolute inset-0 bg-blue-100/20 opacity-50"></div>
+          <div className="absolute inset-0 bg-blue-100/20 opacity-50 -z-10"></div>
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
               Experience Our Campus
