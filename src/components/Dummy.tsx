@@ -45,7 +45,7 @@ const navItems: NavItem[] = [
       },
       {
         name: "Faculty & Office Hours",
-        href: "/academics#faculty",
+        href: "/academics/faculty",
       },
       { name: "Extended Support & FAQs", href: "/support" },
     ],
