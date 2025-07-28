@@ -104,7 +104,7 @@ const Internships = () => {
       <Dummy />
 
       {/* Hero Section */}
-      <section className="pt-40 pb-20 bg-gradient-to-br from-blue-50 to-indigo-50 border-b border-blue-200">
+      <section className="pt-40 pb-20">
         <div className="container mx-auto px-6 pb-10">
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up delay-100">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
@@ -125,7 +125,7 @@ const Internships = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-blue-300 text-blue-700 hover:bg-blue-50 transition-all duration-300 hover:scale-105"
+                className="border-blue-300 text-white hover:bg-blue-50 transition-all duration-300 hover:scale-105"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Career Resources
@@ -157,7 +157,7 @@ const Internships = () => {
       </section>
 
       {/* Current Opportunities */}
-      <section className="py-20">
+      <section className="py-2">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-fade-in-up delay-100">
             <h2 className="text-4xl font-bold mb-6 text-blue-900">
@@ -255,7 +255,7 @@ const Internships = () => {
           </div>
 
           <div className="text-center mt-12 animate-fade-in-up delay-400">
-            <Button variant="outline" size="lg" className="border-blue-300 text-blue-700 hover:bg-blue-50 hover:scale-105 transition-all duration-300">
+            <Button variant="outline" size="lg" className="border-blue-300 text-white hover:bg-blue-50 hover:scale-105 transition-all duration-300">
               View All Opportunities
             </Button>
           </div>
@@ -292,7 +292,7 @@ const Internships = () => {
                   </p>
                   <Button
                     variant="outline"
-                    className="w-full border-blue-300 text-blue-700 group-hover:bg-blue-600 group-hover:text-white hover:scale-105 transition-all duration-300"
+                    className="w-full border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white hover:scale-105 transition-all duration-300"
                   >
                     {tool.action}
                   </Button>
@@ -319,7 +319,7 @@ const Internships = () => {
               { step: "03", title: "Submit & Track", description: "Apply through our platform and track your application status" },
               { step: "04", title: "Interview & Start", description: "Prepare for interviews and begin your internship journey" },
             ].map((item, idx) => (
-              <div key={item.step} className="text-center animate-fade-in-up" style={{ animationDelay: `${0.18 + idx * 0.09}s` }}>
+              <div key={item.step} className="text-center animate-fade-in-up p-6 border border-blue-200 rounded-md" style={{ animationDelay: `${0.18 + idx * 0.09}s` }}>
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-xl font-bold text-white">
                     {item.step}

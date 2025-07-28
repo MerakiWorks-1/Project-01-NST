@@ -1,6 +1,7 @@
-import { ArrowRight, Play } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import campusHero from '@/assets/campus-hero.jpg';
+import { ArrowRight, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import campusHero from "@/assets/campus-hero.jpg";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -16,7 +17,6 @@ const HeroSection = () => {
           alt="Newton School Campus"
           className="w-full h-full object-cover opacity-100"
         />
-
       </div>
 
       {/* Content */}
@@ -24,7 +24,9 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto animate-fade-in-up">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 border border-blue-200 mb-8 animate-fade-in delay-100">
-            <span className="text-blue-700 font-medium">🎓 Welcome to NST Repository</span>
+            <span className="text-blue-700 font-medium">
+              🎓 Welcome to NST Repository
+            </span>
           </div>
 
           {/* Main Heading */}
@@ -36,30 +38,32 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl bg-black/70 p-4 rounded text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-300">
-            Welcome to NST Repository.
-            Discover comprehensive tech resources, documentation, and learning materials
-            to enhance your technical knowledge.
+          <p
+            className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-300
+              bg-white/20 backdrop-blur-md rounded-lg px-6 py-4 text-white/90 border border-white/20 shadow-lg"
+          >
+            Welcome to NST Repository. Discover comprehensive tech resources,
+            documentation, and learning materials to enhance your technical
+            knowledge.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in-up delay-400">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-blue-400 text-white text-lg px-8 py-4 h-auto border-none shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            <Link
+              to={"/campus"}
+              className="rounded-md bg-gradient-to-r from-blue-600 to-blue-400 text-white text-lg px-8 py-4 h-auto border-none shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
               Start Your Journey
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            </Link>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-blue-700 bg-blue-50 hover:bg-black/90 hover:text-white text-lg px-8 py-4 h-auto transition-all duration-300 transform hover:scale-105"
+            <Link
+              to={"https://youtu.be/VDwRPGdWv0g"}
+              className="rounded-md text-blue-700 bg-blue-50 hover:bg-black/90 hover:text-white text-lg px-8 py-4 h-auto transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
               <Play className="mr-2 h-5 w-5" />
               Watch Campus Tour
-            </Button>
+            </Link>
           </div>
 
           {/* Stats */}

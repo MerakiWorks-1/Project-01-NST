@@ -193,7 +193,7 @@ const SemesterContent = ({ semester }) => (
           {semester.beyondClassroom.map(item => (
             <Card key={item.title} className="group overflow-hidden border-blue-200">
               <img src={item.image} alt={item.title} className="w-full h-28 object-cover transition-transform duration-300 group-hover:scale-105" />
-              <div className="p-3 bg-white">
+              <div className="p-3 bg-white h-full">
                 <h5 className="font-semibold text-sm text-blue-950">{item.title}</h5>
               </div>
             </Card>

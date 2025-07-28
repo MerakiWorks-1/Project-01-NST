@@ -114,7 +114,7 @@ const CampusLifeSection = () => {
                       </div>
                       <Button
                         variant="outline"
-                        className="w-full mt-6 border-blue-300 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
+                        className="w-full mt-6 border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
                       >
                         View Floor Plans
                       </Button>
@@ -175,7 +175,7 @@ const CampusLifeSection = () => {
                 <MapPin className="mr-2 h-5 w-5" />
                 Virtual Campus Tour
               </Button>
-              <Button variant="outline" size="lg" className='border-blue-300 text-blue-700 hover:bg-blue-50 transition-all duration-300 hover:scale-105'>
+              <Button variant="outline" size="lg" className='border-blue-300 text-white hover:bg-blue-50 transition-all duration-300 hover:scale-105'>
                 Schedule Visit
               </Button>
             </div>

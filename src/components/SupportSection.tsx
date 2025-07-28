@@ -118,7 +118,7 @@ const SupportSection = () => {
                     </div>
                     <Button 
                       variant="outline" 
-                      className="w-full mt-6 border-blue-300 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
+                      className="w-full mt-6 border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
                     >
                       Book a Session
                       <Clock className="ml-2 h-4 w-4" />
@@ -156,7 +156,7 @@ const SupportSection = () => {
                     <div className="text-sm text-blue-700 font-medium mb-4">
                       {channel.availability}
                     </div>
-                    <Button variant="outline" className="w-full border-blue-300 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105">
+                    <Button variant="outline" className="w-full border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105">
                       {channel.action}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -182,7 +182,7 @@ const SupportSection = () => {
               <MessageCircle className="mr-2 h-5 w-5" />
               Ask Faculty Forum
             </Button>
-            <Button variant="outline" size="lg" className="border-blue-300 text-blue-700 hover:bg-blue-100 transition-all duration-300 hover:scale-105">
+            <Button variant="outline" size="lg" className="border-blue-300 text-white hover:bg-blue-100 transition-all duration-300 hover:scale-105">
               Faculty Directory
             </Button>
           </div>

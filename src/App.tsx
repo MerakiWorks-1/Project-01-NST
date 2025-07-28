@@ -19,8 +19,6 @@ const Startups = lazy(() => import("./pages/Startups"));
 const Internships = lazy(() => import("./pages/Internships"));
 const Support = lazy(() => import("./pages/Support"));
 
-import DotGrid from "./components/DotGrid/DotGrid";
-
 const queryClient = new QueryClient();
 
 const App = () => (

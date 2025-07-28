@@ -40,7 +40,7 @@ const Startups = () => {
       <Dummy />
       
       {/* Hero Section */}
-      <section className="pt-40 pb-20 bg-gradient-to-br from-blue-50 to-indigo-50 border-b border-blue-200">
+      <section className="pt-40 pb-20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up delay-100">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
@@ -54,7 +54,7 @@ const Startups = () => {
                 <Rocket className="w-5 h-5 mr-2" />
                 Apply for Funding
               </Button>
-              <Button variant="outline" size="lg" className='border-blue-300 text-blue-700 hover:bg-blue-50 transition-all duration-300 hover:scale-105'>
+              <Button variant="outline" size="lg" className='border-blue-300 text-white hover:bg-blue-50 transition-all duration-300 hover:scale-105'>
                 <FileText className="w-5 h-5 mr-2" />
                 Download Pitch Template
               </Button>
@@ -151,7 +151,7 @@ const Startups = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {successStories.map((story, idx) => (
-              <Card key={story.name} className="group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up" style={{ animationDelay: `${0.18 + idx * 0.09}s` }}>
+              <Card key={story.name} className="group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up flex flex-col justify-between" style={{ animationDelay: `${0.18 + idx * 0.09}s` }}>
                 <div className="relative">
                   <img
                     src={story.image}
@@ -178,13 +178,11 @@ const Startups = () => {
                       <DollarSign className="w-5 h-5 text-blue-700" />
                       <span className="font-semibold text-blue-800">{story.funding}</span>
                     </div>
-                    <Button variant="outline" size="sm" className='border-blue-300 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105'>
+                    <Button variant="outline" size="sm" className='border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105'>
                       Learn More
                     </Button>
                   </div>
                 </CardContent>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
               </Card>
             ))}
           </div>
@@ -228,8 +226,8 @@ const Startups = () => {
                   </ul>
                   
                   <Button 
-                    className={`w-full hover:scale-105 transition-all duration-300 ${tier.popular ? 'bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg' : 'border-blue-300 text-blue-700 hover:bg-blue-100'}`}
-                    variant={tier.popular ? 'default' : 'outline'}
+                    className={`w-full hover:scale-105 transition-all duration-300 ${tier.popular ? 'bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:text-white hover:shadow-lg' : 'border-blue-300 text-white hover:bg-blue-100'}`}
+                    variant='outline'
                   >
                     Apply Now
                   </Button>
