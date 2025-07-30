@@ -311,7 +311,7 @@ export default function CpClub() {
                               <Clock className="w-4 h-4" />
                               <span>Launching from <strong>August 20th</strong></span>
                           </div>
-                          <a href="https://www.hackerrank.com/contests/project-euler/" target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
+                          <a href="https://www.hackerrank.com/contests/long-challenge-merakicode/challenges" target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
                               <Button variant="secondary" className="bg-white text-blue-700 hover:bg-gray-100 font-semibold text-md px-6 py-3 rounded-full transition-transform duration-300 group-hover:scale-105 shadow-md">
                                   Register on HackerRank <ArrowRight className="ml-2 w-4 h-4" />
                               </Button>

@@ -11,11 +11,11 @@ const EventsSection = () => {
       id: 1,
       title: "Neutron 2025",
       subtitle: "India's First Techno-Cultural Fest",
-      date: "Coming Soon",
+      date: "April 12-13, 2024",
       description: "A student-led fest blending cutting-edge technology with vibrant cultural performances.",
       stats: {
         participants: "1,700+",
-        attendees: "1,100+",
+        attendees: "1,500+",
         prizePool: "₹10L+"
       },
       icon: Zap,
@@ -28,8 +28,8 @@ const EventsSection = () => {
       date: "Nov 29-30, 2024",
       description: "Rishihood University's flagship cultural fest with celebrity performances and workshops.",
       stats: {
-        participants: "45,000+",
-        colleges: "100+",
+        participants: "1,500+",
+        colleges: "20+",
         prizePool: "₹15-20L"
       },
       icon: Music,
@@ -45,15 +45,14 @@ const EventsSection = () => {
   ];
   
   const eventVideos = [
-    { id: 1, title: "Neutron 2025: The Reveal", description: "Experience the energy and innovation of India's first techno-cultural fest.", embedId: "TOv4C1UQap0" },
-    { id: 2, title: "DAMRU: The Aftermovie", description: "Relive the best moments from Rishihood University's grandest cultural celebration.", embedId: "NY9UNcgIaYQ" },
-    { id: 3, title: "Drone Show Highlights", description: "A mesmerizing spectacle of 150 drones lighting up the night sky at Neutron.", embedId: "x6y5ckZQu84" },
-    { id: 4, title: "Campus Tour & Fest Life", description: "Get a feel for the vibrant student life and atmosphere during our fests.", embedId: "7tR2Q3J53xM" },
+    { id: 1, title: "Tech Tour to China", description: "Join us as we explore the tech landscape of China, visiting leading companies and startups.", embedId: "TOv4C1UQap0" },
+    { id: 2, title: "Neutron 2025: The Reveal", description: "Experience the energy and innovation of India's first techno-cultural fest", embedId: "NY9UNcgIaYQ" },
+    { id: 3, title: "Alibaba Insider Model", description: "Get an exclusive look at Alibaba's innovative strategies and technologies.", embedId: "x6y5ckZQu84" },
+    { id: 4, title: "NST to Harvard", description: "Follow our journey as we take NST to the prestigious Harvard University.", embedId: "7tR2Q3J53xM" },
   ];
 
   return (
     <div className="min-h-screen bg-white/95">
-      <Dummy />
       <section id="events" className="py-20">
         <div className="container mx-auto px-6">
           {/* Section Header */}
@@ -102,8 +101,16 @@ const EventsSection = () => {
                           </div>
                         ))}
                       </div>
-                      <Button className={`w-full bg-gradient-to-r ${event.gradient} text-white hover:shadow-lg transition-all duration-300 hover:scale-105`}>
-                        Learn More & Register
+                      <Button
+                      onClick={()=> {
+                        if (idx == 0){
+                          window.open("https://www.neutronfest.com", "_blank");
+                        } else {
+                          window.open("https://www.youtube.com/watch?v=jC4OacF7uG8", "_blank");
+                        }
+                      }}
+                       className={`w-full bg-gradient-to-r ${event.gradient} text-white hover:shadow-lg transition-all duration-300 hover:scale-105`}>
+                        Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </div>

@@ -1,10 +1,18 @@
-import Dummy from '@/components/Dummy';
-import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-// CORRECTED: Added CheckCircle to the import list
-import { Rocket, Users, Trophy, FileText, ExternalLink, Download, Star, Quote, CheckCircle } from 'lucide-react';
+import Navigation from "@/components/Navigation";
+import Dummy from "@/components/Dummy";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+
+import {
+  Building,
+  MapPin,
+  Clock,
+  DollarSign,
+  ExternalLink,
+  Download,
+} from "lucide-react";
 
 const Internships = () => {
   
@@ -34,6 +42,8 @@ const Internships = () => {
 
   return (
     <div className="min-h-screen bg-white/95">
+      
+      {/* <Navigation /> */}
       <Dummy />
 
       {/* Hero Section */}
@@ -48,15 +58,29 @@ const Internships = () => {
             <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: "0.2s"}}>
                 Our students achieve in two years what others take four. That’s why our curriculum is built to rigorously develop industry-relevant skills.
             </p>
-            <div className="flex justify-center gap-4 animate-fade-in-up" style={{animationDelay: "0.3s"}}>
-                <Button size="lg" className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transform hover:scale-105 transition-all" disabled>
-                    Applications Closed
-                </Button>
-                <Button variant="outline" size="lg" className="border-blue-300 text-blue-700 hover:bg-blue-50 transform hover:scale-105 transition-all">
-                    <FileText className="w-5 h-5 mr-2" /> Resume Application
-                </Button>
-            </div>
+          </div>
         </div>
+
+        {/* Stats Section */}
+        <section className="py-12">
+          <div className="container mx-auto px-6">
+            <div className="grid md:grid-cols-4 gap-6 text-center animate-fade-in-up delay-300">
+              {[
+                { label: "Active Internships", value: "250+" },
+                { label: "Partner Companies", value: "80+" },
+                { label: "Average Stipend", value: "₹25K/month" },
+                { label: "Placement Rate", value: "93%" },
+              ].map((stat, idx) => (
+                <div key={stat.label} style={{ animationDelay: `${0.35 + idx * 0.07}s` }} className="animate-fade-in-up">
+                  <div className="text-3xl font-bold text-blue-900 mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-gray-700">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </section>
       
       {/* Internship Report Section */}

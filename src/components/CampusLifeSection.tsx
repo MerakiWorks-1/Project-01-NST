@@ -8,24 +8,24 @@ const CampusLifeSection = () => {
       id: 1,
       name: "Hostel Block R1",
       type: "Boys Hostel",
-      capacity: "150 Students",
-      features: ["AC Rooms", "Wi-Fi", "Study Areas", "Common Room"],
+      capacity: "600+ Students",
+      features: ["AC Rooms", "Wi-Fi", "Laundry", "Common Room"],
       icon: Home
     },
     {
       id: 2,
       name: "Hostel Block R2", 
-      type: "Girls Hostel",
-      capacity: "120 Students",
-      features: ["AC Rooms", "24/7 Security", "Laundry", "Recreation"],
+      type: "Boys Hostel",
+      capacity: "600+ Students",
+      features: ["AC Rooms", "Wi-Fi", "Laundry", "Common Room"],
       icon: Home
     },
     {
       id: 3,
       name: "Hostel Block R3",
-      type: "Mixed Accommodation",
-      capacity: "200 Students",
-      features: ["Single/Double Rooms", "Cafeteria", "Gym Access", "Parking"],
+      type: "Girls Hostel",
+      capacity: "300+ Students",
+      features: ["AC Rooms", "Wi-Fi", "Laundry", "Common Room"],
       icon: Home
     }
   ];
@@ -39,15 +39,15 @@ const CampusLifeSection = () => {
     },
     {
       icon: Dumbbell,
-      title: "Sports Complex",
+      title: "Learners Arena",
       description: "Modern sports facilities and fitness center",
-      details: ["Football field", "Basketball court", "Tennis lawn", "Cricket nets"]
+      details: ["Basketball court", "Tennis lawn", "Cricket nets"]
     },
     {
       icon: Wifi,
       title: "High-Speed WiFi",
       description: "Campus-wide connectivity for all students",
-      details: ["Fiber optic", "24/7 connectivity", "Study areas"]
+      details: ["Fiber optic", "24/7 connectivity"]
     },
     {
       icon: Car,
@@ -111,12 +111,6 @@ const CampusLifeSection = () => {
                           ))}
                         </div>
                       </div>
-                      <Button
-                        variant="outline"
-                        className="w-full mt-6 border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
-                      >
-                        View Floor Plans
-                      </Button>
                     </CardContent>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -170,12 +164,11 @@ const CampusLifeSection = () => {
               Take a virtual tour of our modern facilities or schedule an in-person visit to see what makes our campus special.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <Button size="lg" className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105"
+              onClick={() => window.open('https://maps.app.goo.gl/dpsdhDSJVo7R3j8A7', '_blank')}
+              >
                 <MapPin className="mr-2 h-5 w-5" />
                 Virtual Campus Tour
-              </Button>
-              <Button variant="outline" size="lg" className='border-blue-300 text-white hover:bg-blue-50 transition-all duration-300 hover:scale-105'>
-                Schedule Visit
               </Button>
             </div>
           </div>

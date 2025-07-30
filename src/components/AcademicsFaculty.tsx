@@ -200,7 +200,7 @@ const AcademicsFaculty = () => {
               sectionId="faculty"
             />
             <FlowingCardsSection
-              title="Industry Mentors"
+              title="Mentors"
               data={mentorList}
               sectionId="mentors"
             />
@@ -217,7 +217,6 @@ const AcademicsFaculty = () => {
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
-            overflow: hidden;
           }
         `}</style>
         </section>
