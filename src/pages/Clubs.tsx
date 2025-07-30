@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Dummy from "@/components/Dummy";
 import ClubsSection from "@/components/ClubsSection";
 import Footer from "@/components/Footer";
-import DotGrid from "../components/DotGrid/DotGrid";
+
 
 const Clubs = () => {
   return (

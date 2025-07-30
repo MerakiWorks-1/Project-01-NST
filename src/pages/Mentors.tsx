@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Star, Users, MessageCircle } from "lucide-react";
-import DotGrid from "../components/DotGrid/DotGrid";
+
 
 const Mentors = () => {
   return (
