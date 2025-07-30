@@ -117,7 +117,7 @@ export default function Header1() {
         borderBottom: isScrolled ? "1px solid rgba(59, 130, 246, 0.1)" : "none",
       }}
     >
-      <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-8xl px-6 sm:px-8 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
           <motion.div
             className="flex items-center space-x-2"
