@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import DotGrid from "../components/DotGrid/DotGrid";
+
 import {
   Building,
   MapPin,
@@ -101,22 +101,7 @@ const Internships = () => {
 
   return (
     <div className="min-h-screen bg-white/95">
-      <div style={{ width: "100vw", height: "98vh", position: "absolute", zIndex: 0 }}>
-          <DotGrid
-            dotSize={10}
-            gap={15}
-            // Updated baseColor to a light, subtle blue for the light theme
-            baseColor="#dbeafe" // This corresponds to Tailwind's `blue-100`
-            // Active color is a stronger blue for contrast on the light background
-            activeColor="#3b82f6" // This corresponds to Tailwind's `blue-500`
-            proximity={150}
-            shockRadius={250}
-            shockStrength={5}
-            resistance={750}
-            returnDuration={1.5}
-          >
-          </DotGrid>
-        </div>
+      
       {/* <Navigation /> */}
       <Dummy />
 
@@ -131,23 +116,6 @@ const Internships = () => {
               Gain real-world experience and build your professional portfolio
               with industry internships
             </p>
-            <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-200">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
-                <ExternalLink className="w-5 h-5 mr-2" />
-                Browse Opportunities
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-blue-300 text-white hover:bg-blue-50 transition-all duration-300 hover:scale-105"
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Career Resources
-              </Button>
-            </div>
           </div>
         </div>
 
@@ -159,7 +127,7 @@ const Internships = () => {
                 { label: "Active Internships", value: "250+" },
                 { label: "Partner Companies", value: "80+" },
                 { label: "Average Stipend", value: "₹25K/month" },
-                { label: "Placement Rate", value: "92%" },
+                { label: "Placement Rate", value: "93%" },
               ].map((stat, idx) => (
                 <div key={stat.label} style={{ animationDelay: `${0.35 + idx * 0.07}s` }} className="animate-fade-in-up">
                   <div className="text-3xl font-bold text-blue-900 mb-2">

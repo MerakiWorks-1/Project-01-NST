@@ -38,7 +38,7 @@ const Startups = () => {
       <Dummy />
 
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      <section className="py-40 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent">
             Your Dreams, Our Direction
@@ -47,19 +47,11 @@ const Startups = () => {
             Empowering and enabling future founders in India through funding,
             mentorship, and workshops.
           </p>
-          <div className="flex justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transform hover:scale-105 transition-all">
-              <Rocket className="w-5 h-5 mr-2" /> Apply Now
-            </Button>
-            <Button variant="outline" size="lg" className="border-blue-300 text-blue-700 hover:bg-blue-50 transform hover:scale-105 transition-all">
-              <FileText className="w-5 h-5 mr-2" /> Resume Application
-            </Button>
-          </div>
         </div>
       </section>
 
       {/* How StartX Stands Out */}
-      <section className="py-20 bg-white">
+      <section className="pb-20 bg-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-12 text-blue-900">
             How StartX Stands Out
@@ -111,7 +103,7 @@ const Startups = () => {
             <div className="relative grid md:grid-cols-3 gap-12">
               {processSteps.map((item, idx) => (
                 <div key={idx} className="relative text-center">
-                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-4 border-blue-500 rounded-full flex items-center justify-center font-bold text-blue-600 text-xl shadow-md">
+                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-4 border-blue-500 rounded-full flex items-center justify-center font-bold text-blue-600 text-xl shadow-md">
                     {item.step}
                   </div>
                   <Card className="group bg-white border border-blue-200 overflow-hidden relative hover:shadow-xl transition-all duration-300 h-full">
