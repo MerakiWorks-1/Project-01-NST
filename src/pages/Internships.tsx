@@ -1,355 +1,154 @@
-import Navigation from "@/components/Navigation";
-import Dummy from "@/components/Dummy";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import DotGrid from "../components/DotGrid/DotGrid";
-import {
-  Building,
-  MapPin,
-  Clock,
-  DollarSign,
-  ExternalLink,
-  Download,
-} from "lucide-react";
+import Dummy from '@/components/Dummy';
+import Footer from '@/components/Footer';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+// CORRECTED: Added CheckCircle to the import list
+import { Rocket, Users, Trophy, FileText, ExternalLink, Download, Star, Quote, CheckCircle } from 'lucide-react';
 
 const Internships = () => {
-  const internships = [
-    {
-      id: 1,
-      company: "TechCorp Solutions",
-      role: "Frontend Developer Intern",
-      location: "Bangalore",
-      duration: "3 months",
-      stipend: "₹25,000/month",
-      type: "Full-time",
-      description:
-        "Work on cutting-edge React applications and learn modern web development practices.",
-      skills: ["React", "JavaScript", "HTML/CSS", "Git"],
-      logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=80&h=80&fit=crop",
-    },
-    {
-      id: 2,
-      company: "DataMine Analytics",
-      role: "Data Science Intern",
-      location: "Hyderabad",
-      duration: "6 months",
-      stipend: "₹30,000/month",
-      type: "Full-time",
-      description:
-        "Analyze large datasets and build machine learning models for business insights.",
-      skills: ["Python", "SQL", "Machine Learning", "Pandas"],
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=80&h=80&fit=crop",
-    },
-    {
-      id: 3,
-      company: "CloudTech Innovations",
-      role: "DevOps Intern",
-      location: "Mumbai",
-      duration: "4 months",
-      stipend: "₹28,000/month",
-      type: "Hybrid",
-      description:
-        "Learn cloud infrastructure management and CI/CD pipeline development.",
-      skills: ["AWS", "Docker", "Kubernetes", "Linux"],
-      logo: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=80&h=80&fit=crop",
-    },
-    {
-      id: 4,
-      company: "MobileFirst Studio",
-      role: "Mobile App Developer",
-      location: "Pune",
-      duration: "3 months",
-      stipend: "₹22,000/month",
-      type: "Remote",
-      description:
-        "Develop cross-platform mobile applications using Flutter framework.",
-      skills: ["Flutter", "Dart", "Firebase", "REST APIs"],
-      logo: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=80&h=80&fit=crop",
-    },
+  
+  const gsocStudents = [
+    { name: "Krishna Dave", quote: "From not knowing GSoC to cracking it in 6 months — all thanks to NST’s support. What a journey!", batch: 2024 },
+    { name: "Agnik Misra", quote: "In one year I’ve cracked GSoC 2025 — proud to have hit my first-year milestone!", batch: 2024 },
+    { name: "Birajit Saikia", quote: "If I can do it, so can you.", batch: 2024 },
+    { name: "Ashu Choudhary", quote: "I cracked GSoC 2025 in just one focused month.", batch: 2024 },
+    { name: "Yakshit Savaliya", quote: "NST’s support made it all possible.", batch: 2024 },
   ];
 
-  const portfolioTools = [
-    {
-      title: "Resume Builder",
-      description:
-        "Create professional resumes with industry-specific templates",
-      icon: "📄",
-      action: "Build Resume",
-    },
-    {
-      title: "Portfolio Templates",
-      description: "Showcase your projects with stunning portfolio websites",
-      icon: "🎨",
-      action: "Get Template",
-    },
-    {
-      title: "Project Showcase",
-      description: "Document and present your technical projects effectively",
-      icon: "🚀",
-      action: "Start Showcase",
-    },
-    {
-      title: "Interview Prep",
-      description:
-        "Practice with common interview questions and coding challenges",
-      icon: "💡",
-      action: "Start Prep",
-    },
+  const featuredInterns = [
+      { name: "Janhvi Yadav", role: "Intern, DRDO", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/DRDO_logo.svg/1200px-DRDO_logo.svg.png" },
+      { name: "Udita", role: "Intern, Razorpay", logo: "https://cdn.worldvectorlogo.com/logos/razorpay.svg" },
+      { name: "Rachit Kumar", role: "Frontend Engineer Intern, Sarvam", logo: "https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1499866879/g8q6jsy755vy2zyf8t5z.png" },
   ];
+  
+  const studentProjects = [
+      { title: "Crypto Wallet", description: "Web3-based wallet for secure crypto management, inspired by MetaMask.", madeBy: "Aditya Kumar", batch: 2024 },
+      { title: "CritiAI: AI Chatbot", description: "AI-powered chatbot for travel recs, coding help, and language learning.", madeBy: "Agnik Mishra", batch: 2024 },
+      { title: "Skippi Clone", description: "Modernized website for Skippi ice pop brand, with future e-commerce integration planned.", madeBy: "MD Sajjan", batch: 2024 },
+      { title: "Go-For-Gold", description: "7-day ICPC bootcamp with mentorship from World Finalists and intensive training.", madeBy: "Kunal Vats, Udit Jain", batch: 2024 },
+      { title: "NST AI", description: "AI study buddy for NST using Mistral 7b LLM for Q&A and lecture summaries.", madeBy: "Vivek Wagadare", batch: 2024 },
+      { title: "Smart India Hackathon", description: "Youngest first-year team tackling Delhi Transport Corporation challenges.", madeBy: "Roni, Deeptanu & Team", batch: 2024 },
+  ];
+
 
   return (
     <div className="min-h-screen bg-white/95">
-      <div style={{ width: "100vw", height: "98vh", position: "absolute", zIndex: 0 }}>
-          <DotGrid
-            dotSize={10}
-            gap={15}
-            // Updated baseColor to a light, subtle blue for the light theme
-            baseColor="#dbeafe" // This corresponds to Tailwind's `blue-100`
-            // Active color is a stronger blue for contrast on the light background
-            activeColor="#3b82f6" // This corresponds to Tailwind's `blue-500`
-            proximity={150}
-            shockRadius={250}
-            shockStrength={5}
-            resistance={750}
-            returnDuration={1.5}
-          >
-          </DotGrid>
-        </div>
-      {/* <Navigation /> */}
       <Dummy />
 
       {/* Hero Section */}
-      <section className="pt-40 pb-20">
-        <div className="container mx-auto px-6 pb-10">
-          <div className="text-center max-w-4xl mx-auto animate-fade-in-up delay-100">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
-              Internships & Projects
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        <div className="container mx-auto text-center">
+            <Badge className="mb-4 bg-red-100 text-red-800 animate-fade-in-up">
+              NSAT Applications for 2025 have been closed
+            </Badge>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent animate-fade-in-up" style={{animationDelay: "0.1s"}}>
+                Internship & Placement Success
             </h1>
-            <p className="text-xl text-gray-800 font-medium mb-8">
-              Gain real-world experience and build your professional portfolio
-              with industry internships
+            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: "0.2s"}}>
+                Our students achieve in two years what others take four. That’s why our curriculum is built to rigorously develop industry-relevant skills.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-200">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
-                <ExternalLink className="w-5 h-5 mr-2" />
-                Browse Opportunities
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-blue-300 text-white hover:bg-blue-50 transition-all duration-300 hover:scale-105"
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Career Resources
-              </Button>
+            <div className="flex justify-center gap-4 animate-fade-in-up" style={{animationDelay: "0.3s"}}>
+                <Button size="lg" className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transform hover:scale-105 transition-all" disabled>
+                    Applications Closed
+                </Button>
+                <Button variant="outline" size="lg" className="border-blue-300 text-blue-700 hover:bg-blue-50 transform hover:scale-105 transition-all">
+                    <FileText className="w-5 h-5 mr-2" /> Resume Application
+                </Button>
             </div>
-          </div>
         </div>
+      </section>
+      
+      {/* Internship Report Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+            <div className="text-center">
+                <h2 className="text-3xl font-bold text-blue-900 mb-2 animate-fade-in-up">Internship Report 2025 Released</h2>
+                <p className="text-xl text-blue-700 font-semibold mb-4 animate-fade-in-up" style={{animationDelay: "0.1s"}}>93.07% of students secured internships by their second year.</p>
+                <p className="text-gray-600 mb-6 animate-fade-in-up" style={{animationDelay: "0.2s"}}>Certified by B2K Analytics (IIM Ahmedabad’s Placement Auditors)</p>
+                <Button variant="outline" className="border-blue-300 text-blue-700 hover:bg-blue-100 animate-fade-in-up" style={{animationDelay: "0.3s"}}>
+                    View Official Report <ExternalLink className="w-4 h-4 ml-2"/>
+                </Button>
+            </div>
+        </div>
+      </section>
+      
+      {/* GSoC Success Section */}
+      <section className="py-20 bg-blue-50/70">
+        <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up">Google Summer of Code Success</h2>
+                <p className="text-blue-700 max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: "0.1s"}}>
+                    6 First-Year Students Selected in GSoC with an average stipend of ₹2.3 lakhs, a testament to our hands-on curriculum.
+                </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {gsocStudents.map((student, idx) => (
+                    <Card key={idx} className="bg-white border-blue-200 shadow-lg animate-fade-in-up" style={{ animationDelay: `${0.2 + idx * 0.07}s` }}>
+                        <CardContent className="p-6">
+                            <Quote className="w-8 h-8 text-blue-300 mb-4" />
+                            <p className="text-gray-700 mb-4 italic">"{student.quote}"</p>
+                            <p className="font-semibold text-blue-900">{student.name}</p>
+                            <p className="text-sm text-gray-600">NST {student.batch} Batch</p>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
+        </div>
+      </section>
 
-        {/* Stats Section */}
-        <section className="py-12">
+      {/* Zuvees Case Study */}
+      <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
-            <div className="grid md:grid-cols-4 gap-6 text-center animate-fade-in-up delay-300">
-              {[
-                { label: "Active Internships", value: "250+" },
-                { label: "Partner Companies", value: "80+" },
-                { label: "Average Stipend", value: "₹25K/month" },
-                { label: "Placement Rate", value: "92%" },
-              ].map((stat, idx) => (
-                <div key={stat.label} style={{ animationDelay: `${0.35 + idx * 0.07}s` }} className="animate-fade-in-up">
-                  <div className="text-3xl font-bold text-blue-900 mb-2">
-                    {stat.value}
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div className="animate-fade-in-up">
+                      <Badge className="mb-4 bg-blue-100 text-blue-800">Case Study</Badge>
+                      <h2 className="text-3xl font-bold text-blue-900 mb-4">Building a UAE‑Based Startup’s Product from Scratch</h2>
+                      <p className="text-gray-700 mb-6">
+                          When Zuvees, a fast‑growing gifting tech startup in Dubai, needed a full‑stack tech solution, they turned to our students who built their entire product from the ground up.
+                      </p>
+                      <Card className="bg-blue-50/50 border-blue-200">
+                          <CardContent className="p-6">
+                              <p className="text-blue-800 italic">"It didn’t feel like we were working with students — it felt like we were working with professionals. They delivered like pros."</p>
+                              <p className="font-semibold text-right mt-2 text-blue-900">- Abhishek Daiya, Founder of Zuvees</p>
+                          </CardContent>
+                      </Card>
                   </div>
-                  <div className="text-gray-700">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </section>
-
-      {/* Current Opportunities */}
-      <section className="py-2">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in-up delay-100">
-            <h2 className="text-4xl font-bold mb-6 text-blue-900">
-              Current Opportunities
-            </h2>
-            <p className="text-gray-700 font-medium max-w-2xl mx-auto">
-              Explore internship opportunities from top companies and startups
-              across various technology domains.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {internships.map((internship, idx) => (
-              <Card
-                key={internship.id}
-                className="group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
-                style={{ animationDelay: `${0.18 + idx * 0.09}s` }}
-              >
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div className="flex items-center gap-4">
-                      <img
-                        src={internship.logo}
-                        alt={internship.company}
-                        className="w-12 h-12 rounded-lg object-cover border border-blue-100"
-                      />
-                      <div>
-                        <CardTitle className="text-xl text-blue-950">
-                          {internship.role}
-                        </CardTitle>
-                        <p className="font-medium text-blue-700">
-                          {internship.company}
-                        </p>
-                      </div>
-                    </div>
-                    <Badge
-                      className={
-                        internship.type === "Remote"
-                          ? "bg-blue-600 text-white"
-                          : "bg-blue-100 text-blue-800"
-                      }
-                    >
-                      {internship.type}
-                    </Badge>
+                  <div className="animate-fade-in-up" style={{animationDelay: "0.1s"}}>
+                      <Card className="bg-white border-blue-200 shadow-xl">
+                          <CardHeader>
+                              <CardTitle className="text-blue-900">From Zero to One: What They Built</CardTitle>
+                          </CardHeader>
+                          <CardContent className="space-y-3">
+                              <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" /><span>Real‑time dashboards for the Dubai Ops Team.</span></li>
+                              <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" /><span>Live integrations for payment gateways and order tracking.</span></li>
+                              <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" /><span>Backend to manage inventory, logistics, and user flows.</span></li>
+                              <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" /><span>Frontend designed for customers and ops teams.</span></li>
+                          </CardContent>
+                      </Card>
                   </div>
-                </CardHeader>
-
-                <CardContent className="space-y-4">
-                  <p className="text-gray-700">
-                    {internship.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {internship.skills.map((skill) => (
-                      <Badge key={skill} variant="outline" className="text-xs border-blue-300 text-blue-700">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4 text-sm pt-2 border-t border-blue-100">
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-gray-600" />
-                      <span className="text-gray-700">
-                        {internship.location}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-gray-600" />
-                      <span className="text-gray-700">
-                        {internship.duration}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <DollarSign className="w-4 h-4 text-gray-600" />
-                      <span className="text-gray-700">
-                        {internship.stipend}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Building className="w-4 h-4 text-gray-600" />
-                      <span className="text-gray-700">Tech</span>
-                    </div>
-                  </div>
-
-                  <Button className="w-full bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Apply Now
-                  </Button>
-                </CardContent>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12 animate-fade-in-up delay-400">
-            <Button variant="outline" size="lg" className="border-blue-300 text-white hover:bg-blue-50 hover:scale-105 transition-all duration-300">
-              View All Opportunities
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Building */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-fade-in-up delay-100">
-            <h3 className="text-3xl font-bold mb-6 text-blue-900">
-              Portfolio Building Toolkit
-            </h3>
-            <p className="text-gray-700 font-medium max-w-2xl mx-auto">
-              Access professional tools and templates to create an impressive
-              portfolio and resume that stands out to employers.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {portfolioTools.map((tool, idx) => (
-              <Card
-                key={tool.title}
-                className="text-center group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
-                style={{ animationDelay: `${0.22 + idx * 0.09}s` }}
-              >
-                <CardHeader>
-                  <div className="text-4xl mb-4">{tool.icon}</div>
-                  <CardTitle className="text-xl text-blue-950">{tool.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-gray-700 text-sm">
-                    {tool.description}
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="w-full border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white hover:scale-105 transition-all duration-300"
-                  >
-                    {tool.action}
-                  </Button>
-                </CardContent>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Application Process */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <h3 className="text-3xl font-bold text-center mb-12 text-blue-900 animate-fade-in-up delay-100">
-            How to Apply
-          </h3>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { step: "01", title: "Browse & Select", description: "Explore opportunities that match your skills and interests" },
-              { step: "02", title: "Prepare Application", description: "Use our toolkit to create a compelling resume and portfolio" },
-              { step: "03", title: "Submit & Track", description: "Apply through our platform and track your application status" },
-              { step: "04", title: "Interview & Start", description: "Prepare for interviews and begin your internship journey" },
-            ].map((item, idx) => (
-              <div key={item.step} className="text-center animate-fade-in-up p-6 border border-blue-200 rounded-md" style={{ animationDelay: `${0.18 + idx * 0.09}s` }}>
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-xl font-bold text-white">
-                    {item.step}
-                  </span>
-                </div>
-                <h4 className="text-lg font-semibold mb-4 text-blue-900">
-                  {item.title}
-                </h4>
-                <p className="text-gray-700">{item.description}</p>
               </div>
-            ))}
           </div>
-        </div>
+      </section>
+
+      {/* Student Projects */}
+      <section className="py-20 bg-blue-50/70">
+          <div className="container mx-auto px-6">
+              <h2 className="text-3xl font-bold text-center mb-12 text-blue-900">Student‑Built Projects Showcasing Internship‑Level Work</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {studentProjects.map((project, idx) => (
+                      <Card key={idx} className="group relative overflow-hidden bg-white border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in-up" style={{ animationDelay: `${0.1 + idx * 0.07}s` }}>
+                          <CardHeader>
+                              <CardTitle className="text-blue-950">{project.title}</CardTitle>
+                              <CardDescription className="text-blue-700">By {project.madeBy} ({project.batch})</CardDescription>
+                          </CardHeader>
+                          <CardContent>
+                              <p className="text-gray-700">{project.description}</p>
+                          </CardContent>
+                      </Card>
+                  ))}
+              </div>
+          </div>
       </section>
 
       <Footer />
