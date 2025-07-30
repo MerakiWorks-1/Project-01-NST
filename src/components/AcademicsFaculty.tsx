@@ -104,7 +104,7 @@ const FlowingCardsSection = ({
               >
                 {[...data, ...data].map((person, index) => (
                   <div
-                    key={`${sectionId}-${person.id}-${index}`}
+                    key={`${sectionId}-${index}`}
                     className="flex-shrink-0 mx-3"
                   >
                     <CardItem person={person} />
@@ -150,7 +150,7 @@ const FlowingCardsSection = ({
             >
               {data.map((person) => (
                 <motion.div
-                  key={`${sectionId}-grid-${person.id}`}
+                  key={`${sectionId}`}
                   variants={{
                     hidden: { y: 20, opacity: 0 },
                     show: { y: 0, opacity: 1 },
@@ -196,12 +196,18 @@ const AcademicsFaculty = () => {
             </div>
             <FlowingCardsSection
               title="Our Distinguished Faculty"
-              data={facultyMembers}
+              data={facultyMembers.map((member, idx) => ({
+                ...member,
+                id: idx,
+              }))}
               sectionId="faculty"
             />
             <FlowingCardsSection
               title="Mentors"
-              data={mentorList}
+              data={mentorList.map((mentor, idx) => ({
+                ...mentor,
+                id: idx,
+              }))}
               sectionId="mentors"
             />
           </div>

@@ -5,7 +5,6 @@ import ClubsSection from '@/components/ClubsSection';
 import AcademicsSection from '@/components/AcademicsSection';
 import CampusLifeSection from '@/components/CampusLifeSection';
 import EventsSection from '@/components/EventsSection';
-import SupportSection from '@/components/SupportSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -18,7 +17,6 @@ const Index = () => {
       <AcademicsSection />
       <CampusLifeSection />
       <EventsSection />
-      <SupportSection />
       <Footer />
     </div>
   );

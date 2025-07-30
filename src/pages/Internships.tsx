@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Dummy from "@/components/Dummy";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 import {
@@ -12,6 +12,8 @@ import {
   DollarSign,
   ExternalLink,
   Download,
+  CheckCircle,
+  Quote,
 } from "lucide-react";
 
 const Internships = () => {
@@ -59,7 +61,6 @@ const Internships = () => {
                 Our students achieve in two years what others take four. That’s why our curriculum is built to rigorously develop industry-relevant skills.
             </p>
           </div>
-        </div>
 
         {/* Stats Section */}
         <section className="py-12">
