@@ -6,7 +6,15 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Star, Users, MessageCircle, ExternalLink, X, Linkedin } from "lucide-react";
+import {
+  Calendar,
+  Star,
+  Users,
+  MessageCircle,
+  ExternalLink,
+  X,
+  Linkedin,
+} from "lucide-react";
 import DotGrid from "../components/DotGrid/DotGrid";
 import { studentMentors } from "../data/data.ts";
 
@@ -208,50 +216,37 @@ const Mentors = () => {
       <section className="pt-20 bg-gradient-to-br from-white via-blue-50/40 to-indigo-50/40 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 ">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-blue-700 to-indigo-600 bg-clip-text text-transparent">
               🌱 Junior Mentorship Culture
             </h1>
             <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed mb-8">
-              "Culture does not make people, people make the culture."
-              At NST, we believe that the transition into college life should
-              feel less like a leap and more like a warm welcome.
+              "Culture does not make people, people make the culture." At NST,
+              we believe that the transition into college life should feel less
+              like a leap and more like a warm welcome.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book a Session
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-blue-300 text-blue-700 hover:bg-blue-50 transition-all duration-300 hover:scale-105"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Join Community
-              </Button>
-            </div>
           </div>
 
           {/* Stats Section */}
-          <div className="grid md:grid-cols-4 gap-6 text-center mb-16">
-            {[
-              { label: "Passionate Mentors", value: `${studentMentors.length}+` },
-              { label: "Batches Connected", value: "3+" },
-              { label: "Avg. Session/Month", value: "100+" },
-              { label: "Success Stories", value: "Countless" },
-            ].map((stat, idx) => (
-              <div key={stat.label} className="animate-fade-in-up">
-                <div className="text-3xl font-bold text-blue-900 mb-2">
-                  {stat.value}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center mb-16">
+              {[
+                {
+                  label: "Passionate Mentors",
+                  value: `${studentMentors.length}+`,
+                },
+                { label: "Batches Connected", value: "2+" },
+                { label: "Success Stories", value: "Countless" },
+              ].map((stat, idx) => (
+                <div key={stat.label} className="animate-fade-in-up">
+                  <div className="text-3xl font-bold text-blue-900 mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-gray-700">{stat.label}</div>
                 </div>
-                <div className="text-gray-700">{stat.label}</div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Student Mentors Section with Flowing Cards */}
