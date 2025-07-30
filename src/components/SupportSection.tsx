@@ -116,13 +116,6 @@ const SupportSection = () => {
                         </div>
                       </div>
                     </div>
-                    <Button 
-                      variant="outline" 
-                      className="w-full mt-6 border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
-                    >
-                      Book a Session
-                      <Clock className="ml-2 h-4 w-4" />
-                    </Button>
                   </CardContent>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
