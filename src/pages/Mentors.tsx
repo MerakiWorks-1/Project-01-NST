@@ -10,26 +10,6 @@ import { Calendar, Star, Users, MessageCircle } from "lucide-react";
 const Mentors = () => {
   return (
     <div className="min-h-screen bg-white/95">
-      <div
-        style={{
-          width: "100vw",
-          height: "98vh",
-          position: "absolute",
-          zIndex: 0,
-        }}
-      >
-        <DotGrid
-          dotSize={10}
-          gap={15}
-          baseColor="#dbeafe"
-          activeColor="#3b82f6"
-          proximity={150}
-          shockRadius={250}
-          shockStrength={5}
-          resistance={750}
-          returnDuration={1.5}
-        />
-      </div>
       {/* <Navigation /> */}
       <Dummy />
 
