@@ -28,7 +28,6 @@ const Home = () => {
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 animate-fade-in-up delay-200 relative z-10">
             {[
               { title: 'Clubs & Societies', href: '/clubs', description: 'Join amazing communities' },
-              { title: 'Admissions', href: '/admissions', description: 'Application process' },
               { title: 'Academics', href: '/academics', description: 'Courses & faculty' },
               { title: 'Campus Life', href: '/campus', description: 'Accommodation & facilities' },
               { title: 'Events', href: '/events', description: 'TechFest & cultural events' },

@@ -16,7 +16,6 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const quickLinks = [
-    { label: 'Admissions', href: '/admissions' },
     { label: 'Academic Programs', href: '/academics' },
     { label: 'Campus Life', href: '/campus' },
     { label: 'Student Support', href: '/support' },

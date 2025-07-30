@@ -80,7 +80,6 @@ const navItems: NavItem[] = [
       { name: "Events & Festivals", href: "/events" },
     ],
   },
-  { name: "Admissions", href: "/admissions" },
 ];
 
 export default function Header1() {
@@ -284,41 +283,6 @@ export default function Header1() {
             ))}
           </nav>
 
-          <div className="hidden items-center space-x-4 lg:flex">
-            <motion.div 
-              whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(59, 130, 246, 0.3)" }} 
-              whileTap={{ scale: 0.95 }}
-              initial={{ boxShadow: "0px 0px 0px rgba(59, 130, 246, 0)" }}
-            >
-              <Link
-                to="/#"
-                className="inline-flex items-center space-x-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-2.5 font-medium text-white transition-all duration-300 relative overflow-hidden group"
-              >
-                <motion.span 
-                  className="relative z-10"
-                  initial={{ x: 0 }}
-                  whileHover={{ x: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  Apply Now
-                </motion.span>
-                <motion.div
-                  className="relative z-10"
-                  initial={{ x: 0, opacity: 1 }}
-                  whileHover={{ x: 3, opacity: 1 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  <ArrowRight className="h-4 w-4" />
-                </motion.div>
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  initial={{ scale: 0, rotate: 45 }}
-                  whileHover={{ scale: 1.5, rotate: 0 }}
-                  transition={{ duration: 0.4 }}
-                />
-              </Link>
-            </motion.div>
-          </div>
 
           <motion.button
             className="rounded-lg p-2 transition-all duration-300 hover:bg-blue-50 lg:hidden"

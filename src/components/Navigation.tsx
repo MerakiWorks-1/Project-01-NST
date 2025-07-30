@@ -79,7 +79,6 @@ const Navigation = () => {
     { label: 'Mentors', href: '/mentors' },
     { label: 'Internships', href: '/internships' },
     { label: 'Startups', href: '/startups' },
-    { label: 'Admissions', href: '/admissions' },
   ];
 
   const isActiveDropdown = (items: { href: string }[]) =>
@@ -170,33 +169,11 @@ const Navigation = () => {
                   </NavigationMenuItem>
                 ))}
 
-                {/* Admissions Link */}
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      to="/admissions"
-                      className={cn(
-                        navigationMenuTriggerStyle(),
-                        'text-foreground hover:text-primary bg-transparent',
-                        location.pathname === '/admissions' && 'text-primary'
-                      )}
-                    >
-                      Admissions
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
               </NavigationMenuList>
 
               {/* ✅ REQUIRED FOR PROPER POSITIONING */}
             </NavigationMenu>
           </div>
-
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button variant="default" className="bg-gradient-primary hover:shadow-glow">
-            Apply Now
-          </Button>
-        </div>
 
         {/* Mobile Toggle Button */}
         <Button
@@ -226,9 +203,6 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button variant="default" className="bg-gradient-primary w-full mt-4">
-              Apply Now
-            </Button>
           </div>
         </div>
       )}

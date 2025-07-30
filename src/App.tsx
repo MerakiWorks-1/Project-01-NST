@@ -13,7 +13,6 @@ import AcademicsFaculty from "../src/components/AcademicsFaculty"
 // Lazy load pages for better performance
 const Home = lazy(() => import("./pages/Home"));
 const Clubs = lazy(() => import("./pages/Clubs"));
-const Admissions = lazy(() => import("./pages/Admissions"));
 const Academics = lazy(() => import("./pages/Academics"));
 const Campus = lazy(() => import("./pages/Campus"));
 const Events = lazy(() => import("./pages/Events"));
@@ -40,7 +39,6 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/clubs" element={<Clubs />} />
-            <Route path="/admissions" element={<Admissions />} />
             <Route path="/academics" element={<Academics />} />
             <Route path="/campus" element={<Campus />} />
             <Route path="/events" element={<Events />} />
