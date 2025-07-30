@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const quickLinks = [
-    { label: 'Academic Programs', href: '/academics' },
+    { label: 'Academic Curriculum', href: '/academics' },
     { label: 'Campus Life', href: '/campus' },
     { label: 'Student Support', href: '/support' },
   ];
@@ -26,8 +26,7 @@ const Footer = () => {
       label: 'Academic Calendar',
       href: 'https://drive.google.com/file/d/1XEd4pqtU-eOwKL76o5C1snXM7ZE58AoO/view?usp=sharing',
     },
-    { label: 'Course Catalog', href: '/#' },
-    { label: 'Faculty Directory', href: '/#' },
+    { label: 'Faculty Directory', href: '/academics/faculty' },
     { label: 'Student Portal', href: 'https://my.newtonschool.co/' },
   ];
 
@@ -53,26 +52,6 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-blue-50 to-indigo-50 border-t border-blue-200 py-20">
       <div className="container mx-auto px-6 space-y-16">
-        {/* Newsletter */}
-        <section className="bg-white border border-blue-200 rounded-2xl p-8 md:p-12 shadow-md text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
-            Stay Connected with Newton School of Technology
-          </h3>
-          <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-            Get the latest updates on events, admissions, academic programs, and campus news delivered directly to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-            <Input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-1 bg-white border-blue-300 text-gray-800 placeholder:text-gray-500"
-            />
-            <Button className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white font-medium hover:shadow-lg hover:scale-105 transition-transform">
-              Subscribe
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-        </section>
 
         {/* Links Grid */}
         <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -134,7 +113,6 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={resource.href}
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 text-gray-700 hover:text-blue-600 group"
                   >
@@ -150,7 +128,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-blue-200 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-600 font-medium">
           <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-            <p>© 2024 Newton School of Technology. All rights reserved.</p>
+            <p>© 2025 Newton School of Technology. All rights reserved.</p>
             {/* NEW: Added credit link */}
             <a href="https://www.linkedin.com/company/official-merakiworks/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/60 text-blue-800 px-3 py-1.5 rounded-full border border-blue-200 hover:shadow-md hover:bg-white transition-all duration-300">
               <Code className="w-4 h-4 text-blue-600" />

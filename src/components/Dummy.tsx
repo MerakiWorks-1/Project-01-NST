@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, ArrowRight, Sparkles } from "lucide-react";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "next-themes";
 
 interface NavItem {
@@ -13,28 +13,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { name: "Home", href: "/" },
-  {
-    name: "About & Campus",
-    hasDropdown: true,
-    dropdownItems: [
-      {
-        name: "Campus Life",
-        href: "/campus",
-      },
-      {
-        name: "Accommodation & Mess",
-        href: "/campus#accommodation",
-      },
-      {
-        name: "Sports Arena",
-        href: "/campus#sports",
-      },
-      {
-        name: "Facilities Overview",
-        href: "/campus#facilities",
-      },
-    ],
-  },
+  { name: "Campus Life", href: "/campus" },
   {
     name: "Academics & Support",
     hasDropdown: true,
@@ -93,8 +72,8 @@ export default function Header1() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -131,7 +110,9 @@ export default function Header1() {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       style={{
         backdropFilter: isScrolled ? "blur(20px)" : "none",
-        backgroundColor: isScrolled ? "rgba(255, 255, 255, 0.9)" : "transparent",
+        backgroundColor: isScrolled
+          ? "rgba(255, 255, 255, 0.9)"
+          : "transparent",
         boxShadow: isScrolled ? "0 8px 32px rgba(59, 130, 246, 0.15)" : "none",
         borderBottom: isScrolled ? "1px solid rgba(59, 130, 246, 0.1)" : "none",
       }}
@@ -145,18 +126,18 @@ export default function Header1() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <Link to="/" className="flex items-center space-x-2">
-              <motion.div 
+              <motion.div
                 className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center shadow-md relative overflow-hidden group"
                 whileHover={{ boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)" }}
               >
-                <motion.span 
+                <motion.span
                   className="text-white font-bold text-lg relative z-10"
                   whileHover={{ scale: 1.2 }}
                   transition={{ type: "spring", stiffness: 500 }}
                 >
                   N
                 </motion.span>
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   initial={{ rotate: 45, scale: 0 }}
                   whileHover={{ rotate: 0, scale: 1.5 }}
@@ -167,9 +148,7 @@ export default function Header1() {
                 <h1 className="text-xl font-bold text-blue-950">
                   NST Repository
                 </h1>
-                <p className="text-xs text-blue-700">
-                  Your Tech Knowledge Hub
-                </p>
+                <p className="text-xs text-blue-700">Your Tech Knowledge Hub</p>
               </div>
             </Link>
           </motion.div>
@@ -196,7 +175,7 @@ export default function Header1() {
                       className="text-blue-950 flex items-center space-x-1 text-sm font-medium transition-all duration-300 hover:text-blue-600 relative group"
                     >
                       <span>{item.name}</span>
-                      <motion.div 
+                      <motion.div
                         className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-blue-600 to-indigo-500 group-hover:w-full transition-all duration-300"
                         layoutId={`underline-${item.name}`}
                       />
@@ -214,13 +193,17 @@ export default function Header1() {
                       <span>{item.name}</span>
                       {item.hasDropdown && (
                         <motion.div
-                          animate={activeDropdown === item.name ? { rotate: 180 } : { rotate: 0 }}
+                          animate={
+                            activeDropdown === item.name
+                              ? { rotate: 180 }
+                              : { rotate: 0 }
+                          }
                           transition={{ duration: 0.3 }}
                         >
                           <ChevronDown className="h-4 w-4 text-blue-600" />
                         </motion.div>
                       )}
-                      <motion.div 
+                      <motion.div
                         className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-blue-600 to-indigo-500 group-hover:w-full transition-all duration-300"
                         layoutId={`underline-${item.name}`}
                       />
@@ -237,10 +220,14 @@ export default function Header1() {
                         initial="hidden"
                         animate="visible"
                         exit="hidden"
-                        transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                        transition={{
+                          duration: 0.3,
+                          type: "spring",
+                          stiffness: 300,
+                        }}
                         style={{ transformOrigin: "top center" }}
                       >
-                        <motion.div 
+                        <motion.div
                           className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-50"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 0.5 }}
@@ -259,7 +246,7 @@ export default function Header1() {
                             >
                               <div className="font-medium text-blue-900 group-hover:text-blue-700 flex items-center">
                                 {dropdownItem.name}
-                                <motion.div 
+                                <motion.div
                                   className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
                                   initial={{ x: -5 }}
                                   whileHover={{ x: 0 }}
@@ -282,7 +269,6 @@ export default function Header1() {
               </motion.div>
             ))}
           </nav>
-
 
           <motion.button
             className="rounded-lg p-2 transition-all duration-300 hover:bg-blue-50 lg:hidden"
@@ -311,15 +297,20 @@ export default function Header1() {
               initial="closed"
               animate="open"
               exit="closed"
-              transition={{ duration: 0.4, type: "spring", stiffness: 300, damping: 25 }}
+              transition={{
+                duration: 0.4,
+                type: "spring",
+                stiffness: 300,
+                damping: 25,
+              }}
             >
-              <motion.div 
+              <motion.div
                 className="mt-4 space-y-2 rounded-xl border border-blue-200 bg-white/95 py-4 shadow-xl backdrop-blur-lg relative overflow-hidden"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
               >
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-50"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 0.5 }}
@@ -347,7 +338,7 @@ export default function Header1() {
                     </Link>
                   </motion.div>
                 ))}
-                <motion.div 
+                <motion.div
                   className="space-y-2 px-4 py-2 relative z-10"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -362,8 +353,11 @@ export default function Header1() {
                       Sign In
                     </Link>
                   </motion.div>
-                  <motion.div 
-                    whileHover={{ y: -2, boxShadow: "0px 8px 20px rgba(59, 130, 246, 0.3)" }} 
+                  <motion.div
+                    whileHover={{
+                      y: -2,
+                      boxShadow: "0px 8px 20px rgba(59, 130, 246, 0.3)",
+                    }}
                     whileTap={{ y: 1 }}
                   >
                     <Link
@@ -375,7 +369,7 @@ export default function Header1() {
                         Get Started
                         <Sparkles className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </span>
-                      <motion.div 
+                      <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         initial={{ scale: 0, rotate: 45 }}
                         whileHover={{ scale: 1.5, rotate: 0 }}

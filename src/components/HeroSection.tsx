@@ -69,7 +69,7 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-2xl mx-auto animate-fade-in-up delay-500">
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">500+</div>
+              <div className="text-3xl font-bold text-white mb-2">1500+</div>
               <div className="text-white">Students</div>
             </div>
             <div className="text-center">
@@ -81,7 +81,7 @@ const HeroSection = () => {
               <div className="text-white">Clubs</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">95%</div>
+              <div className="text-3xl font-bold text-white mb-2">93%</div>
               <div className="text-white">Placement</div>
             </div>
           </div>
