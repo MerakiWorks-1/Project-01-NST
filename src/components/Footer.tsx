@@ -56,7 +56,7 @@ const Footer = () => {
         {/* Newsletter */}
         <section className="bg-white border border-blue-200 rounded-2xl p-8 md:p-12 shadow-md text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
-            Stay Connected with Newton School
+            Stay Connected with Newton School of Technology
           </h3>
           <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
             Get the latest updates on events, admissions, academic programs, and campus news delivered directly to your inbox.
@@ -99,7 +99,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-gray-700">
                 <Mail className="h-4 w-4 mr-3 text-blue-600" />
-                <span className="text-sm">admissions@newtonschool.edu</span>
+                <span className="text-sm">csai.leadoffice@nst.rishihood.edu.in</span>
               </div>
             </div>
           </div>

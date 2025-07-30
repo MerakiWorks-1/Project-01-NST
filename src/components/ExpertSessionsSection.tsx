@@ -7,7 +7,7 @@ const expertSessionCards = [
     title: 'What',
     icon: Users,
     heading: 'NST Office Hours (“Expert Sessions”)',
-    description: 'In‑person, 45‑minute one‑on‑one slots with your NST faculty. Bring any course question, project snag, or career query—and get expert answers face‑to‑face.'
+    description: 'In-person, 45-minute one-on-one slots with your NST faculty. Bring any course question, project snag, or career query—and get expert answers face-to-face.'
   },
   {
     title: 'Why',
@@ -82,18 +82,20 @@ const ExpertSessionsSection = () => {
                     <CardTitle className="text-lg text-blue-950">{card.heading}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    {isArray ? (
-                      <ul className="space-y-2 mt-2 text-sm text-gray-700">
-                        {card.description.map((line: string, i: number) => (
-                          <li key={i} className="flex items-start">
-                            <div className="w-2 h-2 bg-blue-600 rounded-full mt-1 mr-2"></div>
-                            <span>{line}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p className="text-sm text-gray-700 mt-2">{card.description}</p>
-                    )}
+                    <div className="space-y-2 mt-2 text-sm text-gray-700">
+                      {Array.isArray(card.description) ? (
+                        <ul>
+                          {card.description.map((line: string, i: number) => (
+                            <li key={i} className="flex items-start">
+                              <div className="w-2 h-2 bg-blue-600 rounded-full mt-1 mr-2"></div>
+                              <span>{line}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>{card.description}</p>
+                      )}
+                    </div>
                   </CardContent>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

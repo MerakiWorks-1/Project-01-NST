@@ -67,10 +67,9 @@ const CampusLifeSection = () => {
             Campus Life
           </h2>
           <p className="text-gray-800 text-lg max-w-3xl mx-auto font-medium">
-            Experience world-class facilities, comfortable accommodation, and a vibrant community that makes Newton School feel like home.
+            Experience world-class facilities, comfortable accommodation, and a vibrant community that makes Newton School of Technology feel like home.
           </p>
         </div>
-
         {/* Accommodation Section */}
         <div id="accommodation" className="mb-16 relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-8 text-center animate-fade-in-up delay-200">
