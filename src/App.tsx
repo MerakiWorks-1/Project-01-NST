@@ -19,7 +19,6 @@ const Events = lazy(() => import("./pages/Events"));
 const Mentors = lazy(() => import("./pages/Mentors"));
 const Startups = lazy(() => import("./pages/Startups"));
 const Internships = lazy(() => import("./pages/Internships"));
-const Support = lazy(() => import("./pages/Support"));
 
 const queryClient = new QueryClient();
 
@@ -45,7 +44,6 @@ const App = () => (
             <Route path="/mentors" element={<Mentors />} />
             <Route path="/startups" element={<Startups />} />
             <Route path="/internships" element={<Internships />} />
-            <Route path="/support" element={<Support />} />
             <Route path="/cp" element={<CpClub />} />
             <Route path="/dev" element={<DevClub />} />
             <Route path="/robotics" element={<RoboticsClub />} />

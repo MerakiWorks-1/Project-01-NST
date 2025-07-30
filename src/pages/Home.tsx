@@ -33,7 +33,7 @@ const Home = () => {
               { title: 'Events', href: '/events', description: 'TechFest & cultural events' },
               { title: 'Mentors', href: '/mentors', description: 'Student guidance' },
               { title: 'Startups', href: '/startups', description: 'Newton Startup Fund' },
-              { title: 'Support', href: '/support', description: 'Help & resources' }
+              { title: 'Student Support', href: '/mentors', description: 'Help & resources' }
             ].map((item, idx) => (
               <Link
                 key={item.title}

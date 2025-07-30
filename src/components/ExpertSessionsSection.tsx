@@ -1,45 +1,57 @@
-import React from 'react';
-import { CalendarClock, Lightbulb, Users, MousePointerClick } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import React from "react";
+import {
+  CalendarClock,
+  Lightbulb,
+  Users,
+  MousePointerClick,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const expertSessionCards = [
   {
-    title: 'What',
+    title: "What",
     icon: Users,
-    heading: 'NST Office Hours (“Expert Sessions”)',
-    description: 'In-person, 45-minute one-on-one slots with your NST faculty. Bring any course question, project snag, or career query—and get expert answers face-to-face.'
+    heading: "NST Office Hours (“Expert Sessions”)",
+    description:
+      "In-person, 45-minute one-on-one slots with your NST faculty. Bring any course question, project snag, or career query—and get expert answers face-to-face.",
   },
   {
-    title: 'Why',
+    title: "Why",
     icon: Lightbulb,
-    heading: 'Personalized Learning. Deeper Insights.',
+    heading: "Personalized Learning. Deeper Insights.",
     description: [
-      'Tailor every session to your needs—no more generic group lectures.',
-      'Clarify tough concepts, debug assignments, or explore advanced topics.',
-      'Build mentor relationships that last beyond the classroom.'
-    ]
+      "Tailor every session to your needs—no more generic group lectures.",
+      "Clarify tough concepts, debug assignments, or explore advanced topics.",
+      "Build mentor relationships that last beyond the classroom.",
+    ],
   },
   {
-    title: 'When',
+    title: "When",
     icon: CalendarClock,
-    heading: 'Monday – Thursday',
+    heading: "Monday – Thursday",
     description: [
-      'Sessions open two weeks in advance.',
-      '45‑minute slots fill up fast—plan ahead!',
-      'You’ll receive an email reminder 24 hours before your booked time.'
-    ]
+      "Sessions open two weeks in advance.",
+      "45‑minute slots fill up fast—plan ahead!",
+      "You’ll receive an email reminder 24 hours before your booked time.",
+    ],
   },
   {
-    title: 'How',
+    title: "How",
     icon: MousePointerClick,
-    heading: 'Book in 5 Easy Clicks',
+    heading: "Book in 5 Easy Clicks",
     description: [
-      'Log into your Newton School Dashboard',
-      'Click the “Expert Sessions” button',
-      'Choose your faculty, date, and time slot',
-      'Confirm—then show up on campus!'
-    ]
-  }
+      "Log into your Newton School Dashboard",
+      "Click the “Expert Sessions” button",
+      "Choose your faculty, date, and time slot",
+      "Confirm—then show up on campus!",
+    ],
+  },
 ];
 
 const ExpertSessionsSection = () => {
@@ -50,11 +62,18 @@ const ExpertSessionsSection = () => {
         <div className="text-center mb-16 animate-fade-in-up delay-100 relative">
           <div className="absolute inset-0 -z-10 mx-auto w-3/4 h-full bg-blue-50/50 blur-3xl rounded-full"></div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
-            Expert Sessions
+            Office Hours
           </h2>
-          <p className="text-gray-800 text-lg max-w-3xl mx-auto font-medium">
-            One-on-one sessions with faculty to help you master difficult topics, fix bugs, and plan your future—at your convenience.
+          <p className="text-gray-800 text-lg max-w-3xl mx-auto font-medium pb-8">
+            One-on-one sessions with faculty to help you master difficult
+            topics, fix bugs, and plan your future—at your convenience.
           </p>
+
+              <img
+                className="rounded-lg"
+                src="/Office-hours.jpeg"
+                alt=""
+              />
         </div>
 
         {/* Grid Cards */}
@@ -79,7 +98,9 @@ const ExpertSessionsSection = () => {
                         {card.title}
                       </span>
                     </div>
-                    <CardTitle className="text-lg text-blue-950">{card.heading}</CardTitle>
+                    <CardTitle className="text-lg text-blue-950">
+                      {card.heading}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2 mt-2 text-sm text-gray-700">
