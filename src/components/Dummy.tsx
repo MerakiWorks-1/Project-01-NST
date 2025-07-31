@@ -13,7 +13,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { name: "Home", href: "/" },
-  { name: "Campus Life", href: "/campus" },
+  { name: "Campus Life", href: "/campxus" },
   {
     name: "Academics & Support",
     hasDropdown: true,
