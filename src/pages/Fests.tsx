@@ -40,7 +40,7 @@ const Fests = () => {
       <div className="min-h-screen">
 
         {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        <section className="py-20 px-4">
           <div className="container mx-auto text-center">
             <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200/80 transition-colors animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               <Trophy className="w-4 h-4 mr-1" />
@@ -70,7 +70,9 @@ const Fests = () => {
                             <div><p className="text-2xl font-bold text-blue-600">250+</p><p className="text-sm text-gray-500">Colleges</p></div>
                             <div><p className="text-2xl font-bold text-blue-600">₹10L+</p><p className="text-sm text-gray-500">Prize Pool</p></div>
                         </div>
-                        <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:shadow-lg transform hover:scale-105 transition-all">
+                        <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:shadow-lg transform hover:scale-105 transition-all"
+                        onClick={() => window.open("https://www.neutronfest.com", "_blank")}
+                        >
                             Explore Neutron <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
                     </div>
@@ -117,7 +119,9 @@ const Fests = () => {
                             <div><p className="text-2xl font-bold text-pink-600">100+</p><p className="text-sm text-gray-500">Colleges</p></div>
                             <div><p className="text-2xl font-bold text-pink-600">₹20L</p><p className="text-sm text-gray-500">Prize Pool</p></div>
                         </div>
-                        <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600 text-white hover:shadow-lg transform hover:scale-105 transition-all">
+                        <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600 text-white hover:shadow-lg transform hover:scale-105 transition-all"
+                        onClick={() => window.open("https://www.youtube.com/watch?v=jC4OacF7uG8", "_blank")}
+                        >
                             Explore DAMRU <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
                     </div>
