@@ -23,6 +23,7 @@ import {
   BookOpen,
   ArrowRight,
   Gamepad2,
+  Linkedin,
 } from "lucide-react"
 import Footer from "@/components/Footer";
 
