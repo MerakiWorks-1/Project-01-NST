@@ -81,7 +81,7 @@ const TechTrek = () => {
     {
       location: "Commming Soon",
       cities: "soon .......",
-      description: "",
+      description: "This year we are Comming up with more adventures...",
       image:
         "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tbWluZyUyMHNvb258ZW58MHx8MHx8fDA%3D",
       icon: Plane,
