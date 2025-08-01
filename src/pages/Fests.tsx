@@ -15,7 +15,7 @@ const Fests = () => {
   ];
 
   const damruHighlights = [
-    { title: "Star Performers", description: "Live performances by stars like Aastha Gill, Gaurav Kapoor, DJ MaskBox, and the fusion band Sadho." },
+    { title: "Star Performers", description: "Live performances by stars like Jassie Gill, Gaurav Kapoor, DJ MaskBox, and the fusion band Sadho." },
     { title: "Diverse Competitions", description: "Battle of the Bands, solo/group dance-offs, theatre, street art, and fashion shows." },
     { title: "Creative Workshops", description: "Masterclasses in photography, pottery, graffiti art, and creative writing." },
     { title: "Talent Showcases", description: "Open mic sessions, classical singing competitions, and much more for students to shine." },
@@ -66,9 +66,9 @@ const Fests = () => {
                             India’s most futuristic techno-cultural carnival, featuring cutting-edge tech competitions, workshops, and the first-ever massive drone show on a college campus.
                         </p>
                         <div className="grid grid-cols-3 gap-4 text-center mb-8">
-                            <div><p className="text-2xl font-bold text-blue-600">5,000+</p><p className="text-sm text-gray-500">Attendees</p></div>
-                            <div><p className="text-2xl font-bold text-blue-600">250+</p><p className="text-sm text-gray-500">Colleges</p></div>
-                            <div><p className="text-2xl font-bold text-blue-600">₹10L+</p><p className="text-sm text-gray-500">Prize Pool</p></div>
+                            <div><p className="text-2xl font-bold text-blue-600">1,700+</p><p className="text-sm text-gray-500">Attendees</p></div>
+                            <div><p className="text-2xl font-bold text-blue-600">1,100+</p><p className="text-sm text-gray-500">Participation</p></div>
+                            <div><p className="text-2xl font-bold text-blue-600">₹20L+</p><p className="text-sm text-gray-500">Prize Pool</p></div>
                         </div>
                         <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:shadow-lg transform hover:scale-105 transition-all"
                         onClick={() => window.open("https://www.neutronfest.com", "_blank")}
@@ -115,8 +115,8 @@ const Fests = () => {
                             North India's grandest cultural festival, spanning two days of music, dance, art, and recreation with a massive prize pool and top entertainers.
                         </p>
                         <div className="grid grid-cols-3 gap-4 text-center lg:text-right mb-8">
-                            <div><p className="text-2xl font-bold text-pink-600">45,000+</p><p className="text-sm text-gray-500">Participants</p></div>
-                            <div><p className="text-2xl font-bold text-pink-600">100+</p><p className="text-sm text-gray-500">Colleges</p></div>
+                            <div><p className="text-2xl font-bold text-pink-600">1,000+</p><p className="text-sm text-gray-500">Participants</p></div>
+                            <div><p className="text-2xl font-bold text-pink-600">20+</p><p className="text-sm text-gray-500">Colleges</p></div>
                             <div><p className="text-2xl font-bold text-pink-600">₹20L</p><p className="text-sm text-gray-500">Prize Pool</p></div>
                         </div>
                         <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600 text-white hover:shadow-lg transform hover:scale-105 transition-all"
