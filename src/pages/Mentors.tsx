@@ -378,6 +378,178 @@ const Mentors = () => {
         </div>
       </section>
 
+      {/* Key Benefits Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50/30 via-white to-indigo-50/30 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.08),transparent_50%)]" />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-blue-700 to-indigo-600 bg-clip-text text-transparent">
+              🌟 Key Benefits for Juniors
+            </h2>
+            <p className="text-gray-700 text-lg font-medium max-w-3xl mx-auto leading-relaxed">
+              Here's how the Junior Mentorship Culture transforms your college experience from day one
+            </p>
+          </div>
+
+          <div className="grid gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                emoji: "🌟",
+                number: "1",
+                title: "Easier Transition into College Life",
+                points: [
+                  "College can be intimidating — new people, new environment, new expectations.",
+                  "Mentors serve as friendly guides, helping juniors settle in smoothly.",
+                  "They explain how things work — from academics to clubs, from campus culture to events."
+                ],
+                bgGradient: "from-yellow-50 to-orange-50",
+                borderColor: "border-yellow-200",
+                hoverBorder: "hover:border-yellow-400"
+              },
+              {
+                emoji: "🧭",
+                number: "2", 
+                title: "Academic & Career Guidance",
+                points: [
+                  "Many mentors are already interning at top companies like Exly, Countress AI, AgroEdge, Penn State University, etc.",
+                  "Juniors gain insights into real-world projects, tech stacks, internships, and learning paths.",
+                  "Help with coding, subjects, tech profiles, and career clarity."
+                ],
+                bgGradient: "from-blue-50 to-cyan-50",
+                borderColor: "border-blue-200",
+                hoverBorder: "hover:border-blue-400"
+              },
+              {
+                emoji: "🫂",
+                number: "3",
+                title: "Emotional and Social Support", 
+                points: [
+                  "Mentors aren't just for studies — they're someone to talk to.",
+                  "They listen, share personal experiences, and help deal with homesickness, stress, or self-doubt.",
+                  "Builds friendships and trust early on."
+                ],
+                bgGradient: "from-pink-50 to-rose-50",
+                borderColor: "border-pink-200", 
+                hoverBorder: "hover:border-pink-400"
+              },
+              {
+                emoji: "🎉",
+                number: "4",
+                title: "Fun & Bonding",
+                points: [
+                  "Regular group mixers and challenges make juniors feel connected.",
+                  "Activities foster friendships and build a community vibe.",
+                  "Mentors are relatable seniors who hype you up and create a positive, friendly atmosphere."
+                ],
+                bgGradient: "from-purple-50 to-violet-50",
+                borderColor: "border-purple-200",
+                hoverBorder: "hover:border-purple-400"
+              },
+              {
+                emoji: "🌱",
+                number: "5",
+                title: "Growth-Oriented Mindset",
+                points: [
+                  "Through growth challenges and check-ins, mentors help juniors:",
+                  "• Build confidence",
+                  "• Set goals", 
+                  "• Track progress",
+                  "• Reflect on personal growth"
+                ],
+                bgGradient: "from-green-50 to-emerald-50",
+                borderColor: "border-green-200",
+                hoverBorder: "hover:border-green-400"
+              },
+              {
+                emoji: "🛡",
+                number: "6", 
+                title: "Supportive Culture & Safe Space",
+                points: [
+                  "Juniors become part of a non-judgmental and caring community.",
+                  "You're never alone — whether it's academic help or personal support, someone is just a message away."
+                ],
+                bgGradient: "from-indigo-50 to-blue-50",
+                borderColor: "border-indigo-200",
+                hoverBorder: "hover:border-indigo-400"
+              },
+              {
+                emoji: "🌐",
+                number: "7",
+                title: "Networking & Opportunities", 
+                points: [
+                  "Juniors get early exposure to active student communities, clubs, and internship paths.",
+                  "Learn from mentors' journeys — e.g., joining GDG, OOPS-CP Club, GameDev Club, or real startup roles."
+                ],
+                bgGradient: "from-teal-50 to-cyan-50",
+                borderColor: "border-teal-200",
+                hoverBorder: "hover:border-teal-400"
+              }
+            ].map((benefit, idx) => (
+              <Card
+                key={benefit.number}
+                className={`group relative overflow-hidden bg-gradient-to-br ${benefit.bgGradient} border-2 ${benefit.borderColor} ${benefit.hoverBorder} hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]`}
+              >
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center shadow-lg border border-white/50">
+                        <span className="text-2xl">{benefit.emoji}</span>
+                      </div>
+                      <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mt-3 shadow-sm">
+                        <span className="text-white font-bold text-sm">{benefit.number}</span>
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-900 transition-colors">
+                        {benefit.title}
+                      </h3>
+                      <div className="space-y-3">
+                        {benefit.points.map((point, pointIdx) => (
+                          <div key={pointIdx} className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <p className="text-gray-700 leading-relaxed font-medium">{point}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-500"></div>
+              </Card>
+            ))}
+          </div>
+
+          {/* Summary Card */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <Card className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 border-0 text-white overflow-hidden relative">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
+              <CardContent className="p-10 relative z-10">
+                <div className="text-center">
+                  <div className="text-4xl mb-6">❤️</div>
+                  <h3 className="text-3xl font-bold mb-6 text-white">Summary</h3>
+                  <p className="text-xl leading-relaxed mb-8 text-blue-100">
+                    The Junior Mentorship Culture is like having a <span className="font-semibold text-yellow-300">personal coach</span>, 
+                    <span className="font-semibold text-pink-300"> cheerleader</span>, and 
+                    <span className="font-semibold text-green-300"> older sibling</span> rolled into one. 
+                    It's not just guidance — it's <span className="font-semibold text-white">belonging</span>, 
+                    <span className="font-semibold text-white"> support</span>, and 
+                    <span className="font-semibold text-white"> empowerment</span> from day one.
+                  </p>
+                  <div className="border-t border-blue-700/50 pt-6">
+                    <blockquote className="text-lg italic text-blue-200 mb-4">
+                      "Culture does not make people, people make the culture."
+                    </blockquote>
+                    <p className="text-blue-100">
+                      At NST, juniors help build the culture just by being supported, and later, supporting others in return.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* What Juniors Can Expect */}
       <section className="py-16 bg-gradient-to-br from-white via-blue-50/40 to-indigo-50/40 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
