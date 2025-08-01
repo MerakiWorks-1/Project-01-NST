@@ -51,7 +51,7 @@ const navItems: NavItem[] = [
         name: "Clubs & Societies",
         href: "/clubs",
       },
-      { name: "Events & Festivals", href: "/events" },
+      { name: "Fests", href: "/fests" },
     ],
   },
   { name: "Student Mentors", href: "/mentors" },

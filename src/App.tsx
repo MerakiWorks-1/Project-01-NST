@@ -15,6 +15,7 @@ const Home = lazy(() => import("./pages/Home"));
 const Clubs = lazy(() => import("./pages/Clubs"));
 const Academics = lazy(() => import("./pages/Academics"));
 const Campus = lazy(() => import("./pages/Campus"));
+const Fests = lazy(() => import("./pages/Fests"));
 const Events = lazy(() => import("./pages/Events"));
 const Mentors = lazy(() => import("./pages/Mentors"));
 const Startups = lazy(() => import("./pages/Startups"));
@@ -40,9 +41,10 @@ const App = () => (
             <Route path="/clubs" element={<Clubs />} />
             <Route path="/academics" element={<Academics />} />
             <Route path="/campus" element={<Campus />} />
-            <Route path="/events" element={<Events />} />
+            <Route path="/fests" element={<Fests />} />
             <Route path="/mentors" element={<Mentors />} />
             <Route path="/startups" element={<Startups />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/internships" element={<Internships />} />
             <Route path="/cp" element={<CpClub />} />
             <Route path="/dev" element={<DevClub />} />

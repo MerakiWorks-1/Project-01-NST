@@ -4,7 +4,7 @@ import EventsSection from '@/components/EventsSection';
 import Footer from '@/components/Footer';
 
 
-const Events = () => {
+const Fests = () => {
   return (
     <div className="min-h-screen">
       
@@ -18,4 +18,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default Fests;
