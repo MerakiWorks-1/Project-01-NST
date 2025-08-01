@@ -9,7 +9,6 @@ const Campus = () => {
     <div className="min-h-screen">
       
       {/* <Navigation /> */}
-      <Dummy />
       <div className="pt-20">
         <CampusLifeSection />
       </div>
