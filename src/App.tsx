@@ -9,6 +9,7 @@ import CpClub from "./pages/Clubs/CpClub";
 import DevClub from "./pages/Clubs/DevClub";
 import RoboticsClub from "./pages/Clubs/RoboticsClub";
 import AcademicsFaculty from "../src/components/AcademicsFaculty"
+import TechTrek from "./components/TechTrek";
 
 // Lazy load pages for better performance
 const Home = lazy(() => import("./pages/Home"));
@@ -50,6 +51,7 @@ const App = () => (
             <Route path="/dev" element={<DevClub />} />
             <Route path="/robotics" element={<RoboticsClub />} />
             <Route path="/academics/faculty" element={<AcademicsFaculty/>} /> 
+            <Route path="/techtrek" element={<TechTrek />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
