@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, Clock, Code, Trophy, Users, Target, Star, Award, Zap, ArrowRight, PlayCircle, Youtube, Brain, Rocket, Globe, BookOpen, TrendingUp, Medal, Flame, Sparkles, Crown, Swords, Shield } from "lucide-react"
+import { Calendar, Clock, Code, Trophy, Users, Target, Star, Award, Zap, ArrowRight, PlayCircle, Youtube, Brain, Rocket, Globe, BookOpen, TrendingUp, Medal, Flame, Sparkles, Crown, Swords, Shield, MessageCircle } from "lucide-react"
 import Dummy from "@/components/Dummy";
 import Footer from "@/components/Footer";
 
@@ -196,7 +196,92 @@ export default function CpClub() {
           </div>
         </section>
 
-    
+    {/* Club POC Section */}
+        <section className="py-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_50%)]" />
+          <div className="container mx-auto relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-blue-900 via-blue-700 to-indigo-600 bg-clip-text mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                🤝 Club Point of Contact
+              </h2>
+              <p className="text-xl text-blue-700 max-w-3xl mx-auto font-medium animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.18s" }}>
+                Connect with our club leader for queries, guidance, and opportunities
+              </p>
+            </div>
+
+            <div className="flex justify-center">
+              <div className="w-full max-w-md animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+                <Card className="group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border-2 border-blue-200 hover:border-blue-400 shadow-xl transition-all duration-500 hover:-translate-y-3">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute top-0 right-0 w-0 h-0 border-solid border-t-8 border-r-8 border-transparent group-hover:border-t-blue-200 group-hover:border-r-blue-200 transition-all duration-300" />
+                  
+                  <CardContent className="p-8 text-center relative z-10">
+                    {/* Profile Image */}
+                    <div className="relative mb-6">
+                      <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white shadow-2xl transition-transform duration-300">
+                        <img
+                          src="https://media.licdn.com/dms/image/v2/D4D03AQHYnjLR5FUbhw/profile-displayphoto-crop_800_800/B4DZeyo43iG8AI-/0/1751048754518?e=1756944000&v=beta&t=-WOyrODketSY_tAXPA_M13eEPBLfTlgjdXN_4HaQ92g"
+                          alt="Karan"
+                          className="w-full h-full object-cover object-top"
+                          onError={(e) => {
+                            e.currentTarget.src = `https://ui-avatars.com/api/?name=Karan+Chhillar&background=3b82f6&color=fff&size=200`;
+                          }}
+                        />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-300">
+                        <Crown className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+
+                    {/* Name & Title */}
+                    <div className="mb-6">
+                      <h3 className="text-2xl font-bold text-blue-950 mb-2 group-hover:text-blue-900 transition-colors">
+                        Karan Chhillar
+                      </h3>
+                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 rounded-full">
+                        <Star className="w-4 h-4 text-blue-600" />
+                        <span className="text-blue-800 font-semibold text-sm">Club President</span>
+                      </div>
+                    </div>
+
+                    {/* Bio */}
+                    <div className="mb-8">
+                      <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors">
+                        Passionate competitive programmer and leader driving OOPS towards ICPC excellence. 
+                        Experienced in algorithmic problem-solving and mentoring aspiring programmers to achieve their goals.
+                      </p>
+                    </div>
+
+                    {/* LinkedIn Button */}
+                    <div className="space-y-3">
+                      <a
+                        href="https://www.linkedin.com/in/karan-chhillar-0a1618309/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block"
+                      >
+                        <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                          <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                          </svg>
+                          Connect on LinkedIn
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        </Button>
+                      </a>
+                      
+                      <div className="text-sm text-gray-600">
+                        <span className="inline-flex items-center gap-1">
+                          <MessageCircle className="w-4 h-4" />
+                          Available for mentorship & queries
+                        </span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Entrance Process - Enhanced */}
         <section className="py-20 px-4">
@@ -324,7 +409,7 @@ export default function CpClub() {
                 return (
                   <Card
                     key={item.title}
-                    className={`group text-center ${item.colors.bg} ${item.colors.border} ${item.colors.hoverBorder} hover:shadow-2xl hover:-translate-y-3 hover:rotate-1 transition-all duration-500 animate-fade-in-up relative overflow-hidden`}
+                    className={`group text-center bg-white/80 ${item.colors.border} ${item.colors.hoverBorder} hover:shadow-2xl hover:-translate-y-3 hover:rotate-1 transition-all duration-500 animate-fade-in-up relative overflow-hidden`}
                     style={{ animationDelay: `${0.25 + idx * 0.1}s` }}
                   >
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -358,12 +443,63 @@ export default function CpClub() {
           </div>
         </section>
 
-        {/* Member Spotlights - Enhanced */}
-        <section className="py-20 px-4 bg-gradient-to-br from-white via-purple-50/30 to-pink-50/30 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.08),transparent_50%)]" />
+        {/* Why Join OOPS - New Benefits Section */}
+        <section className="py-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0" />
           <div className="container mx-auto relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-purple-900 via-purple-700 to-pink-600 bg-clip-text mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              <h2 className="text-4xl md:text-5xl font-bold text-transparent text-black mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                🚀 Why Join OOPS?
+              </h2>
+              <p className="text-xl text-blue-700 max-w-3xl mx-auto font-medium animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.18s" }}>
+                Unlock your potential and transform your programming journey with exclusive benefits
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {clubBenefits.map((benefit, idx) => {
+                const Icon = benefit.icon;
+                return (
+                  <Card
+                    key={benefit.title}
+                    className={`group relative overflow-hidden bg-white/80 border-2 ${benefit.borderColor} ${benefit.hoverBorder} hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in-up`}
+                    style={{ animationDelay: `${0.25 + idx * 0.1}s` }}
+                  >
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className={`absolute inset-0 bg-gradient-to-r ${benefit.gradient} opacity-5`} />
+                    </div>
+                    
+                    <CardContent className="p-8 relative z-10">
+                      <div className="text-center">
+                        <div className={`w-16 h-16 bg-gradient-to-r ${benefit.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
+                          <Icon className="w-8 h-8 text-white" />
+                        </div>
+                        
+                        <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-900 transition-colors">
+                          {benefit.title}
+                        </h3>
+                        
+                        <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors">
+                          {benefit.description}
+                        </p>
+                      </div>
+                    </CardContent>
+                    
+                    <div className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${benefit.gradient} group-hover:w-full transition-all duration-500`} />
+                    <div className="absolute top-0 right-0 w-0 h-0 border-solid border-t-8 border-r-8 border-transparent group-hover:border-t-blue-200 group-hover:border-r-blue-200 transition-all duration-300" />
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Member Spotlights - Enhanced */}
+        <section className="py-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 " />
+          <div className="container mx-auto relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-transparent text-black mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
                 🌟 Member Spotlights
               </h2>
               <p className="text-xl text-purple-700 max-w-3xl mx-auto font-medium animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.18s" }}>
@@ -419,18 +555,18 @@ export default function CpClub() {
         </section>
 
         {/* Contest Schedule - Enhanced */}
-        <section className="py-20 px-4 bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/30 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
+        <section className="py-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0" />
           <div className="container mx-auto relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-blue-900 via-blue-700 to-indigo-600 bg-clip-text mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              <h2 className="text-4xl md:text-5xl font-bold text-transparent text-black mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
                 ⚔️ Contest Arena
               </h2>
               <p className="text-xl text-blue-700 max-w-3xl mx-auto font-medium animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.18s" }}>
                 Rigorous and engaging contest schedule across multiple platforms to sharpen your competitive edge
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
               {[
                 { 
@@ -526,8 +662,8 @@ export default function CpClub() {
             <div className="text-center animate-fade-in-up" style={{ animationDelay: "0.65s" }}>
               <h3 className="text-3xl font-bold text-blue-900 mb-8">🎯 Special Events & Announcements</h3>
               <div className="max-w-3xl mx-auto">
-                <Card className="group relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-2xl border-none transition-all duration-500 hover:shadow-3xl hover:-translate-y-2 hover:scale-105">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <Card className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-2xl border-none transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-100 transition-opacity duration-500" />
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)]" />
                   
                   <CardContent className="p-10 relative z-10">
@@ -557,10 +693,10 @@ export default function CpClub() {
                     </div>
                     
                     <a href="https://www.hackerrank.com/contests/long-challenge-merakicode/challenges" target="_blank" rel="noopener noreferrer">
-                      <Button className="bg-white text-blue-700 hover:bg-gray-100 font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl shadow-lg">
+                      <Button className="bg-white text-blue-700 hover:bg-gray-100 font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-lg">
                         <Rocket className="mr-3 w-5 h-5" />
                         Register on HackerRank 
-                        <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                        <ArrowRight className="ml-3 w-5 h-5 hover:translate-x-1 transition-transform duration-300" />
                       </Button>
                     </a>
                   </CardContent>
@@ -570,90 +706,38 @@ export default function CpClub() {
           </div>
         </section>
 
-        {/* Vision - Enhanced */}
-        <section className="py-20 px-4 bg-gradient-to-br from-indigo-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.2),transparent_50%)]" />
-          
-          <div className="container mx-auto text-center relative z-10">
-            <div className="mb-16">
-              <h2 className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-yellow-400 via-orange-300 to-red-400 bg-clip-text mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                🏆 Our Vision
-              </h2>
-              <div className="max-w-5xl mx-auto">
-                <p className="text-2xl md:text-3xl font-bold leading-relaxed animate-fade-in-up mb-8" style={{ animationDelay: "0.18s" }}>
-                  The ultimate vision of the CP Club is to make India win its first{" "}
-                  <span className="text-transparent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text font-black">
-                    ICPC World Finals Gold Medal
-                  </span>
-                </p>
-                <p className="text-xl text-blue-200 font-medium animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-                  and we aspire for{" "}
-                  <span className="text-white font-bold">Newton School of Technology</span> to lead that historic moment.
-                </p>
+        {/* Vision */}
+        <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+          <div className="container mx-auto text-center">
+            <h2 className="text-3xl font-bold text-blue-900 mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              Our Vision
+            </h2>
+            <div className="max-w-4xl mx-auto">
+              <div className="text-xl text-gray-800 mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.18s" }}>
+                The ultimate vision of the CP Club is to make India win its first{" "}
+                <strong className="text-blue-700">ICPC World Finals Gold Medal</strong>, and we aspire for{" "}
+                <strong>Newton School of Technology</strong> to lead that historic moment.
               </div>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {[
-                { 
-                  icon: Trophy, 
-                  title: "Build Strong ICPC Team", 
-                  desc: "Develop competitive teams ready for international competitions with world-class training",
-                  gradient: "from-yellow-400 to-orange-500",
-                  bgGradient: "from-yellow-400/10 to-orange-500/10"
-                },
-                { 
-                  icon: Target, 
-                  title: "International Problem-Solving", 
-                  desc: "Promote world-class algorithmic thinking and coding skills among Indian students",
-                  gradient: "from-blue-400 to-cyan-500",
-                  bgGradient: "from-blue-400/10 to-cyan-500/10"
-                },
-                { 
-                  icon: Star, 
-                  title: "Global CP Presence", 
-                  desc: "Elevate India's standing in global competitive programming and inspire future generations",
-                  gradient: "from-purple-400 to-pink-500",
-                  bgGradient: "from-purple-400/10 to-pink-500/10"
-                },
-              ].map((item, idx) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={item.title}
-                    className={`group relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-fade-in-up transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:scale-105 overflow-hidden`}
-                    style={{ animationDelay: `${0.32 + idx * 0.1}s` }}
-                  >
-                    <div className={`absolute inset-0 bg-gradient-to-br ${item.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                    
-                    <div className="relative z-10">
-                      <div className={`w-20 h-20 bg-gradient-to-r ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-2xl`}>
-                        <Icon className="w-10 h-10 text-white" />
-                      </div>
-                      
-                      <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-yellow-300 transition-colors duration-300">
-                        {item.title}
-                      </h3>
-                      
-                      <p className="text-blue-200 leading-relaxed group-hover:text-white transition-colors duration-300">
-                        {item.desc}
-                      </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { icon: Trophy, title: "Build Strong ICPC Team", desc: "Develop competitive teams ready for international competitions" },
+                  { icon: Target, title: "International Problem-Solving", desc: "Promote world-class algorithmic thinking and coding skills" },
+                  { icon: Star, title: "Global CP Presence", desc: "Elevate India's standing in global competitive programming" },
+                ].map((item, idx) => {
+                   const Icon = item.icon;
+                   return (
+                    <div
+                      key={item.title}
+                      className="bg-white/80 rounded-lg p-6 border border-blue-100 animate-fade-in-up transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-blue-300"
+                      style={{ animationDelay: `${0.22 + idx * 0.09}s` }}
+                    >
+                      <Icon className="w-8 h-8 mx-auto mb-3 text-blue-600" />
+                      <h3 className="font-semibold text-blue-950 mb-2">{item.title}</h3>
+                      <p className="text-sm text-gray-700">{item.desc}</p>
+                       </div>
+                   )
+                })}
                     </div>
-                    
-                    <div className={`absolute bottom-0 left-0 w-0 h-2 bg-gradient-to-r ${item.gradient} group-hover:w-full transition-all duration-500`} />
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Call to Action */}
-            <div className="mt-20 animate-fade-in-up" style={{ animationDelay: "0.65s" }}>
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-gray-900 font-bold text-lg shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 cursor-pointer">
-                <Crown className="w-6 h-6" />
-                <span>Join the Revolution</span>
-                <Sparkles className="w-6 h-6" />
-              </div>
             </div>
           </div>
         </section>
