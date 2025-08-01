@@ -48,7 +48,21 @@ const ClubsSection = () => {
       icon: Microchip,
       tags: ["Robotics", "AI", "Engineering"],
       link: "/robotics",
-    },]
+    },
+    {
+      name: "Google Developer Group",
+      description: "A community for developers to learn, share, and grow.",
+      members: "300+ Members",
+      icon: Code,
+      tags: [
+        "Web Development",
+        "Mobile Development",
+        "Cloud Computing",
+        "AI & ML",
+      ],
+      link: "/gdg",
+    }
+  ]
 
     return (
     <section id="clubs" className="py-20">
