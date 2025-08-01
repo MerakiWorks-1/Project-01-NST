@@ -26,6 +26,14 @@ import {
 } from "lucide-react"
 import Footer from "@/components/Footer";
 
+const pocDetails = {
+  name: "Alex Doe",
+  role: "DevClub Lead",
+  photo: `https://ui-avatars.com/api/?name=Alex+Doe&background=4f46e5&color=fff&size=128`,
+  bio: "Passionate developer and open-source advocate, leading DevClub to build innovative projects and foster a culture of collaboration and learning.",
+  linkedin: "https://www.linkedin.com/",
+};
+
 export default function RoboticsClub() {
   return (
     <div className="min-h-screen bg-white/95">
@@ -65,6 +73,41 @@ export default function RoboticsClub() {
                   </div>
                 )
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Point of Contact Section */}
+        <section className="py-16 px-4 bg-white">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                Point of Contact
+              </h2>
+              <p className="text-blue-700 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.18s" }}>
+                Have questions or want to collaborate? Reach out to our club lead.
+              </p>
+            </div>
+            <div className="max-w-md mx-auto animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+              <Card className="group relative overflow-hidden bg-white border-2 border-blue-200 hover:border-indigo-400 shadow-xl transition-all duration-500 hover:-translate-y-2">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <CardContent className="p-8 text-center relative z-10">
+                  <img
+                    src={pocDetails.photo}
+                    alt={pocDetails.name}
+                    className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/128'; }}
+                  />
+                  <h3 className="text-2xl font-bold text-blue-950">{pocDetails.name}</h3>
+                  <p className="text-indigo-600 font-semibold mb-4">{pocDetails.role}</p>
+                  <p className="text-gray-700 mb-6">{pocDetails.bio}</p>
+                  <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                    <a href={pocDetails.linkedin} target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="mr-2 h-4 w-4" /> Connect on LinkedIn
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>

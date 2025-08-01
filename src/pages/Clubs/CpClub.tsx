@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, Clock, Code, Trophy, Users, Target, Star, Award, Zap, ArrowRight, PlayCircle, Youtube, Brain, Rocket, Globe, BookOpen, TrendingUp, Medal, Flame, Sparkles, Crown, Swords, Shield, MessageCircle } from "lucide-react"
+import { Calendar, Clock, Code, Trophy, Users, Target, Star, Award, Zap, ArrowRight, PlayCircle, Youtube, Brain, Rocket, Globe, BookOpen, TrendingUp, Medal, Flame, Sparkles, Crown, Swords, Shield, MessageCircle, Linkedin } from "lucide-react"
 import Dummy from "@/components/Dummy";
 import Footer from "@/components/Footer";
 
@@ -148,6 +148,14 @@ export default function CpClub() {
     }
   ];
 
+  const pocDetails = {
+  name: "Alex Doe",
+  role: "DevClub Lead",
+  photo: `https://ui-avatars.com/api/?name=Alex+Doe&background=4f46e5&color=fff&size=128`,
+  bio: "Passionate developer and open-source advocate, leading DevClub to build innovative projects and foster a culture of collaboration and learning.",
+  linkedin: "https://www.linkedin.com/",
+};
+
   return (
     <div className="min-h-screen bg-white/95">
       <Dummy />
@@ -196,89 +204,37 @@ export default function CpClub() {
           </div>
         </section>
 
-    {/* Club POC Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_50%)]" />
-          <div className="container mx-auto relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-blue-900 via-blue-700 to-indigo-600 bg-clip-text mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                🤝 Club Point of Contact
+    {/* Point of Contact Section */}
+        <section className="py-16 px-4 bg-white">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                Point of Contact
               </h2>
-              <p className="text-xl text-blue-700 max-w-3xl mx-auto font-medium animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.18s" }}>
-                Connect with our club leader for queries, guidance, and opportunities
+              <p className="text-blue-700 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.18s" }}>
+                Have questions or want to collaborate? Reach out to our club lead.
               </p>
             </div>
-
-            <div className="flex justify-center">
-              <div className="w-full max-w-md animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-                <Card className="group relative overflow-hidden bg-gradient-to-br from-white to-blue-50 border-2 border-blue-200 hover:border-blue-400 shadow-xl transition-all duration-500 hover:-translate-y-3">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute top-0 right-0 w-0 h-0 border-solid border-t-8 border-r-8 border-transparent group-hover:border-t-blue-200 group-hover:border-r-blue-200 transition-all duration-300" />
-                  
-                  <CardContent className="p-8 text-center relative z-10">
-                    {/* Profile Image */}
-                    <div className="relative mb-6">
-                      <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white shadow-2xl transition-transform duration-300">
-                        <img
-                          src="https://media.licdn.com/dms/image/v2/D4D03AQHYnjLR5FUbhw/profile-displayphoto-crop_800_800/B4DZeyo43iG8AI-/0/1751048754518?e=1756944000&v=beta&t=-WOyrODketSY_tAXPA_M13eEPBLfTlgjdXN_4HaQ92g"
-                          alt="Karan"
-                          className="w-full h-full object-cover object-top"
-                          onError={(e) => {
-                            e.currentTarget.src = `https://ui-avatars.com/api/?name=Karan+Chhillar&background=3b82f6&color=fff&size=200`;
-                          }}
-                        />
-                      </div>
-                      <div className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-300">
-                        <Crown className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
-
-                    {/* Name & Title */}
-                    <div className="mb-6">
-                      <h3 className="text-2xl font-bold text-blue-950 mb-2 group-hover:text-blue-900 transition-colors">
-                        Karan Chhillar
-                      </h3>
-                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 rounded-full">
-                        <Star className="w-4 h-4 text-blue-600" />
-                        <span className="text-blue-800 font-semibold text-sm">Club President</span>
-                      </div>
-                    </div>
-
-                    {/* Bio */}
-                    <div className="mb-8">
-                      <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors">
-                        Passionate competitive programmer and leader driving OOPS towards ICPC excellence. 
-                        Experienced in algorithmic problem-solving and mentoring aspiring programmers to achieve their goals.
-                      </p>
-                    </div>
-
-                    {/* LinkedIn Button */}
-                    <div className="space-y-3">
-                      <a
-                        href="https://www.linkedin.com/in/karan-chhillar-0a1618309/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block"
-                      >
-                        <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                          <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                          </svg>
-                          Connect on LinkedIn
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        </Button>
-                      </a>
-                      
-                      <div className="text-sm text-gray-600">
-                        <span className="inline-flex items-center gap-1">
-                          <MessageCircle className="w-4 h-4" />
-                          Available for mentorship & queries
-                        </span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+            <div className="max-w-md mx-auto animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
+              <Card className="group relative overflow-hidden bg-white border-2 border-blue-200 hover:border-indigo-400 shadow-xl transition-all duration-500 hover:-translate-y-2">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <CardContent className="p-8 text-center relative z-10">
+                  <img
+                    src={pocDetails.photo}
+                    alt={pocDetails.name}
+                    className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/128'; }}
+                  />
+                  <h3 className="text-2xl font-bold text-blue-950">{pocDetails.name}</h3>
+                  <p className="text-indigo-600 font-semibold mb-4">{pocDetails.role}</p>
+                  <p className="text-gray-700 mb-6">{pocDetails.bio}</p>
+                  <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                    <a href={pocDetails.linkedin} target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="mr-2 h-4 w-4" /> Connect on LinkedIn
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
