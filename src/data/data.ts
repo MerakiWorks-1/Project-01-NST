@@ -369,13 +369,6 @@ export const studentMentors = [
     linkedin: "https://www.linkedin.com/in/adamya-tiwari-2922b3328/",
   },
   {
-    name: "Aditya Kishore Singh",
-    bio: "Student Mentor",
-    batch: "2028",
-    img: "/images/student_mentors/aditya_kishore_singh.png",
-    linkedin: "https://www.linkedin.com/in/aditya-kishore-singh-3168a4249/",
-  },
-  {
     name: "Aditya Rana",
     bio: "Student Mentor",
     batch: "2028",
@@ -528,5 +521,12 @@ export const studentMentors = [
     batch: "2028",
     img: "/images/student_mentors/vansh_panwar.jpeg",
     linkedin: "https://www.linkedin.com/in/vanshpanwar018/",
+  },
+  {
+    name: "Aditya Kishore Singh",
+    bio: "Student Mentor",
+    batch: "2028",
+    img: "/images/student_mentors/aditya_kishore_singh.png",
+    linkedin: "https://www.linkedin.com/in/aditya-kishore-singh-3168a4249/",
   },
 ];
