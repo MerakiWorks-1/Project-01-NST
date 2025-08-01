@@ -40,10 +40,8 @@ const navItems: NavItem[] = [
         name: "Newton Startup Fund",
         href: "/startups",
       },
-      { name: "Real-World Exposure", 
-        href: "/events#exposure" 
-      },
-      { name: "Tech Trek", 
+      
+      { name: "Real World Exposure", 
         href: "/techtrek" 
       },
     ],

@@ -225,20 +225,24 @@ export default function CampusLifeSection() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-blue-900 mb-4">
-                Experience Our Campus
-              </h3>
-              <p className="text-gray-700 mb-6 max-w-xl mx-auto">
-                Take a virtual tour or schedule an in-person visit to explore our state-of-the-art facilities.
-              </p>
-              <Button
-                size="lg"
-                onClick={() => window.open('https://maps.app.goo.gl/dpsdhDSJVo7R3j8A7', '_blank')}
-                className="bg-gradient-to-r from-blue-700 to-indigo-600 text-white font-semibold rounded-full px-8 py-3 hover:scale-105 focus:ring-4 focus:ring-indigo-300 transition-transform shadow-lg"
-              >
-                <MapPin className="h-5 w-5 mr-2" aria-hidden="true" />
-                Schedule a Tour
-              </Button>
+        <h3 className="text-2xl font-bold text-blue-900 mb-4">
+          Experience Our Campus
+        </h3>
+        <p className="text-gray-700 mb-6 max-w-xl mx-auto">
+          Take a virtual tour or schedule an in-person visit to explore our state-of-the-art facilities.
+        </p>
+        <div className="flex justify-center">
+          <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/VDwRPGdWv0g"
+            title="Campus Tour"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded-xl shadow-xl max-w-3xl w-full"
+          ></iframe>
+        </div>
             </motion.div>
           </div>
         </div>

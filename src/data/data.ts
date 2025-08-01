@@ -275,14 +275,6 @@ export const mentorList = [
     img: "/images/mentors/gaurav_singh.jpg",
   },
   {
-    name: "Huram Pariya",
-    gender: "Female",
-    designation: "Mentor",
-    linkedin: "https://www.linkedin.com/in/huram-pariya-b16244324/",
-    bio: "Academic Advisor at NST, Ex - Apex Visas",
-    img: "/images/mentors/huram_pariya.jpg",
-  },
-  {
     name: "Nitish Patel",
     gender: "Male",
     designation: "Mentor",
