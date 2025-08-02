@@ -26,11 +26,11 @@ import {
 import Footer from "@/components/Footer";
 
 const pocDetails = {
-  name: "Alex Doe",
-  role: "DevClub Lead",
-  photo: `https://ui-avatars.com/api/?name=Alex+Doe&background=4f46e5&color=fff&size=128`,
-  bio: "Passionate developer and open-source advocate, leading DevClub to build innovative projects and foster a culture of collaboration and learning.",
-  linkedin: "https://www.linkedin.com/",
+  name: "Aditya Kumar",
+  role: "Full stack Developer | Strategy & Innovation | AI/ML Expert | Blockchain Expert | Club President@DevClub",
+  photo: "../../../public/images/Aditya.jpg",
+  bio: "",
+  linkedin: "https://www.linkedin.com/in/adityaInnovates/",
 };
 
 export default function DevClub() {

@@ -28,11 +28,11 @@ import {
 import Footer from "@/components/Footer";
 
 const pocDetails = {
-  name: "Alex Doe",
-  role: "DevClub Lead",
-  photo: `https://ui-avatars.com/api/?name=Alex+Doe&background=4f46e5&color=fff&size=128`,
-  bio: "Passionate developer and open-source advocate, leading DevClub to build innovative projects and foster a culture of collaboration and learning.",
-  linkedin: "https://www.linkedin.com/",
+  name: "Sourabh Sarkar",
+  role: "POC Robotics Club",
+  photo: "../../../public/images/Sourabh Sarkar.jpg",
+  bio: "",
+  linkedin: "https://www.linkedin.com/in/sourabh-sarkar-a32821293/",
 };
 
 export default function RoboticsClub() {

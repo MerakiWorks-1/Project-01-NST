@@ -11,23 +11,23 @@ const Gdg = () => {
     {
       name: "Aaryan Yadav",
       role: "President, GDG RU",
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
+      photo: "../../../public/images/Aryan.jpg",
       bio: "Leading the charge to foster a vibrant tech community at Rishihood University.",
       linkedin: "https://www.linkedin.com/in/aaryanyadav/",
     },
     {
       name: "Puneet",
       role: "Vice President, GDG RU",
-      photo: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200&auto=format&fit=crop",
+      photo: "../../../public/images/Puneet.jpg",
       bio: "Dedicated to creating opportunities for students to learn, grow, and connect.",
-      linkedin: "https://www.linkedin.com/in/puneet/",
+      linkedin: "https://www.linkedin.com/in/puneet-kathuria-33a296220/",
     },
     {
       name: "Pranav Singh",
       role: "Secretary, GDG RU",
-      photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop",
-      bio: "The organizational backbone of GDG RU, managing communications and coordination.",
-      linkedin: "https://www.linkedin.com/in/pranavsingh/",
+      photo: "../../../public/images/student_mentors/pranav_singh.jpeg",
+      bio: "The organizational backbone of GDG RU, managment and coordination.",
+      linkedin: "https://www.linkedin.com/in/pranav-singh-developer"
     },
   ];
 
