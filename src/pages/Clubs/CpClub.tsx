@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, Clock, Code, Trophy, Users, Target, Star, Award, Zap, ArrowRight, PlayCircle, Youtube, Brain, Rocket, Globe, BookOpen, TrendingUp, Medal, Flame, Sparkles, Crown, Swords, Shield, MessageCircle, Linkedin, ChevronRight, ExternalLink, Mail, Phone, MapPin } from "lucide-react"
 import { Footer } from "react-day-picker";
+import Dummy from "@/components/Dummy";
 
 export default function CpClub() {
   const communityMembers = [
@@ -127,7 +128,7 @@ export default function CpClub() {
     name: "Karan Chhillar",
     role: "President - OOPS (CP Club)",
     achievements: "Pupil @ Codeforces (Max - 1311) | 3⭐ @ CodeChef (Max - 1706) | Knight @ Leetcode (Max - 1846)",
-    photo: "../../../public/images/Karan.jpg",
+    photo: "/images/Karan.jpg",
     bio: "Passionate competitive programmer leading OOPS with a vision to elevate Newton School of Technology's presence in global programming competitions.",
     linkedin: "https://www.linkedin.com/in/karan-chhillar-0a1618309/",
     email: "karan.chhillar@example.com"
@@ -177,25 +178,7 @@ export default function CpClub() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
-      {/* Navigation Header */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                <Code className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">OOPS</span>
-            </div>
-            <div className="hidden md:flex items-center space-x-6">
-              <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">About</a>
-              <a href="#community" className="text-gray-600 hover:text-blue-600 transition-colors">Community</a>
-              <a href="#contests" className="text-gray-600 hover:text-blue-600 transition-colors">Contests</a>
-              <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Dummy />
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 px-4 overflow-hidden">
