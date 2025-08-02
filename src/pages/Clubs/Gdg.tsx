@@ -27,7 +27,7 @@ const Gdg = () => {
       role: "Secretary, GDG RU",
       photo: "../../../public/images/student_mentors/pranav_singh.jpeg",
       bio: "The organizational backbone of GDG RU, managment and coordination.",
-      linkedin: "https://www.linkedin.com/in/pranav-singh-developer"
+      linkedin: "https://www.linkedin.com/in/pranav-singh-developer",
     },
   ];
 
@@ -44,6 +44,19 @@ const Gdg = () => {
       { step: "03", icon: UserCheck, title: "Final Selection", description: "Successful candidates are welcomed into a vertical to begin their journey of learning and contributing to the GDG RU community." },
   ];
 
+  const communityHighlights = [
+    {
+      title: "Visual Vortex Hackathon 2024",
+      url: "https://www.linkedin.com/posts/gdgrishihood_hackathon-accessibility-innovation-activity-7268140311434915840-PbAt",
+      description: "Our first-ever UI/UX hackathon, where students created innovative, accessible digital solutions in a 12-hr Overnight Designing Sprint, showcasing creativity and teamwork.",
+    },
+    {
+      title: "IdeaVerse 1.0 Ideathon",
+      url: "https://www.linkedin.com/posts/gdgrishihood_ideaverse-ideathon-innovationinaction-activity-7299196093383229440-UKsS",
+      description: "An entrepreneurship-themed event where students pitched groundbreaking ideas and built business models, guided by industry experts.",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white/95">
       <Dummy />
@@ -57,7 +70,7 @@ const Gdg = () => {
               Google Developer Groups
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 animate-fade-in-up" style={{ animationDelay: "0.18s" }}>
-              GDG <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">Rishihood University</span>
+              Google Developers <span className="bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">Group</span>
             </h1>
             <p className="text-xl text-gray-700 mb-10 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
               An open, inclusive space for students to learn, collaborate, and innovate with Google technologies.
@@ -133,6 +146,50 @@ const Gdg = () => {
           </div>
         </section>
 
+        {/* Community Highlights Section */}
+        <section className="py-16 px-4 bg-white">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up">Community Highlights</h2>
+              <p className="text-blue-700 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                Explore our vibrant community through our latest events and achievements.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {communityHighlights.map((highlight, idx) => (
+                <Card
+                  key={idx}
+                  className="group relative overflow-hidden bg-white border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+                  style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
+                >
+                  <CardHeader>
+                    <CardTitle className="text-blue-950">{highlight.title}</CardTitle>
+                    <CardDescription className="text-blue-700">{highlight.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button
+                      className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
+                      onClick={() => window.open(highlight.url, "_blank")}
+                    >
+                      View More
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="text-center mt-10 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+              <Button
+                className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
+                onClick={() => window.open("https://www.linkedin.com/company/gdgrishihood/", "_blank")}
+              >
+                Explore More on LinkedIn
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          </div>
+        </section>
+
         {/* Leadership Section */}
         <section className="py-16 px-4 bg-white">
           <div className="container mx-auto">
@@ -151,7 +208,7 @@ const Gdg = () => {
                     <CardDescription className="text-blue-700 font-semibold">{leader.role}</CardDescription>
                     <p className="text-gray-600 text-sm mt-3 min-h-[60px]">{leader.bio}</p>
                     <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
-                      <Button variant="outline" size="icon" className="rounded-full border-blue-300 text-blue-700 hover:bg-blue-100">
+                      <Button variant="outline" size="icon" className="rounded-full border-blue-300 text-white hover:bg-blue-100">
                         <Linkedin className="w-4 h-4" />
                       </Button>
                     </a>
@@ -162,7 +219,7 @@ const Gdg = () => {
           </div>
         </section>
 
-        {/* How to Join Section - REDESIGNED */}
+        {/* How to Join Section */}
         <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-16 text-blue-900">
