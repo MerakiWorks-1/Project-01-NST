@@ -30,7 +30,7 @@ import Footer from "@/components/Footer";
 const pocDetails = {
   name: "Sourabh Sarkar",
   role: "POC Robotics Club",
-  photo: "../../../public/images/Sourabh Sarkar.jpg",
+  photo: "/images/Sourabh Sarkar.jpg",
   bio: "",
   linkedin: "https://www.linkedin.com/in/sourabh-sarkar-a32821293/",
 };

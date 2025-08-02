@@ -28,7 +28,7 @@ import Footer from "@/components/Footer";
 const pocDetails = {
   name: "Aditya Kumar",
   role: "Full stack Developer | Strategy & Innovation | AI/ML Expert | Blockchain Expert | Club President@DevClub",
-  photo: "../../../public/images/Aditya.jpg",
+  photo: "/images/Aditya.jpg",
   bio: "",
   linkedin: "https://www.linkedin.com/in/adityaInnovates/",
 };
