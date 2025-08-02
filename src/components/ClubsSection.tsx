@@ -14,7 +14,6 @@ const ClubsSection = () => {
     {
       name: "CP Club",
       description: "For aspiring problem solvers and competitive programmers.",
-      members: "250+ Members",
       icon: Code,
       tags: [
         "Competitive Programming",
@@ -27,7 +26,6 @@ const ClubsSection = () => {
     {
       name: "Dev Club",
       description: "Hone your public speaking and communication skills.",
-      members: "120+ Members",
       icon: Binary,
       tags: [
         "UI/UX",
@@ -44,7 +42,6 @@ const ClubsSection = () => {
     {
       name: "Robotics Club",
       description: "Explore the world of robotics and automation.",
-      members: "180+ Members",
       icon: Microchip,
       tags: ["Robotics", "AI", "Engineering"],
       link: "/robotics",
@@ -52,7 +49,6 @@ const ClubsSection = () => {
     {
       name: "Google Developer Group",
       description: "A community for developers to learn, share, and grow.",
-      members: "300+ Members",
       icon: Code,
       tags: [
         "Web Development",

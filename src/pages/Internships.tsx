@@ -14,6 +14,8 @@ import {
   Download,
   CheckCircle,
   Quote,
+  Rocket,
+  Sparkles,
 } from "lucide-react";
 
 const Internships = () => {
@@ -41,7 +43,6 @@ const Internships = () => {
       { title: "Smart India Hackathon", description: "Youngest first-year team tackling Delhi Transport Corporation challenges.", madeBy: "Roni, Deeptanu & Team", batch: 2024 },
   ];
 
-
   return (
     <div className="min-h-screen bg-white/95">
       
@@ -51,9 +52,6 @@ const Internships = () => {
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
         <div className="container mx-auto text-center">
-            <Badge className="mb-4 bg-red-100 text-red-800 animate-fade-in-up">
-              NSAT Applications for 2025 have been closed
-            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent animate-fade-in-up" style={{animationDelay: "0.1s"}}>
                 Internship & Placement Success
             </h1>
@@ -91,8 +89,18 @@ const Internships = () => {
                 <h2 className="text-3xl font-bold text-blue-900 mb-2 animate-fade-in-up">Internship Report 2025 Released</h2>
                 <p className="text-xl text-blue-700 font-semibold mb-4 animate-fade-in-up" style={{animationDelay: "0.1s"}}>93.07% of students secured internships by their second year.</p>
                 <p className="text-gray-600 mb-6 animate-fade-in-up" style={{animationDelay: "0.2s"}}>Certified by B2K Analytics (IIM Ahmedabad’s Placement Auditors)</p>
-                <Button variant="outline" className="border-blue-300 text-blue-700 hover:bg-blue-100 animate-fade-in-up" style={{animationDelay: "0.3s"}}>
-                    View Official Report <ExternalLink className="w-4 h-4 ml-2"/>
+                <Button
+                  variant="outline"
+                  className="border-blue-300 text-white hover:bg-blue-100 animate-fade-in-up"
+                  style={{ animationDelay: "0.3s" }}
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/posts/nst-placement-cell_internship-report-activity-7351948283545554945-O-iM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADyYFOEB7fjXRNe7HZi7MRLOi3_Nt2Vqoi4",
+                      "_blank"
+                    )
+                  }
+                >
+                  View Internship Report
                 </Button>
             </div>
         </div>
@@ -154,6 +162,146 @@ const Internships = () => {
                   </div>
               </div>
           </div>
+      </section>
+      {/* How to Apply Section */}
+      <section id="how-to-apply" className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up">How to Land Your Dream Internship</h2>
+            <p className="text-xl text-blue-700 max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: "0.1s"}}>
+              Whether you're on campus or exploring off-campus opportunities, NST equips you with cutting-edge tools and strategies to secure top internships.
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* On-Campus Section */}
+            <Card className="bg-blue-50/50 border-blue-200 shadow-xl animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <CardHeader>
+                <CardTitle className="text-blue-900 flex items-center gap-2">
+                  <Building className="w-6 h-6 text-blue-500" /> On-Campus Opportunities
+                </CardTitle>
+                <CardDescription className="text-blue-700">
+                  Streamlined, high-impact process to connect you with top companies through our placement portal.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-blue-900">Craft a Stellar Resume</p>
+                    <p className="text-gray-700">Work with your mentor to create a resume that stands out, tailored to showcase your skills and projects.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-blue-900">Access the Placement Portal</p>
+                    <p className="text-gray-700">Once your resume is mentor-approved, unlock our AI-powered placement portal on your student dashboard.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-blue-900">One-Click Apply</p>
+                    <p className="text-gray-700">Apply to top companies with a single click — our backend auto-submits your resume and tracks your applications.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-blue-900">AI Interview Prep</p>
+                    <p className="text-gray-700">Get exclusive access to our AI-driven mock interview platform, simulating real-world interviews with instant feedback.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Off-Campus Section */}
+            <Card className="bg-blue-50/50 border-blue-200 shadow-xl animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              <CardHeader>
+                <CardTitle className="text-blue-900 flex items-center gap-2">
+                  <MapPin className="w-6 h-6 text-blue-500" /> Off-Campus Opportunities
+                </CardTitle>
+                <CardDescription className="text-blue-700">
+                  Take charge of your career with creative, out-of-the-box strategies to land internships globally.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-blue-900">Cold Email Mastery</p>
+                    <p className="text-gray-700">Use our AI-crafted cold email templates to pitch directly to startup founders and hiring managers with a 30%+ response rate.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-blue-900">Freelance Platforms</p>
+                    <p className="text-gray-700">Showcase your skills on platforms like Fiverr, Upwork, and Toptal with NST’s portfolio-building workshops.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-blue-900">Job Platforms & Networking</p>
+                    <p className="text-gray-700">Leverage LinkedIn, Naukri.com, and Glassdoor with our AI-optimized profile tips to attract recruiters.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                  <div>
+                    <p className="font-semibold text-blue-900">Open-Source Contributions</p>
+                    <p className="text-gray-700">Stand out by contributing to open-source projects like GSoC with guidance from our mentors and alumni network.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+      {/* Why Apply Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-blue-900 mb-4 animate-fade-in-up">Why Apply for Internships ?</h2>
+            <p className="text-xl text-blue-700 max-w-3xl mx-auto animate-fade-in-up" style={{animationDelay: "0.1s"}}>
+              Unlock unparalleled opportunities to kickstart your career with real-world experience, mentorship, and a chance to shine in the tech world.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Real-World Impact",
+                description: "Work on projects that shape industries, from startups to global giants, and see your code in action.",
+                icon: <Rocket className="w-8 h-8 text-blue-500" />,
+              },
+              {
+                title: "Mentorship That Matters",
+                description: "Learn from industry veterans and GSoC mentors who guide you to build skills that employers value.",
+                icon: <Sparkles className="w-8 h-8 text-blue-500" />,
+              },
+              {
+                title: "Launch Your Career",
+                description: "93% placement rate and internships at top firms like DRDO and Razorpay — your future starts here.",
+                icon: <CheckCircle className="w-8 h-8 text-blue-500" />,
+              },
+            ].map((reason, idx) => (
+              <Card
+                key={idx}
+                className="group bg-white border-blue-200 shadow-lg hover:border-blue-500 hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + idx * 0.07}s` }}
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    {reason.icon}
+                    <h3 className="text-xl font-semibold text-blue-900">{reason.title}</h3>
+                  </div>
+                  <p className="text-gray-700">{reason.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Student Projects */}
