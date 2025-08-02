@@ -30,7 +30,7 @@ const Home = () => {
               { title: 'Clubs & Societies', href: '/clubs', description: 'Join amazing communities' },
               { title: 'Academics', href: '/academics', description: 'Courses & faculty' },
               { title: 'Campus Life', href: '/campus', description: 'Accommodation & facilities' },
-              { title: 'Events', href: '/events', description: 'TechFest & cultural events' },
+              { title: 'Events', href: '/fests', description: 'TechFest & cultural events' },
               { title: 'Mentors', href: '/mentors', description: 'Student guidance' },
               { title: 'Startups', href: '/startups', description: 'Newton Startup Fund' },
               { title: 'Student Support', href: '/mentors', description: 'Help & resources' }
