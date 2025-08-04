@@ -113,8 +113,7 @@ const ClubsSection = () => {
                     </div>
                     <Button
                       onClick={() => (window.location.href = club.link)}
-                      variant="outline"
-                      className="w-full border-blue-300 text-white group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 hover:scale-105"
+                      className="w-full bg-blue-500 border border-blue-300 text-white hover:bg-blue-700 transition-all duration-300 hover:scale-105"
                     >
                       Explore Community
                     </Button>
