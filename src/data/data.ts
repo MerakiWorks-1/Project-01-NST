@@ -349,7 +349,7 @@ export const studentMentors = [
   },
   {
     name: "Pranav Singh",
-    bio: "AI/ML Intern at The MA Studio Co. | Secretary of GDG, RU | Deputy Chief of Rajputana Clan",
+    bio: "AI/ML Intern at The MA Studio Co. | Secretary of GDG, RU | Deputy Chief of Rajputana Clan | Student Mentor",
     batch: "2028",
     img: "/images/student_mentors/pranav_singh.jpeg",
     linkedin: "https://www.linkedin.com/in/pranav-singh-developer/",
