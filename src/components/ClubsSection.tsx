@@ -90,7 +90,6 @@ const ClubsSection = () => {
                         <IconComponent className="h-8 w-8 text-blue-700" />
                       </div>
                       <Badge className="bg-blue-100 text-blue-800 border-blue-200">
-                        {club.members}
                       </Badge>
                     </div>
                     <CardTitle className="text-xl text-blue-950">
