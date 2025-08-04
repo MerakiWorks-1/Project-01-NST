@@ -18,7 +18,7 @@ const Footer = () => {
   const quickLinks = [
     { label: 'Academic Curriculum', href: '/academics' },
     { label: 'Campus Life', href: '/campus' },
-    { label: 'Student Support', href: '/support' },
+    { label: 'Student Support', href: '/mentors' },
   ];
 
   const resources = [
