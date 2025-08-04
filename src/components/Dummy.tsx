@@ -44,6 +44,9 @@ const navItems: NavItem[] = [
       { name: "Real World Exposure", 
         href: "/techtrek" 
       },
+      { name: "Travel Funds", 
+        href: "/travelfunds" 
+      },
     ],
   },
   {
