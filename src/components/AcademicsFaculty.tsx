@@ -17,7 +17,7 @@ interface Person {
 }
 
 // --- REDESIGNED CARD COMPONENT ---
-const CardItem = ({ person }: { person: Person }) => (
+const CardItem = ({ person, showBio = true }: { person: Person; showBio?: boolean }) => (
   <div className="group relative bg-gradient-to-br from-white to-blue-50 rounded-xl shadow-lg w-72 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:!scale-105">
     <div className="absolute -inset-px bg-gradient-to-r from-blue-400 to-indigo-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     <div className="relative h-full bg-gradient-to-br from-white to-blue-50 rounded-xl z-10 flex flex-col">
@@ -38,9 +38,11 @@ const CardItem = ({ person }: { person: Person }) => (
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div>
           <h3 className="text-lg font-bold text-blue-950">{person.name}</h3>
-          {/* <p className="text-sm text-blue-700 mt-1 line-clamp-3 min-h-[60px]">
-            {person.bio}
-          </p> */}
+          {showBio && (
+            <p className="text-sm text-blue-700 mt-1 line-clamp-3 min-h-[60px]">
+              {person.bio}
+            </p>
+          )}
         </div>
         <div className="mt-3 flex flex-wrap gap-2 items-center justify-center min-h-[24px]">
           {person.badges?.map((logo, idx) => (
@@ -81,6 +83,7 @@ const FlowingCardsSection = ({
 }) => {
   const [showAll, setShowAll] = useState(false);
   const animationDuration = data.length * 5;
+  const showBio = sectionId === "faculty"; // Only show bio for faculty
 
   return (
     <div className="mb-16">
@@ -107,7 +110,7 @@ const FlowingCardsSection = ({
                     key={`${sectionId}-${index}`}
                     className="flex-shrink-0 mx-3"
                   >
-                    <CardItem person={person} />
+                    <CardItem person={person} showBio={showBio} />
                   </div>
                 ))}
               </div>
@@ -157,7 +160,7 @@ const FlowingCardsSection = ({
                   }}
                   className="flex justify-center"
                 >
-                  <CardItem person={person} />
+                  <CardItem person={person} showBio={showBio} />
                 </motion.div>
               ))}
             </motion.div>

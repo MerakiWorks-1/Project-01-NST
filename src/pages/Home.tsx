@@ -32,8 +32,7 @@ const Home = () => {
               { title: 'Campus Life', href: '/campus', description: 'Accommodation & facilities' },
               { title: 'Events', href: '/fests', description: 'TechFest & cultural events' },
               { title: 'Mentors', href: '/mentors', description: 'Student guidance' },
-              { title: 'Startups', href: '/startups', description: 'Newton Startup Fund' },
-              { title: 'Student Support', href: '/mentors', description: 'Help & resources' }
+              { title: 'Startups', href: '/startups', description: 'Newton Startup Fund' }
             ].map((item, idx) => (
               <Link
                 key={item.title}
