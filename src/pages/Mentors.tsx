@@ -60,15 +60,15 @@ const MentorCardItem = ({ mentor }: { mentor: StudentMentor }) => (
       </div>
       <div className="p-4 pt-0">
         {mentor.linkedin ? (
-          <a
-            href={mentor.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-full bg-white/80 p-2 rounded-lg shadow-sm border border-blue-200 text-blue-700 font-semibold transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-lg"
-          >
-            <Linkedin className="h-4 w-4 mr-2" />
-            View Profile
-          </a>
+          // <a
+          //   href={mentor.linkedin}
+          //   target="_blank"
+          //   rel="noopener noreferrer"
+          //   className="flex items-center justify-center w-full bg-white/80 p-2 rounded-lg shadow-sm border border-blue-200 text-blue-700 font-semibold transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-lg"
+          // >
+          //   <Linkedin className="h-4 w-4 mr-2" />
+          //   View Profile
+          // </a>
         ) : (
           <div className="flex items-center justify-center w-full bg-gray-100 p-2 rounded-lg border border-gray-200 text-gray-500 font-semibold">
             <MessageCircle className="h-4 w-4 mr-2" />

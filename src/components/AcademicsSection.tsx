@@ -255,13 +255,13 @@ const AcademicsSection = () => {
                     </div>
                     <div className="mt-8">
                       <h4 className="text-lg font-semibold text-blue-900 mb-4 text-center lg:text-left">What you'll learn</h4>
-                      <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                      {/* <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                         {yearData.skills.map(skill => (
                           <Badge key={skill} variant="outline" className="border-blue-300 text-blue-700 bg-blue-50/50">
                             {skill}
                           </Badge>
                         ))}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 

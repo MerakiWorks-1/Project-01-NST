@@ -38,9 +38,9 @@ const CardItem = ({ person }: { person: Person }) => (
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div>
           <h3 className="text-lg font-bold text-blue-950">{person.name}</h3>
-          <p className="text-sm text-blue-700 mt-1 line-clamp-3 min-h-[60px]">
+          {/* <p className="text-sm text-blue-700 mt-1 line-clamp-3 min-h-[60px]">
             {person.bio}
-          </p>
+          </p> */}
         </div>
         <div className="mt-3 flex flex-wrap gap-2 items-center justify-center min-h-[24px]">
           {person.badges?.map((logo, idx) => (
