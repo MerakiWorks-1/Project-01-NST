@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Rocket, Users, Trophy, FileText, ArrowRight } from 'lucide-react';
 
+
 const Startups = () => {
   // Program statistics
   const stats = [
@@ -38,7 +39,7 @@ const Startups = () => {
       <Dummy />
 
       {/* Hero Section */}
-      <section className="py-40 px-4">
+      <section className="pt-40 pb-20 px-4 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-600 bg-clip-text text-transparent">
             Your Dreams, Our Direction
@@ -51,7 +52,7 @@ const Startups = () => {
       </section>
 
       {/* How StartX Stands Out */}
-      <section className="pb-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-12 text-blue-900">
             How StartX Stands Out
@@ -71,12 +72,12 @@ const Startups = () => {
             {['Infrastructure Support', 'Dedicated Mentorship', 'Product Marketing', 'Interactive Workshops'].map((title, idx) => (
               <Card
                 key={idx}
-                className="group p-6 bg-white border border-blue-200 overflow-hidden relative hover:border-blue-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group relative overflow-hidden bg-white border border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <CardHeader>
+                <CardHeader className="relative z-10">
                   <CardTitle className="text-xl text-blue-900 mb-2">{title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="relative z-10">
                   <p className="text-gray-700 text-sm">
                     {title === 'Infrastructure Support' && 'Based on prototype potential and technical alignment.'}
                     {title === 'Dedicated Mentorship' && 'One-on-one sessions with industry experts.'}
@@ -85,6 +86,7 @@ const Startups = () => {
                   </p>
                 </CardContent>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
               </Card>
             ))}
           </div>
@@ -98,22 +100,22 @@ const Startups = () => {
             Your Path to Success
           </h3>
           <div className="relative">
-            {/* Dotted line for the timeline */}
-            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-1 bg-blue-200 hidden md:block"></div>
-            <div className="relative grid md:grid-cols-3 gap-12">
+            <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-blue-200 hidden md:block"></div>
+            <div className="space-y-16 md:space-y-0">
               {processSteps.map((item, idx) => (
-                <div key={idx} className="relative text-center">
-                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-4 border-blue-500 rounded-full flex items-center justify-center font-bold text-blue-600 text-xl shadow-md">
-                    {item.step}
+                <div key={idx} className={`md:flex items-center w-full ${idx % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                  <div className="w-full md:w-[calc(50%-2.5rem)]">
+                     <Card className="p-6 bg-white border border-blue-200 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <CardTitle className="text-xl text-blue-900 mb-2">{item.title}</CardTitle>
+                        <p className="text-gray-700">{item.description}</p>
+                      </Card>
                   </div>
-                  <Card className="group bg-white border border-blue-200 overflow-hidden relative hover:shadow-xl transition-all duration-300 h-full">
-                    <CardHeader>
-                      <CardTitle className="text-xl text-blue-900 mt-4">{item.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-700">{item.description}</p>
-                    </CardContent>
-                  </Card>
+                  <div className="relative my-4 md:my-0">
+                    <div className="z-10 bg-white w-12 h-12 rounded-full border-4 border-blue-500 flex items-center justify-center font-bold text-blue-600 text-xl shadow-md mx-4 shrink-0">
+                      {item.step}
+                    </div>
+                  </div>
+                  <div className="hidden md:block w-[calc(50%-2.5rem)]"></div>
                 </div>
               ))}
             </div>
@@ -132,7 +134,6 @@ const Startups = () => {
                     Hear from the leaders and innovators shaping the future of tech.
                 </p>
             </div>
-            {/* CORRECTED: Changed grid to 2 columns and adjusted max-width to center the content */}
             <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {/* Video 1 */}
                 <div className="animate-fade-in-up">

@@ -138,7 +138,7 @@ const TravelFunds = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-gray-700">For all queries and application submissions, please contact the Dean's office at the email address below.</p>
-                  <Button asChild variant="outline" className="w-full border-blue-300 text-blue-700 hover:bg-blue-100">
+                  <Button asChild variant="outline" className="w-full border-blue-300 text-white-700 hover:bg-blue-100">
                     <a href="mailto:deanoffice.csai@nst.rishihood.edu.in">
                       deanoffice.csai@nst.rishihood.edu.in
                     </a>
