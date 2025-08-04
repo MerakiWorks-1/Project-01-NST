@@ -13,7 +13,7 @@ const ClubsSection = () => {
   const clubs = [
     {
       name: "CP Club",
-      description: "For aspiring problem solvers and competitive programmers.",
+      description: "For aspiring competitive programmers.",
       icon: Code,
       tags: [
         "Competitive Programming",
@@ -43,7 +43,7 @@ const ClubsSection = () => {
       name: "Robotics Club",
       description: "Explore the world of robotics and automation.",
       icon: Microchip,
-      tags: ["Robotics", "AI", "Engineering"],
+      tags: ["Robotics", "AI", "Engineering", "Automation", "Embedded Systems", "IoT", "Mechatronics"],
       link: "/robotics",
     },
     {
