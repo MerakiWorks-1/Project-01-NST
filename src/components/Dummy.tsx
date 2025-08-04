@@ -86,11 +86,6 @@ export default function Header1() {
   const headerVariants = {
     initial: { y: -100, opacity: 0 },
     animate: { y: 0, opacity: 1 },
-    scrolled: {
-      backdropFilter: "blur(20px)",
-      backgroundColor: "rgba(255, 255, 255, 0.9)",
-      boxShadow: "0 8px 32px rgba(59, 130, 246, 0.15)",
-    },
   };
 
   const mobileMenuVariants = {
@@ -132,7 +127,7 @@ export default function Header1() {
                 className="w-10 h-10 rounded-lg flex items-center justify-center shadow-md relative overflow-hidden group transition-all duration-200"
                 whileHover={{ boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)" }}
               >
-                <svg width="20px" height="20px" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_127_15039)"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.46951 0H10.3963V2.27927H2.46951V5.53538L5.12235 5.53538H6.90853C8.56579 5.53538 10.0967 6.09099 11.3342 7.0307L15.9611 2.27927H12.2988V0H17.5305H19.75V2.27927V7.65185H17.5305V3.89096L12.9036 8.6424C13.8187 9.91324 14.3597 11.4854 14.3597 13.1872L14.3597 18.9118L14.3598 22.2937C16.2787 20.8921 17.5305 18.5899 17.5305 15.9875V9.60551H19.75V15.9875C19.75 21.5172 15.3848 26 10 26C4.61522 26 0.25 21.5172 0.25 15.9875V2.27927V0H2.46951ZM2.46951 15.9875V7.81465L5.12235 7.81465H6.90853C9.79792 7.81465 12.1402 10.22 12.1402 13.1872L12.1402 18.9118L12.1402 23.4039C11.4618 23.6101 10.7435 23.7207 10 23.7207C5.84103 23.7207 2.46951 20.2584 2.46951 15.9875Z" fill="#0673F9"></path></g></svg>
+                <svg width="20px" height="20px" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g clipPath="url(#clip0_127_15039)"><path fillRule="evenodd" clipRule="evenodd" d="M2.46951 0H10.3963V2.27927H2.46951V5.53538L5.12235 5.53538H6.90853C8.56579 5.53538 10.0967 6.09099 11.3342 7.0307L15.9611 2.27927H12.2988V0H17.5305H19.75V2.27927V7.65185H17.5305V3.89096L12.9036 8.6424C13.8187 9.91324 14.3597 11.4854 14.3597 13.1872L14.3597 18.9118L14.3598 22.2937C16.2787 20.8921 17.5305 18.5899 17.5305 15.9875V9.60551H19.75V15.9875C19.75 21.5172 15.3848 26 10 26C4.61522 26 0.25 21.5172 0.25 15.9875V2.27927V0H2.46951ZM2.46951 15.9875V7.81465L5.12235 7.81465H6.90853C9.79792 7.81465 12.1402 10.22 12.1402 13.1872L12.1402 18.9118L12.1402 23.4039C11.4618 23.6101 10.7435 23.7207 10 23.7207C5.84103 23.7207 2.46951 20.2584 2.46951 15.9875Z" fill="#0673F9"></path></g></svg>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 opacity-100 transition-all duration-300"
                   initial={{ rotate: 45, scale: 0 }}
@@ -167,7 +162,7 @@ export default function Header1() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Link
-                      to={item.href}
+                      to={item.href!}
                       className="text-blue-950 flex items-center space-x-1 text-sm font-medium transition-all duration-300 hover:text-blue-600 relative group"
                     >
                       <span>{item.name}</span>
@@ -178,33 +173,25 @@ export default function Header1() {
                     </Link>
                   </motion.div>
                 ) : (
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Link
-                      to={item.href}
-                      className="text-blue-950 flex items-center space-x-1 text-sm font-medium transition-all duration-300 hover:text-blue-600 relative group"
-                    >
-                      <span>{item.name}</span>
-                      {item.hasDropdown && (
-                        <motion.div
-                          animate={
-                            activeDropdown === item.name
-                              ? { rotate: 180 }
-                              : { rotate: 0 }
-                          }
-                          transition={{ duration: 0.3 }}
-                        >
-                          <ChevronDown className="h-4 w-4 text-blue-600" />
-                        </motion.div>
-                      )}
+                  <div className="text-blue-950 flex items-center space-x-1 text-sm font-medium transition-all duration-300 hover:text-blue-600 relative group cursor-pointer">
+                    <span>{item.name}</span>
+                    {item.hasDropdown && (
                       <motion.div
-                        className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-blue-600 to-indigo-500 group-hover:w-full transition-all duration-300"
-                        layoutId={`underline-${item.name}`}
-                      />
-                    </Link>
-                  </motion.div>
+                        animate={
+                          activeDropdown === item.name
+                            ? { rotate: 180 }
+                            : { rotate: 0 }
+                        }
+                        transition={{ duration: 0.3 }}
+                      >
+                        <ChevronDown className="h-4 w-4 text-blue-600" />
+                      </motion.div>
+                    )}
+                    <motion.div
+                      className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-blue-600 to-indigo-500 group-hover:w-full transition-all duration-300"
+                      layoutId={`underline-${item.name}`}
+                    />
+                  </div>
                 )}
 
                 {item.hasDropdown && (
@@ -215,7 +202,7 @@ export default function Header1() {
                         variants={dropdownVariants}
                         initial="hidden"
                         animate="visible"
-                        exit="hidden"
+                        // CORRECTED: Removed the 'exit' prop to disable the exit animation
                         transition={{
                           duration: 0.3,
                           type: "spring",
@@ -292,7 +279,7 @@ export default function Header1() {
               variants={mobileMenuVariants}
               initial="closed"
               animate="open"
-              exit="closed"
+              // CORRECTED: Removed the 'exit' prop to disable the exit animation
               transition={{
                 duration: 0.4,
                 type: "spring",
@@ -321,7 +308,7 @@ export default function Header1() {
                     className="relative z-10"
                   >
                     <Link
-                      to={item.href}
+                      to={item.href!}
                       className="block px-4 py-3 font-medium text-blue-900 transition-all duration-300 hover:bg-blue-50 hover:pl-6"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
