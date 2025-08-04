@@ -225,29 +225,29 @@ export default function CampusLifeSection() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-        <h3 className="text-2xl font-bold text-blue-900 mb-4">
-          Experience Our Campus
-        </h3>
-        <p className="text-gray-700 mb-6 max-w-xl mx-auto">
-          Take a virtual tour or schedule an in-person visit to explore our state-of-the-art facilities.
-        </p>
-        <div className="flex justify-center">
-          <iframe
-            width="100%"
-            height="400"
-            src="https://www.youtube.com/embed/VDwRPGdWv0g"
-            title="Campus Tour"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="rounded-xl shadow-xl max-w-3xl w-full"
-          ></iframe>
-        </div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                Experience Our Campus
+              </h3>
+              <p className="text-gray-700 mb-6 max-w-xl mx-auto">
+                Take a virtual tour or schedule an in-person visit to explore our state-of-the-art facilities.
+              </p>
+              <div className="flex justify-center">
+                <iframe
+                  width="100%"
+                  height="400"
+                  src="https://www.youtube.com/embed/VDwRPGdWv0g"
+                  title="Campus Tour"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="rounded-xl shadow-xl max-w-3xl w-full"
+                ></iframe>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
-      <Footer />
+      {/* The extra Footer component has been removed from here */}
     </div>
   );
 }

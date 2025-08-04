@@ -73,10 +73,6 @@ const Footer = () => {
                 <span className="text-sm">Rishihood University, Haryana, India</span>
               </div>
               <div className="flex items-center text-gray-700">
-                <Phone className="h-4 w-4 mr-3 text-blue-600" />
-                <span className="text-sm">+91 98765 43210</span>
-              </div>
-              <div className="flex items-center text-gray-700">
                 <Mail className="h-4 w-4 mr-3 text-blue-600" />
                 <span className="text-sm">csai.leadoffice@nst.rishihood.edu.in</span>
               </div>
