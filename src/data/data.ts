@@ -314,6 +314,15 @@ export const mentorList = [
     bio: "Operations Associate at NST, Ex - Summer Research Intern at IIT BHU",
     img: "/images/mentors/kushagra_rajput.jpg",
   },
+  {
+    name: "Tanmay Shrivastava",
+    gender: "Male",
+    designation: "Mentor",
+    linkedin: "https://www.linkedin.com/in/vastaviktanmay/",
+    bio: "",
+    img: "/images/student_mentors/aditya_kishore_singh.png",
+  },
+  
 ];
 
 export const studentMentors = [
