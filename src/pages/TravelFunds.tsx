@@ -23,7 +23,7 @@ const TravelFunds = () => {
     {
       step: "02",
       title: "Email the Application",
-      description: "Send the completed application and all supporting documents via email to deanoffice.csai@nst.rishihood.edu.in.",
+      description: "Send the completed application and all supporting documents via email to csai.leadoffice@nst.rishihood.edu.in",
     },
     {
       step: "03",
@@ -139,8 +139,8 @@ const TravelFunds = () => {
                 <CardContent className="space-y-4">
                   <p className="text-gray-700">For all queries and application submissions, please contact the Dean's office at the email address below.</p>
                   <Button asChild variant="outline" className="w-full border-blue-300 text-white-700 hover:bg-blue-100">
-                    <a href="mailto:deanoffice.csai@nst.rishihood.edu.in">
-                      deanoffice.csai@nst.rishihood.edu.in
+                    <a href="mailto:csai.leadoffice@nst.rishihood.edu.in">
+                      csai.leadoffice@nst.rishihood.edu.in
                     </a>
                   </Button>
                 </CardContent>

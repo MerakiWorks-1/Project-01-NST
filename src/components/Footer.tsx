@@ -128,7 +128,7 @@ const Footer = () => {
             {/* NEW: Added credit link */}
             <a href="https://www.linkedin.com/company/official-merakiworks/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/60 text-blue-800 px-3 py-1.5 rounded-full border border-blue-200 hover:shadow-md hover:bg-white transition-all duration-300">
               <Code className="w-4 h-4 text-blue-600" />
-              <span>Made with 💙 by <strong>Meraki Works</strong></span>
+              <span>Made with 💙 by <strong>MerakiWorks</strong></span>
             </a>
           </div>
           <div className="flex space-x-4">
