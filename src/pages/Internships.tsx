@@ -132,37 +132,73 @@ const Internships = () => {
 
       {/* Zuvees Case Study */}
       <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  <div className="animate-fade-in-up">
-                      <Badge className="mb-4 bg-blue-100 text-blue-800">Case Study</Badge>
-                      <h2 className="text-3xl font-bold text-blue-900 mb-4">Building a UAE‑Based Startup’s Product from Scratch</h2>
-                      <p className="text-gray-700 mb-6">
-                          When Zuvees, a fast‑growing gifting tech startup in Dubai, needed a full‑stack tech solution, they turned to our students who built their entire product from the ground up.
-                      </p>
-                      <Card className="bg-blue-50/50 border-blue-200">
-                          <CardContent className="p-6">
-                              <p className="text-blue-800 italic">"It didn’t feel like we were working with students — it felt like we were working with professionals. They delivered like pros."</p>
-                              <p className="font-semibold text-right mt-2 text-blue-900">- Abhishek Daiya, Founder of Zuvees</p>
-                          </CardContent>
-                      </Card>
-                  </div>
-                  <div className="animate-fade-in-up" style={{animationDelay: "0.1s"}}>
-                      <Card className="bg-white border-blue-200 shadow-xl">
-                          <CardHeader>
-                              <CardTitle className="text-blue-900">From Zero to One: What They Built</CardTitle>
-                          </CardHeader>
-                          <CardContent className="space-y-3">
-                              <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" /><span>Real‑time dashboards for the Dubai Ops Team.</span></li>
-                              <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" /><span>Live integrations for payment gateways and order tracking.</span></li>
-                              <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" /><span>Backend to manage inventory, logistics, and user flows.</span></li>
-                              <li className="flex items-start gap-3"><CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" /><span>Frontend designed for customers and ops teams.</span></li>
-                          </CardContent>
-                      </Card>
-                  </div>
-              </div>
+  <div className="container mx-auto px-6">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      
+      {/* Left Side: Case Study Description */}
+      <div className="animate-fade-in-up">
+        <Badge className="mb-4 bg-blue-100 text-blue-800">Case Study</Badge>
+        <h2 className="text-3xl font-bold text-blue-900 mb-4">
+          Building a UAE‑Based Startup’s Product from Scratch
+        </h2>
+        <p className="text-gray-700 mb-6">
+          When Zuvees, a fast‑growing gifting tech startup in Dubai, needed a full‑stack tech solution, they turned to our students who built their entire product from the ground up.
+        </p>
+        <Card className="bg-blue-50/50 border-blue-200">
+          <CardContent className="p-6">
+            <p className="text-blue-800 italic">
+              "It didn’t feel like we were working with students — it felt like we were working with professionals. They delivered like pros."
+            </p>
+            <p className="font-semibold text-right mt-2 text-blue-900">
+              - Abhishek Daiya, Founder of Zuvees
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Right Side: What They Built */}
+      <div className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+        <Card className="group relative overflow-hidden bg-white border border-blue-200 hover:border-blue-500 transition-all duration-300">
+          
+          {/* Gradient background (z-0) */}
+          <div className="absolute inset-0 z-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+          {/* Bottom progress bar (z-0) */}
+          <div className="absolute bottom-0 left-0 w-0 h-1 z-0 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300"></div>
+
+          {/* Content (z-10) */}
+          <div className="relative z-10">
+            <CardHeader>
+              <CardTitle className="text-blue-900">
+                From Zero to One: What They Built
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                <span className="text-gray-700">Real‑time dashboards for the Dubai Ops Team.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                <span className="text-gray-700">Live integrations for payment gateways and order tracking.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                <span className="text-gray-700">Backend to manage inventory, logistics, and user flows.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-blue-500 mt-1 shrink-0" />
+                <span className="text-gray-700">Frontend designed for customers and ops teams.</span>
+              </li>
+            </CardContent>
           </div>
-      </section>
+          
+        </Card>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* How to Apply Section */}
       <section id="how-to-apply" className="py-20 bg-white">
         <div className="container mx-auto px-6">
